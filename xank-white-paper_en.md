@@ -50,7 +50,6 @@ We propose Xank, a cryptocurrency that utilizes a soft price pegging mechanism t
 # Table of Contents
 
 - [Abstract](#abstract)
-- [Table of Contents](#table-of-contents)
 - [Introduction](#introduction)
 - [Xank Design Considerations: Implementing Price Stability](#xank-design-considerations--implementing-price-stability)
   * [Avalanche Protocol for the Xank Network](#avalanche-protocol-for-the-xank-network)
@@ -136,7 +135,7 @@ In this paper, we describe how the Xank network achieves an essential balance be
 
 In order to achieve price stability, the Xank protocol has chosen design elements from leading cryptocurrencies and combined them with a conceptual framework that is based on the concepts of sound and stable money. Xank will technically be implemented as a fork of the Dash network and therefore will retain many of the Dash technical characteristics. The Xank protocol will also incorporate various adjustments and enhancements to the Dash protocol which are designed to achieve the price stability that is necessary for Xank to serve and function as a stablecoin. 
 
-In this section, we describe the importance of decentralized governance and a self-funded budget system as implemented on the Dash network. We then look at the concepts of the IMF’s Special Drawing Rights (ISO 4217 currency code XDR (numeric: 960), also abbreviated SDR) instrument, which will be used as the first soft peg for the Xank network. In contrast to Dash’s democratic governance model, we also consider the advantages that can be gained by implementing Ray Dalio’s meritocratic governance system, as outlined in his essay, which led to the success of the company he founded, Bridgewater[^1], <sup> </sup>and how this can be applied in the Xank network.
+In this section, we describe the importance of decentralized governance and a self-funded budget system as implemented on the Dash network. We then look at the concepts of the IMF’s Special Drawing Rights (ISO 4217 currency code XDR (numeric: 960), also abbreviated SDR) instrument, which will be used as the first soft peg for the Xank network. In contrast to Dash’s democratic governance model, we also consider the advantages that can be gained by implementing Ray Dalio’s meritocratic governance system, as outlined in his essay, which led to the success of the company he founded, Bridgewater<sup id="a1">[1](#f1)</sup>, and how this can be applied in the Xank network.
 
 
 ## Avalanche Protocol for the Xank Network
@@ -166,7 +165,7 @@ In addition to the element of decentralization, Avalanche provides several addit
 *   PayPal — 193 transactions per second
 *   Avalanche — 6,500 transactions per second (1,000 nodes hosted on AWS)
 
-As Xank becomes more widely adopted and used for various purposes, the number of transactions will naturally increase, and the Xank network will need the capacity to handle a growing number of transactions. Avalanche, which reached 6,500 transactions per second on a test network of 1,000 nodes and stabilized at 5,000 transactions per second[^2], has exhibited the ability to handle far more transactions per second than its predecessors. Therefore, Avalanche protocol is the optimal solution for a cryptocurrency like Xank, which will require both high throughput and scalability to function as a truly usable cryptocurrency.
+As Xank becomes more widely adopted and used for various purposes, the number of transactions will naturally increase, and the Xank network will need the capacity to handle a growing number of transactions. Avalanche, which reached 6,500 transactions per second on a test network of 1,000 nodes and stabilized at 5,000 transactions per second<sup id="a2">[2](#f2)</sup>, has exhibited the ability to handle far more transactions per second than its predecessors. Therefore, Avalanche protocol is the optimal solution for a cryptocurrency like Xank, which will require both high throughput and scalability to function as a truly usable cryptocurrency.
 
 _Environment-friendly_
 
@@ -174,7 +173,7 @@ Bitcoin’s Proof-of-Work is notorious for its excessive consumption of electric
 
 _Privacy_
 
-Privacy, whether it is built into the blockchain or made possible through an external application, is essential for a cryptocurrency like Xank. Xank will enable optional transactional privacy that will be implemented at the wallet level to allow for users to protect their identity and data. The Xank Universal Wallet will follow after the footsteps of Samourai Wallet[^3] and Wasabi Wallet[^4] to ensure private transactions for not only bitcoin transactions but also for those of other cryptocurrencies. With built-in privacy features, the Xank Universal Wallet will prevent the unwanted exposure of users’ personal information.
+Privacy, whether it is built into the blockchain or made possible through an external application, is essential for a cryptocurrency like Xank. Xank will enable optional transactional privacy that will be implemented at the wallet level to allow for users to protect their identity and data. The Xank Universal Wallet will follow after the footsteps of Samourai Wallet<sup id="a3">[3](#f3)</sup> and Wasabi Wallet<sup id="a4">[4](#f4)</sup> to ensure private transactions for not only bitcoin transactions but also for those of other cryptocurrencies. With built-in privacy features, the Xank Universal Wallet will prevent the unwanted exposure of users’ personal information.
 
 In summary, Avalanche is a third-generation protocol that displays advantages over other protocols that are prevalent today. Avalanche will give the Xank network the decentralization, speed, security, and quiescence that is required for Xank to perform as the next-generational stable cryptocurrency.
 
@@ -203,7 +202,7 @@ The Xank cryptocurrency will initially set it’s soft peg functionality to the 
 
 ### **A brief history of the IMF’s SDR**
 
-The SDR is an international reserve asset created by the IMF in 1969 to supplement the reserves of the member countries. As of September 2017, 204.2 billion SDRs[^5] (\$291 billion USD equivalent) had been created and allocated to the member states. SDRs are freely interchangeable for other participant currencies. 
+The SDR is an international reserve asset created by the IMF in 1969 to supplement the reserves of the member countries. As of September 2017, 204.2 billion SDRs<sup id="a5">[5](#f5)</sup> (\$291 billion USD equivalent) had been created and allocated to the member states. SDRs are freely interchangeable for other participant currencies. 
 
 The SDR was created as a supplementary international reserve asset within the context of the Bretton Woods fixed exchange rate system, where participating countries needed official reserves in the form of government or central bank holdings of gold and widely internationally accepted currencies in order to establish and maintain a fixed and balanced exchange rate. The expansion of international trade and finance was impaired, however, as there was an inadequate international supply and reserve of the two key reserve assets: gold and the U.S. dollar. This prompted the international community to decide on the creation of a new international reserve asset that was to operate under the auspices of the IMF. 
 
@@ -217,7 +216,7 @@ When the SDR scheme was launched in 1969, it’s value was initially set as equi
 
 The IMF posts the value of the SDR in U.S. dollar terms on its website, and its value is determined and updated on a daily basis. It is calculated as the sum of specific amounts of each basket currency valued in U.S. dollars, based on the spot exchange rates observed at around noon London time. 
 
-Every five years, the composition of the basket is reviewed by the Executive Board of the IMF. This periodicity can be altered if there are compelling economic circumstances in the meantime between meetings. The Executive Board bases its determination of the basket composition in consideration of the relative importance of the position of the five main member states in terms of international trade. The most recent inclusion was the Chinese Renminbi (Chinese yuan) in October of 2016 in recognition that it met the criteria that had been set for inclusion. This also coincided with a new weighting algorithm that was adopted that same year, which incorporated the assignment of equal shares to the currency issuer’s exports and a composite financial indicator in the new weighting formula. According to the IMF’s 2016 factsheet[^6],
+Every five years, the composition of the basket is reviewed by the Executive Board of the IMF. This periodicity can be altered if there are compelling economic circumstances in the meantime between meetings. The Executive Board bases its determination of the basket composition in consideration of the relative importance of the position of the five main member states in terms of international trade. The most recent inclusion was the Chinese Renminbi (Chinese yuan) in October of 2016 in recognition that it met the criteria that had been set for inclusion. This also coincided with a new weighting algorithm that was adopted that same year, which incorporated the assignment of equal shares to the currency issuer’s exports and a composite financial indicator in the new weighting formula. According to the IMF’s 2016 factsheet<sup id="a6">[6](#f6)</sup>,
 
 “The financial indicator comprises, in equal shares, official reserves denominated in the member’s (or monetary union’s) currency that are held by other monetary authorities that are not issuers of the relevant currency, foreign exchange turnover in the currency, and the sum of outstanding international bank liabilities and international debt securities denominated in the currency.”
 
@@ -237,7 +236,7 @@ This level of stability has been chosen to bootstrap the first three years of th
 
 ## Xank and the Bridgewater Idea Meritocracy System
 
-The Xank network will employ meritocratic governance. The following key points on meritocracy have been extracted from an essay[^7] written by Ray Dalio, the founder of Bridgewater, wherein he outlines how a meritocratic governance system and the implementation of its key principles and components were intricate to the success of the Bridgewater venture. We will also describe how some of these meritocratic principles will echo through the Xank network, in particular, the Xank governance system.
+The Xank network will employ meritocratic governance. The following key points on meritocracy have been extracted from an essay<sup id="a7">[7](#f7)</sup> written by Ray Dalio, the founder of Bridgewater, wherein he outlines how a meritocratic governance system and the implementation of its key principles and components were intricate to the success of the Bridgewater venture. We will also describe how some of these meritocratic principles will echo through the Xank network, in particular, the Xank governance system.
 
 Ray summarises the idea in the following quote:
 
@@ -421,7 +420,7 @@ In order for the Xank Reserve system to function autonomously and in real time, 
 
 The Xank-XDR exchange rate measurement must take into account various data feeds. In particular, the exchange rate calculation requires the SDR and all its component basket currencies to be tracked. The resultant real-time data needs to be independently and autonomously fed to the blockchain as needed for Stable Pay functionality. The data will be handled at the masternode level, and the established rate will be calculated and entered into each Xank block to be made available to the whole network.
 
-Seeing as the SDR rate is measured against a basket of weighted currencies and is announced and published by the IMF on its website on a daily[^8] basis, this daily feed will be fed directly into the oracle system and used as a basis for calculating the Xank-XDR exchange rate. 
+Seeing as the SDR rate is measured against a basket of weighted currencies and is announced and published by the IMF on its website on a daily<sup id="a8">[8](#f8)</sup> basis, this daily feed will be fed directly into the oracle system and used as a basis for calculating the Xank-XDR exchange rate. 
 
 As the currency value of the SDR is determined by summing the values in U.S. dollars based on market exchange rates of a basket of major currencies, a further step is required to establish the Xank-XDR exchange rate. The exchange rate calculation needs to track the exchange rate of the XANK coin against the fiat currencies that are included in the SDR basket. The oracle system needs to establish feeds from exchanges where the XANK coin is listed, traded and denominated in the U.S. dollar, Euro, Japanese yen, British pound sterling, and the Chinese renminbi. These feeds will be made available during the launch of the Xank blockchain, and a voting mechanism will be outlined in the Xank Constitution should more reliable feeds become available or should more feeds be added for better aggregation calculations ensuring the robustness of the feed information. Should the Xank network also decide as a whole to change the Stable Pay peg away from the SDR and choose a different underlying asset value, the same voting mechanism will be enacted for the provision of the new feeds, and the oracle system will be updated.
 
@@ -621,7 +620,7 @@ Digital asset and cryptocurrency exchanges can use Xank to overcome many of thes
 *   Allow users to move a fiat-denominated cryptocurrency in and out of the exchange with little to no friction
 *   Outsource their fiat custodial risk and take advantage of the Xank Reserve stabilizing mechanism, thereby freeing them up to only deal and manage cryptocurrencies
 *   Offer more fiat-to-crypto trading pairs by taking advantage of Xank’s pegging mechanism and stability
-*   Secure customer assets purely through cryptocurrency industry best practices and encryption technologies, such as multisignature security, cold and hot wallet usage, Hierarchical Deterministic (HD) wallets (BIP32)[^9] and more.
+*   Secure customer assets purely through cryptocurrency industry best practices and encryption technologies, such as multisignature security, cold and hot wallet usage, Hierarchical Deterministic (HD) wallets (BIP32)<sup id="a9">[9](#f9)</sup> and more.
 
 *   Set up their systems to purely deal with cryptocurrencies thereby reducing complexity and improving audit readiness.
 *   Utilize all additional functionality that Xank offers over earlier blockchains, such as Xank stablecoin functionality, reduced block times for quicker withdrawal and deposit confirmations, and more transactions per second, allowing for a new class of trading products
@@ -760,7 +759,7 @@ The ultimate success of the Xank network can be measured by the degree to which 
 2. Big houses
 3. Food Waste
 
-**Sustainable Development Goals (SDGs)** - efforts that aim to support the UN initiative[^10]:
+**Sustainable Development Goals (SDGs)** - efforts that aim to support the UN initiative<sup id="a10">[10](#f10)</sup>:
 
 1. No Poverty
 2. Zero Hunger
@@ -798,7 +797,7 @@ In this paper, we introduced Xank, a robust, decentralized, autonomous organizat
 
 ## Pros and Cons of Existing Stablecoins
 
-It is important to consider what problems certain cryptocurrencies have attempted to solve and how their efforts have resulted in gaining a better understanding of the Xank proposition. Below are commentary, analysis, observations and extracts based on a post by Haseeb Qureshi on Hackernoon, where he explains the key concepts behind the current batch of stablecoins (full text[^11]).
+It is important to consider what problems certain cryptocurrencies have attempted to solve and how their efforts have resulted in gaining a better understanding of the Xank proposition. Below are commentary, analysis, observations and extracts based on a post by Haseeb Qureshi on Hackernoon, where he explains the key concepts behind the current batch of stablecoins (full text<sup id="a11">[11](#f11)</sup>).
 
 
 ### Tether
@@ -1169,35 +1168,35 @@ Bitcoin Cash and Avalanche Video:
 
 ## Notes
 
-[^1]:Ray Dalio’s meritocratic governance system, as outlined in his essay, which led to the success of the company he founded, Bridgewater
+<b id="f1">1</b>:Ray Dalio’s meritocratic governance system, as outlined in his essay, which led to the success of the company he founded, Bridgewater [↩](#a1)
     https://www.linkedin.com/pulse/key-bridgewaters-success-real-idea-meritocracy-ray-dalio
 
-[^2]:Avalanche, which reached 6,500 transactions per second on a test network of 1,000 nodes and stabilized at 5,000 transactions per second
+<b id="f2">2</b>:Avalanche, which reached 6,500 transactions per second on a test network of 1,000 nodes and stabilized at 5,000 transactions per second [↩](#a2)
     https://medium.com/avalabs/avalanche-ava-monthly-update-may-2019-7a78657217f4
 
-[^3]:Samourai Wallet
+<b id="f3">3</b>:Samourai Wallet [↩](#a3)
     https://samouraiwallet.com/
 
-[^4]:Wasabi Wallet
+<b id="f4">4</b>:Wasabi Wallet [↩](#a4)
     https://wasabiwallet.io/
 
-[^5]:As of September 2017, 204.2 billion SDRs ($291 billion USD equivalent) had been created and allocated to the member states.
+<b id="f5">5</b>:As of September 2017, 204.2 billion SDRs ($291 billion USD equivalent) had been created and allocated to the member states. [↩](#a5)
     https://www.imf.org/en/About/Factsheets/Sheets/2016/08/01/14/51/Special-Drawing-Right-SDR
 
-[^6]:IMF’s 2016 factsheet
+<b id="f6">6</b>:IMF’s 2016 factsheet [↩](#a6)
     https://www.imf.org/external/np/exr/facts/sdrcb.htm 
 
-[^7]:How a meritocratic governance system and the implementation of its key principles and components were intricate to the success of the Bridgewater venture.
+<b id="f7">7</b>:How a meritocratic governance system and the implementation of its key principles and components were intricate to the success of the Bridgewater venture. [↩](#a7)
     https://www.linkedin.com/pulse/key-bridgewaters-success-real-idea-meritocracy-ray-dalio
 
-[^8]:Seeing as the SDR rate is measured against a basket of weighted currencies and is announced and published by the IMF on its website.
+<b id="f8">8</b>:Seeing as the SDR rate is measured against a basket of weighted currencies and is announced and published by the IMF on its website. [↩](#a8)
     https://www.imf.org/external/np/fin/data/rms_sdrv.aspx
 
-[^9]:Multisignature security, cold and hot wallet usage, Hierarchical Deterministic (HD) wallets (BIP32)
+<b id="f9">9</b>:Multisignature security, cold and hot wallet usage, Hierarchical Deterministic (HD) wallets (BIP32) [↩](#a9)
     https://bitcoin.org/en/glossary/hd-protocol
 
-[^10]:Sustainable Development Goals (SDGs)
+<b id="f10">10</b>:Sustainable Development Goals (SDGs) [↩](#a10)
     https://www.un.org/sustainabledevelopment/
 
-[^11]:A commentary, analysis, observations and extracts based on a post by Haseeb Qureshi on Hackernoon, where he explains the key concepts behind the current batch of stablecoins.
+<b id="f11">11</b>:A commentary, analysis, observations and extracts based on a post by Haseeb Qureshi on Hackernoon, where he explains the key concepts behind the current batch of stablecoins. [↩](#a11)
     https://hackernoon.com/stablecoins-designing-a-price-stable-cryptocurrency-6bf24e2689e5
