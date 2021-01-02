@@ -49,7 +49,68 @@ We propose Xank, a cryptocurrency that utilizes a soft price pegging mechanism t
 
 # Table of Contents
 
-[TOC]
+- [Abstract](#abstract)
+- [Table of Contents](#table-of-contents)
+- [Introduction](#introduction)
+- [Xank Design Considerations: Implementing Price Stability](#xank-design-considerations--implementing-price-stability)
+  * [Avalanche Protocol for the Xank Network](#avalanche-protocol-for-the-xank-network)
+  * [Adoption of a Self-funding Treasury System](#adoption-of-a-self-funding-treasury-system)
+  * [Soft-pegging to the IMF’s SDR (Special Drawing Rights)](#soft-pegging-to-the-imf-s-sdr--special-drawing-rights-)
+    + [**A brief history of the IMF’s SDR**](#--a-brief-history-of-the-imf-s-sdr--)
+  * [Xank and the Bridgewater Idea Meritocracy System](#xank-and-the-bridgewater-idea-meritocracy-system)
+  * [**Idea Meritocracy**](#--idea-meritocracy--)
+    + [Meaningful Work](#meaningful-work)
+    + [Meaningful Relationships](#meaningful-relationships)
+    + [Radical Truthfulness](#radical-truthfulness)
+    + [Radical Transparency](#radical-transparency)
+  * [The Xank Protocol](#the-xank-protocol)
+    + [Stable Pay Functionality](#stable-pay-functionality)
+    + [Local Pay Functionality](#local-pay-functionality)
+    + [Xank Proof-of-Stake (PoS) Governance](#xank-proof-of-stake--pos--governance)
+    + [The Xank Reserve](#the-xank-reserve)
+    + [Go-to-market Strategy](#go-to-market-strategy)
+    + [Measuring the Exchange Rate](#measuring-the-exchange-rate)
+      - [<span style="text-decoration:underline;">SDR and Currency Feeds</span>](#-span-style--text-decoration-underline---sdr-and-currency-feeds--span-)
+      - [<span style="text-decoration:underline;">Oracle System</span>](#-span-style--text-decoration-underline---oracle-system--span-)
+      - [<span style="text-decoration:underline;">Oracle Feed Redundancy</span>](#-span-style--text-decoration-underline---oracle-feed-redundancy--span-)
+    + [Stable/Local Pay Transaction Lifecycle](#stable-local-pay-transaction-lifecycle)
+    + [Xank Multi-currency Support](#xank-multi-currency-support)
+    + [Extreme Volatility Safeguard (EVS) Price Floor Mechanism](#extreme-volatility-safeguard--evs--price-floor-mechanism)
+    + [Atomic Swap Basket](#atomic-swap-basket)
+    + [Idea Meritocracy Governance](#idea-meritocracy-governance)
+    + [Xank Self-sovereign Identity and Xank Reputation Index](#xank-self-sovereign-identity-and-xank-reputation-index)
+    + [Xank Budget Allocation](#xank-budget-allocation)
+- [Applications and Use Cases](#applications-and-use-cases)
+  * [Exchanges](#exchanges)
+  * [Individuals](#individuals)
+  * [Merchants](#merchants)
+  * [Business and Startup Funding](#business-and-startup-funding)
+  * [Activism](#activism)
+- [Xank in a Post-fiat World](#xank-in-a-post-fiat-world)
+  * [Soft-pegging to a Consumer Price Index](#soft-pegging-to-a-consumer-price-index)
+  * [Giving Power Back to the People](#giving-power-back-to-the-people)
+  * [A Preamble to the Xank Constitution](#a-preamble-to-the-xank-constitution)
+- [Conclusion](#conclusion)
+- [Appendix](#appendix)
+  * [Pros and Cons of Existing Stablecoins](#pros-and-cons-of-existing-stablecoins)
+    + [Tether](#tether)
+    + [Maker (Dai)](#maker--dai-)
+    + [Carbon](#carbon)
+  * [**Xank Network Specifications and Comparisons**](#--xank-network-specifications-and-comparisons--)
+  * [**Xank Units of Measure**](#--xank-units-of-measure--)
+  * [XANK Coin Supply Algorithm](#xank-coin-supply-algorithm)
+    + [Introduction](#introduction-1)
+    + [Limited Supply](#limited-supply)
+    + [Unlimited Supply and Inflation](#unlimited-supply-and-inflation)
+    + [GDP](#gdp)
+    + [Xank Network Transactions](#xank-network-transactions)
+    + [Xank Coin Supply](#xank-coin-supply)
+    + [Xank Emission Algorithm](#xank-emission-algorithm)
+      - [Initial Design](#initial-design)
+      - [Current Design](#current-design)
+  * [**Xank Protocol Characteristics Comparison**](#--xank-protocol-characteristics-comparison--)
+- [References and Resources](#references-and-resources)
+  * [Notes](#notes)
 
 
 # Introduction
@@ -232,9 +293,9 @@ This mechanism will be referred to as the Xank Reserve throughout this paper. Th
 
 When considering the Xank protocol, it is useful to understand that Xank will be initiated as a fork of the Dash protocol and therefore have the same base technical characteristics as the Dash protocol together with the following additional characteristics which define the Xank protocol:
 
-* **The Xank Reserve will be funded by a percentage of the block rewards. **15% of all coins from Xank’s coin emission will fund the Xank Reserve, the decentralized and autonomous mechanism that calibrates Stable Pay and Local Pay transactions, both of which are outlined next.
+* **The Xank Reserve will be funded by a percentage of the block rewards.** 15% of all coins from Xank’s coin emission will fund the Xank Reserve, the decentralized and autonomous mechanism that calibrates Stable Pay and Local Pay transactions, both of which are outlined next.
 
-*   **The Xank protocol will specify and assign a soft peg to an underlying asset. **Special transaction types called Stable Pay and Local Pay will be made available to the users of the network. 
+*   **The Xank protocol will specify and assign a soft peg to an underlying asset.** Special transaction types called Stable Pay and Local Pay will be made available to the users of the network. 
 
     The Stable Pay transaction type will allow a user to make a transfer of value that is denominated in the IMF’s SDR, another fiat currency, an index like the Consumer Price Index (CPI), or a predefined basket of goods. The underlying asset to be pegged in simulation will be decided on and set by the network as specified by the Xank protocol’s governance mechanism. At launch, the soft peg will be set to the SDR, and the SDR value of a Stable Pay transaction will remain constant throughout the timeline of the transaction, that is, from initiation to final settlement and receipt between the transacting parties. Because the initial pegged asset is set as the IMF’s SDR, the soft SDR peg will be referred to by example throughout the rest of this paper. 
     
@@ -242,13 +303,13 @@ When considering the Xank protocol, it is useful to understand that Xank will be
 
 *   **The Xank blockchain will use an oracle service to monitor an exchange rate feed to measure price.** The Xank-XDR exchange rate will be fed to the Xank blockchain by a real-time exchange rate oracle. This can be achieved in a decentralized way so as not to expose the network to centralized points of failure. This process is described in more detail in this paper.
 *   **The Xank blockchain calibrates the precise count of XANK coins on a per Stable Pay transaction basis,** so as the value that is transferred does not deviate from the underlying pegged asset’s exchange rate at the time of the transaction. 
-    *   If at the time of the Stable Pay transaction the XANK coins are trading at a **lesser **value than the desired SDR equilibrium rate, the number of XANK coins involved in that transaction will be algorithmically **increased **to the required amount so as the transacted value is equal to the intended purchase price. This process is described in more detail in this paper.
-    *   If at the time of the Stable Pay transaction the XANK coins are trading at a **higher **value than the desired SDR equilibrium rate, the number of XANK coins involved in that transaction will be algorithmically **decreased **to the required amount so as the transacted value is equal to the intended purchase price. This process is described in more detail in this paper.
+    *   If at the time of the Stable Pay transaction the XANK coins are trading at a **lesser** value than the desired SDR equilibrium rate, the number of XANK coins involved in that transaction will be algorithmically **increased** to the required amount so as the transacted value is equal to the intended purchase price. This process is described in more detail in this paper.
+    *   If at the time of the Stable Pay transaction the XANK coins are trading at a **higher** value than the desired SDR equilibrium rate, the number of XANK coins involved in that transaction will be algorithmically **decreased** to the required amount so as the transacted value is equal to the intended purchase price. This process is described in more detail in this paper.
 *   **All profits and losses will be put back into the Reserve.** This process will be regulated by the Xank Reserve, which will calibrate any XANK coin profits and losses made during Stable Pay transaction life-cycles with the Xank Reserve fund, thereby keeping the value within the confines of the blockchain and its reserve system without the need for any human intervention or manual manipulation. All this will be set from the onset at the protocol level.
     
     *   If the price of XANK decreases during the transaction process, then all the loss made from the algorithmic adjustment will be refunded from the Reserve. If the price of XANK increases during the transaction process, then the receiver receives fewer coins. However, the fiat equivalent is still equal to that sent by the sender, and the difference is paid into the Reserve.
 *   **An Extreme Volatility Safeguard (EVS) price floor mechanism will be set** to safeguard the economy from a complete collapse. This mechanism will assure that the Xank cryptocurrency will serve as a stablecoin even after it recovers from a catastrophic failure, an occurrence that is extremely unlikely, while also remaining a free-floating cryptocurrency during normal times. The Extreme Volatility Safeguard is described in more detail later in this paper. 
-*   **An Extreme Volatility Safeguard (EVS) price ceiling mechanism will _not_ be set **to assure that any upside will remain in the Reserve, assuring the stability and continuity of the reserve function and confidence in the wider network sustainability at large.
+*   **An Extreme Volatility Safeguard (EVS) price ceiling mechanism will _not_ be set** to assure that any upside will remain in the Reserve, assuring the stability and continuity of the reserve function and confidence in the wider network sustainability at large.
 
 At this point, it is useful to think of the soft-pegging mechanism in practice as an autonomously adjusting price tracking mechanism, and not as a peg as such, as a peg usually refers to a figure arbitrarily set by a centralized governing body. We provide this example:
 
@@ -261,7 +322,7 @@ If Alice decides to use the Xank Stable Pay feature to send 100 XDR worth of XAN
 
 **Scenario A**
 
-    The price of XANK was $10.00 USD at the time that Alice sent the transaction. This means that Alice needed to send Bob 10 XANK coins to achieve the required USD value (10 XANK = $100.00 USD). In the time that it took Bob to receive the transaction, the value of XANK doubled, meaning that only 5 XANK coins are required to achieve the value of $100.00 USD. In this scenario, the protocol deducts 5 XANK coins from the receiving wallet and places them in the Xank Reserve system. When Bob transfers his Xank to fiat, he will receive $100.00 USD worth in fiat terms. Alice and Bob’s need to transact using a stablecoin has been met.
+> The price of XANK was $10.00 USD at the time that Alice sent the transaction. This means that Alice needed to send Bob 10 XANK coins to achieve the required USD value (10 XANK = $100.00 USD). In the time that it took Bob to receive the transaction, the value of XANK doubled, meaning that only 5 XANK coins are required to achieve the value of $100.00 USD. In this scenario, the protocol deducts 5 XANK coins from the receiving wallet and places them in the Xank Reserve system. When Bob transfers his Xank to fiat, he will receive $100.00 USD worth in fiat terms. Alice and Bob’s need to transact using a stablecoin has been met.
 
 
 
@@ -272,7 +333,7 @@ If Alice decides to use the Xank Stable Pay feature to send 100 XDR worth of XAN
 
 **Scenario B**
 
-    The price of XANK was $10.00 USD at the time that Alice sent the transaction. This means that Alice needed to send Bob 10 XANK coins to achieve the required USD value (10 XANK = $100.00 USD). In the time that it took Bob to receive the transaction, the value of XANK halved, meaning that 20 XANK coins are required to achieve the value of $100.00 USD. In this scenario, the protocol adds an extra 10 XANK coins to the receiving wallet by extracting them from the Xank Reserve system. When Bob transfers his Xank to fiat, he will receive USD $100.00 worth in fiat terms. Alice and Bob’s need to transact using a stablecoin has been met.
+> The price of XANK was $10.00 USD at the time that Alice sent the transaction. This means that Alice needed to send Bob 10 XANK coins to achieve the required USD value (10 XANK = $100.00 USD). In the time that it took Bob to receive the transaction, the value of XANK halved, meaning that 20 XANK coins are required to achieve the value of $100.00 USD. In this scenario, the protocol adds an extra 10 XANK coins to the receiving wallet by extracting them from the Xank Reserve system. When Bob transfers his Xank to fiat, he will receive USD $100.00 worth in fiat terms. Alice and Bob’s need to transact using a stablecoin has been met.
 
 
 
@@ -282,7 +343,7 @@ If Alice decides to use the Xank Stable Pay feature to send 100 XDR worth of XAN
 
 **Scenario C**
 
-    The price of XANK is $9.99 USD at the time that Alice wants to send the transaction to Bob. This means that Alice needs to send Bob 10.00728 XANK coins to achieve the required USD value (10.00728 XANK = $100.00 USD). Alice is choosing to use regular XANK coins for this transfer. She is also wanting to send using Stable Pay instead of normal send as the transfer method. The Xank Universal Wallet supports in-wallet Stable Pay conversions, since it is a phone number based wallet that can be connected with multiple Xank wallets holding regular XANK and Stable/Local Pay coins. Alice can easily send fiat money using the Xank Universal Wallet as well since it supports fiat currency bank accounts and credit/debit cards.
+> The price of XANK is $9.99 USD at the time that Alice wants to send the transaction to Bob. This means that Alice needs to send Bob 10.00728 XANK coins to achieve the required USD value (10.00728 XANK = $100.00 USD). Alice is choosing to use regular XANK coins for this transfer. She is also wanting to send using Stable Pay instead of normal send as the transfer method. The Xank Universal Wallet supports in-wallet Stable Pay conversions, since it is a phone number based wallet that can be connected with multiple Xank wallets holding regular XANK and Stable/Local Pay coins. Alice can easily send fiat money using the Xank Universal Wallet as well since it supports fiat currency bank accounts and credit/debit cards.
 
 
 ### Stable Pay Functionality
@@ -301,7 +362,7 @@ Unlike Bitcoin and Dash that use the Proof-of-Work (PoW) mining consensus mechan
 
 There will be one form of staking in the Xank ecosystem:
 
-*   **Masternode Staking** - Masternode operators will stake 1,000 XDR worth of XANK coins at the point of masternode creation to operate a Xank masternode that gives them voting privileges on the Xank network. Xank masternode operators are also known as **Governors **and receive incentives from the network.
+*   **Masternode Staking** - Masternode operators will stake 1,000 XDR worth of XANK coins at the point of masternode creation to operate a Xank masternode that gives them voting privileges on the Xank network. Xank masternode operators are also known as **Governors** and receive incentives from the network.
 
 The reason we are using XDR as a unit of account instead of a XANK coin count for masternode staking is to remove the potential entry barrier for latecomers who wish to operate a masternode on the Xank network. If we set 1,000 XANK as the masternode staking requirement, it will be easy to stake a masternode in the beginning, but as the price rises, it will become increasingly difficult to stake a masternode. If we set 1,000 XDR as the masternode staking requirement, the number of XANK required for each masternode will fluctuate, but the value in fiat terms will always be constant. We believe this system will make it easier for later investors to participate in the network as Governors. Since building a non-inflationary currency is a significant objective of cryptocurrencies, we believe this makes more sense. 
 
@@ -331,19 +392,19 @@ To achieve this, we will be allocating funds from block rewards in the following
 
 **1.	Governors** - 35% of total block rewards
 
-    *   Xank Governors are Xank node operators that have staked 1,000 XDR as collateral and are thus qualified to be Xank masternode operators. Masternode operators can establish voting rights on how Treasury funds are spent. Masternode operators can also establish voting rights so as to vote on proposals for protocol modifications, upgrades, and underlying asset pegging mechanisms in order to be able to respond to market conditions, network robustness, and network competitiveness. Governors must maintain the original XANK coins for 1,000 XDR as collateral at all times and will lose all voting rights should they maintain a balance less than that. 35% of each block reward will be allocated for distribution toward the network’s Governors. There is no upper limit to the number of masternodes an operator may acquire, but a Self-sovereign Identity (SSI) system will ensure that a masternode operator can only establish the power of one reputation weighted vote regardless of how many masternodes they have in operation. The reward mechanism will maintain a minimum of 5% of the coin supply at all times for the Governors portion of the Xank Reserve Pool, which we’ll cover later in this paper.
+* Xank Governors are Xank node operators that have staked 1,000 XDR as collateral and are thus qualified to be Xank masternode operators. Masternode operators can establish voting rights on how Treasury funds are spent. Masternode operators can also establish voting rights so as to vote on proposals for protocol modifications, upgrades, and underlying asset pegging mechanisms in order to be able to respond to market conditions, network robustness, and network competitiveness. Governors must maintain the original XANK coins for 1,000 XDR as collateral at all times and will lose all voting rights should they maintain a balance less than that. 35% of each block reward will be allocated for distribution toward the network’s Governors. There is no upper limit to the number of masternodes an operator may acquire, but a Self-sovereign Identity (SSI) system will ensure that a masternode operator can only establish the power of one reputation weighted vote regardless of how many masternodes they have in operation. The reward mechanism will maintain a minimum of 5% of the coin supply at all times for the Governors portion of the Xank Reserve Pool, which we’ll cover later in this paper.
 
 **2.	Citizens** - 35% of total block rewards
 
-    *   Xank has a lot of special features, but a cryptocurrency is only as good as its adoption rate. That is why we've allocated 35% of our coin emission for market adoption via a loyalty points redemption program, which we call the Redeemers program. The Redeemers program allows three parties - merchants, consumers, and Xank - to benefit from Xank's distinct loyalty redemption structure, as well as from any other market adoption strategy the network chooses to implement in the future. For example, at a subsequent stage, the network may decide to use the Citizens pool to fund a Universal Basic Income (UBI) initiative, similar to the ones adopted by certain governments, to ensure that every citizen receives a minimum income. As more businesses and consumers see the merit in Xank's adoption strategies and come on board, we believe usage will come naturally. Then, the Xank network will grow to be not only a uniquely designed protocol but also a widely used cryptocurrency. The reward mechanism will maintain a minimum of 5% of the coin supply at all times for the Citizens portion of the Xank Reserve Pool, which we'll cover later in this paper. 
+* Xank has a lot of special features, but a cryptocurrency is only as good as its adoption rate. That is why we've allocated 35% of our coin emission for market adoption via a loyalty points redemption program, which we call the Redeemers program. The Redeemers program allows three parties - merchants, consumers, and Xank - to benefit from Xank's distinct loyalty redemption structure, as well as from any other market adoption strategy the network chooses to implement in the future. For example, at a subsequent stage, the network may decide to use the Citizens pool to fund a Universal Basic Income (UBI) initiative, similar to the ones adopted by certain governments, to ensure that every citizen receives a minimum income. As more businesses and consumers see the merit in Xank's adoption strategies and come on board, we believe usage will come naturally. Then, the Xank network will grow to be not only a uniquely designed protocol but also a widely used cryptocurrency. The reward mechanism will maintain a minimum of 5% of the coin supply at all times for the Citizens portion of the Xank Reserve Pool, which we'll cover later in this paper. 
 
 **3.	Xank Reserve** - 15% of total block rewards
 
-    *   Calibrating the value of XANK coins against the value of the XDR, fiat currency, or any underlying asset chosen by the network for the purposes of stablecoin functionality, will require transactions to be subsidized from a reserve fund. The Xank Reserve fund will operate autonomously and will be funded by a percentage of each block reward. The Xank protocol’s use of the Xank Reserve is designed in such a way so as the protocol remains resistant to death spirals and positive feedback loops that have the opposite effect of maintaining stablecoin functionality. By default, 15% of each block reward will be allocated for distribution toward the Xank Reserve. Most government-run central banks in the world maintain a less than 10% reserve to stabilize their respective currency. Since no one can predict whether the XANK price will rise or fall during a transaction lifecycle, which starts and ends at a different price level, the Reserve is forecasted to maintain 15% of the total coin supply, a percentage that is higher than most government-run central banks' reserves. 
+* Calibrating the value of XANK coins against the value of the XDR, fiat currency, or any underlying asset chosen by the network for the purposes of stablecoin functionality, will require transactions to be subsidized from a reserve fund. The Xank Reserve fund will operate autonomously and will be funded by a percentage of each block reward. The Xank protocol’s use of the Xank Reserve is designed in such a way so as the protocol remains resistant to death spirals and positive feedback loops that have the opposite effect of maintaining stablecoin functionality. By default, 15% of each block reward will be allocated for distribution toward the Xank Reserve. Most government-run central banks in the world maintain a less than 10% reserve to stabilize their respective currency. Since no one can predict whether the XANK price will rise or fall during a transaction lifecycle, which starts and ends at a different price level, the Reserve is forecasted to maintain 15% of the total coin supply, a percentage that is higher than most government-run central banks' reserves. 
 
-**4.	Xank Treasury **- 15% of total block rewards
+**4.	Xank Treasury** - 15% of total block rewards
 
-    *   The Xank Treasury is the network’s self-funding mechanism for network development and growth. The Xank Treasury will contribute funds for code development, code auditing, marketers, translators, and all other funding needs that are set out in the Xank Constitution. The allocation of funds and percentages of funds to be used will vary according to each masternode voting round. The Xank Constitution is described in more detail later in this paper. 15% of each block reward will be allocated for distribution toward the Xank Treasury. The reward mechanism will maintain a minimum of 5% of the coin supply at all times for the treasury portion of the Xank Reserve Pool, which we’ll also cover later in this paper.
+* The Xank Treasury is the network’s self-funding mechanism for network development and growth. The Xank Treasury will contribute funds for code development, code auditing, marketers, translators, and all other funding needs that are set out in the Xank Constitution. The allocation of funds and percentages of funds to be used will vary according to each masternode voting round. The Xank Constitution is described in more detail later in this paper. 15% of each block reward will be allocated for distribution toward the Xank Treasury. The reward mechanism will maintain a minimum of 5% of the coin supply at all times for the treasury portion of the Xank Reserve Pool, which we’ll also cover later in this paper.
 
 
 ### Go-to-market Strategy
@@ -376,7 +437,7 @@ These feeds will be provided by purpose-built oracles that will function autonom
 
 Should any of the public feeds that the oracle system rely upon experience failure or permanent loss of data, such as in the case of a sustained denial-of-service attack, regional IP censorship or geo-blocking, permanent shutdown of data feed, or any other temporary or permanent feed interruption, the masternodes will be able to rely on further layers of redundancy - Masternode Feed Aggregation, Masternode Direct Manual Feed Input, and Staker Oracle Feed Data Corruption Assurance.
 
-*   **Masternode Feed Aggregation **- should autonomous feed interruptions or losses affect 49% or less of the masternode network, such as in the case where certain oracle feeds are geo-blocked in certain regions, the affected masternodes can retrieve feed data from the unaffected masternodes on the network that are still able to retrieve the oracle feeds. The affected masternodes will aggregate the information and feed it back into the network.
+*   **Masternode Feed Aggregation** - should autonomous feed interruptions or losses affect 49% or less of the masternode network, such as in the case where certain oracle feeds are geo-blocked in certain regions, the affected masternodes can retrieve feed data from the unaffected masternodes on the network that are still able to retrieve the oracle feeds. The affected masternodes will aggregate the information and feed it back into the network.
 *   **Masternode and Staker Feed Aggregation** - should autonomous feed interruptions or losses affect 50% or more of the masternode network and less than 49% of the Staker’s node software, such as in the case where certain oracle feeds are geo-blocked in certain regions, the affected masternodes can retrieve feed data from the unaffected masternodes and unaffected Staker nodes on the network that are still able to retrieve the oracle feeds. The affected masternodes will aggregate the information and feed it back into the network.
 *   **Masternode Direct Manual Feed Input** - should autonomous feed interruptions or losses affect 50% or more of the masternode network and 50% or more of the Staker’s node software resulting in the autonomous nature of the feeds becoming unreliable, such as in the case of the feeds being shut down or discontinued, the masternode network will be allowed to provide Direct Manual Feeds until reliable autonomous feeds can be reestablished. Such an event will also activate a daily masternode voting mechanism where masternodes will vote on whether a new feed needs to be permanently established to replace the defunct feed, and if so, which is the preferred new feed. This mechanism will be activated in accordance with the voting rules that are established in the Xank Constitution. When the Direct Manual Feed mode is activated, the Xank masternode network will aggregate manual masternode feeds along with any remaining autonomous feeds still available to any of the masternodes to derive the desired exchange rate.
 *   **Staker Oracle Feed Data Corruption Assurance** - As a further redundancy measure, Staker nodes will be incentivised to monitor the network for corrupt or compromised feeds. Staker node software will be able to monitor individual masternode feeds and alert the network of Staker nodes if any masternodes are corrupted or compromised, where votes are weighted according to stake ownership. Should corrupt or compromised masternodes be identified, a vote can be arranged among the Staker network to suspend the masternode from the network until the problem is resolved and uncorrupted and uncompromised feeds can be resumed from the masternode in question. This mechanism can act as a counter to any masternode collusion as the Staker network is incentivized to preserve the long-term viability and robustness of the network and to retain its decentralized nature. It should be noted that this mechanism will not punish masternodes that are not able to retrieve oracle feed information. Rather, this mechanism will only be activated should a masternode provide feed data that is not consistent with oracle feeds or masternode aggregation data and is a deliberate or compromised attempt to provide the network with false information.
@@ -389,7 +450,7 @@ To calibrate the count of Xank coins per Stable/Local Pay transaction, the Xank 
 *   **Stable/Local Pay Coin Send** - for example, Alice sends 100 XDR worth of XANK coins to Bob. They have agreed to use the Stable Pay method for this transaction. 
 *   **Stable Pay XDR Calculation** - Alice’s wallet software uses data provided to the Xank blockchain by the Oracle system as implemented by the masternodes and makes her aware of the required amount of XANK coins that is equivalent to 100 XDR as agreed. She selects the required amount of Xank and performs a Stable Pay send transaction. Bob receives the amount of XANK coins that is equivalent to the 100 XDR as agreed. As the transaction is entered into the blockchain, the coins are flagged and are known to the network as Stable/Local Pay coins. 
 *   **Stable/Local Pay Coin Sell** - at a future point in time, Bob is ready to sell the coins he received from Alice. Seeing as these coins are flagged as Stable/Local Pay coins, he will receive the denominated amount of XANK coins in return when he sells his coins. The terminology of sell here simply refers to Bob using the Stable/Local Pay coins he received in a subsequent transaction that includes these coins. When Bob sends this ‘sell’ transaction, the sent amount will be denominated in XDR value in his wallet software, and he can send up to the full 100 XDR amount that he currently holds. The Stable Pay feature will be activated, and the required amount of XANK coins will be sent to the receiver to fulfill the 100 XDR rate at the time of the sell transaction.
-*   **Stable Pay XDR Normalization **- After the sale, the coins are no longer pegged as Stable/Local Pay coins on the network, and the coins become ‘free-floating’ XANK coins once again.
+*   **Stable Pay XDR Normalization** - After the sale, the coins are no longer pegged as Stable/Local Pay coins on the network, and the coins become ‘free-floating’ XANK coins once again.
 
 
 ### Xank Multi-currency Support
@@ -466,10 +527,9 @@ SDR: Special drawing rights (ISO 4217 currency code XDR) are supplementary forei
 
 <div align="center"><strong>Figure 5</strong>: Extreme Volatility Safeguard (EVS) Price Floor Mechanism</div>
 
-
 The Xank Treasury has a minimum limit set to 5% of the total circulating supply of Xank. Therefore when the Xank Treasury falls beneath that level, it algorithmically stops any more funding. Because of how Stable Pay operates, the equilibrium state of the Xank Reserve is expected to retain 15% of the total circulating supply of Xank at normal times. When extreme volatility hits, the first level of EVS is set at 50% price drop in a single day. When that happens, the Xank Reserve will automatically pull all funds preserved in the Xank Treasury. The second level of EVS is set at 70% price drop in a single day. When that happens, the Xank Reserve will pull all funds engaged in Xank Governors’ masternode collaterals automatically. The third level of EVS is set at 90% price drop in a single day. When that happens, the Xank Reserve will pull all funds engaged in Xank Citizens’ staking collaterals automatically. On top of these measures, 30% of the Xank Reserve Pool will at all times be atomically swapped with five cryptocurrencies with a low or negative correlation to Xank in prorated percentages reviewed every year as an extra safety net. When volatility subsides and normal times return, all collaterals from Xank Citizens will be returned first, and all collaterals from Xank Governors will be subsequently returned.
 
-    Xank Reserve Pool = Xank Reserve (15% of Circulating Supply) + Xank Treasury (5% of Circulating Supply) + Xank Governors’ Collaterals (5% of Circulating Supply) + Xank Citizens’ Collaterals (5% of Circulating Supply)
+> Xank Reserve Pool = Xank Reserve (15% of Circulating Supply) + Xank Treasury (5% of Circulating Supply) + Xank Governors’ Collaterals (5% of Circulating Supply) + Xank Citizens’ Collaterals (5% of Circulating Supply)
 
 
 ### Atomic Swap Basket
@@ -484,7 +544,7 @@ The Atomic Swap Basket will be composed of tokenized assets and cryptocurrencies
 
 Composition and weighting of the Atomic Swap Basket will be voted on by Xank DAO monthly. If Xank has a low correlation to BTC, we anticipate BTC to become a greater proportion within the basket. Tokenized commodities such as gold are currently not large enough to be included in the basket but we hope to include commodities when liquidity is sufficient. 
 
-    Atomic Swap Basket = Xank Reserve Pool 30% circulating supply x Atomic Swap Ratio 30% = 9% of Xank circulating value 
+> Atomic Swap Basket = Xank Reserve Pool 30% circulating supply x Atomic Swap Ratio 30% = 9% of Xank circulating value 
 
 
 ### Idea Meritocracy Governance
@@ -931,9 +991,10 @@ Emission volume is reduced by half every 2n years.  For example, the 1st year 80
 We use the binary logarithm to calculate the emission of the Xank coins in the nth year. The binary logarithm is the logarithm to the base 2. It is the inverse function of the power of two functions and is used to reduce the coin emission gradually. Instead of using a fixed issuance amount, Xank takes into account the current global GDP as an economic growth Indicator and Xank TPS as the network growth indicator. As the global GDP, as well as Xank TPS, is bound to increase over time, we can reduce them gradually by applying binary logarithm.
 
 The general term of the emission sequence of Xank coins is:
-$$
-E_n=(GDP_n + TPS_n) *(\frac{1}2)^{INT(log_2n)}
-$$
+
+![E_n=(GDP_n + TPS_n) *(\frac{1}2)^{INT(log_2n)}
+](https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+E_n%3D%28GDP_n+%2B+TPS_n%29+%2A%28%5Cfrac%7B1%7D2%29%5E%7BINT%28log_2n%29%7D%0A)
+
 From the below graph, you can see that the amount of Xank released per year is very high during the initial years and gradually reduces over time. This gives rise to very high inflation during the initial period.  From the above link, you can see that any changes in GDP or TPS in the initial years cause significant variance in issuance amount. As seen in the table, this initial volatile years corresponds to the first three logarithmic cycles.
 
 ![Figure 6](images/Xank-Emission-for-100-years-en.png "Xank Emission for 100 years")
@@ -945,75 +1006,62 @@ To mitigate the high volatility as well as high inflation of logarithmic emissio
 
 Hence we define the general term for Xank emission per year as,
 
-$$
-E_n=340,000,000 , for\ n < = 7
-$$
+![E_n=340,000,000 , for\ n < = 7](https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+E_n%3D340%2C000%2C000+%2C+for%5C+n+%3C+%3D+7)
 
-$$
-E_n=(GDP_n + TPS_n) *(\frac{1}2)^{INT(log_2n)}, for\ n > 7
-$$
-
+![E_n=(GDP_n + TPS_n) *(\frac{1}2)^{INT(log_2n)}, for\ n > 7](https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+E_n%3D%28GDP_n+%2B+TPS_n%29+%2A%28%5Cfrac%7B1%7D2%29%5E%7BINT%28log_2n%29%7D%2C+for%5C+n+%3E+7)
 
 Where, 
 
-*   $E_n=N^{th}$ year emission
-*   $GDP_n= N^{th}$ year Global GDP divided by 100K (Rounded off to Millions)
-*   $TPS_n=N^{th}$ year Xank network transactions per second
-*   $INT()=$ Integer-valued function which takes integer part of the given number 
+*   ![E_n=N^{th}](https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+E_n%3DN%5E%7Bth%7D) year emission
+*   ![GDP_n= N^{th}](https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+GDP_n%3D+N%5E%7Bth%7D) year Global GDP divided by 100K (Rounded off to Millions)
+*   ![TPS_n=N^{th}](https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+TPS_n%3DN%5E%7Bth%7D) year Xank network transactions per second
+*   ![INT()=](https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+INT%28%29%3D) Integer-valued function which takes integer part of the given number 
     *   For instance 
-        *   $INT(1.1)=1$
-        *   $INT(2)=2$
-        *   $INT(\sqrt2)=INT(1.414…)=1$
-        *   $log_23≅1.58496$ so that $INT(log_23)=1$
+        *   ![INT(1.1)=1](https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+INT%281.1%29%3D1) 
+        *   ![INT(2)=2](https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+INT%282%29%3D2) 
+        *   ![INT(\sqrt2)=INT(1.414\.\.\.)=1](https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+INT%28%5Csqrt2%29%3DINT%281.414%5C.%5C.%5C.%29%3D1) 
+        *   ![log_23\approxeq1.58496](https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+log_23%5Capproxeq1.58496) so that ![INT(log_2 3)=1](https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+INT%28log_2+3%29%3D1)
 
 
 ![Figure 7](images/Xank-Final-Emission-for-100-years-en.png "Xank Final Emission for 100 years")
 
 <div align="center"><strong>Figure 7</strong>: Xank Final Emission for 100 years</div>
 
-
 The partial sum of the sequence is:
-$$
-M_n=P+\sum^n_{k=1n} E_k
-$$
 
-$$
-M_n=P +\sum^n_{k=1} E_{340,000,000} , for\ n < = 7
-$$
+![M_n=P+\sum^n_{k=1n} E_k](https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+M_n%3DP%2B%5Csum%5En_%7Bk%3D1n%7D+E_k)
 
-$$
-M_n=P+7*340,000,000 +\sum_{k=8}^n E_k , for\ n > 7
-$$
+![M_n=P +\sum^n_{k=1} E_{340,000,000} , for\ n < = 7](https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+M_n%3DP+%2B%5Csum%5En_%7Bk%3D1%7D+E_%7B340%2C000%2C000%7D+%2C+for%5C+n+%3C+%3D+7)
+
+![M_n=P+7*340,000,000 +\sum_{k=8}^n E_k , for\ n > 7](https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+M_n%3DP%2B7%2A340%2C000%2C000+%2B%5Csum_%7Bk%3D8%7D%5En+E_k+%2C+for%5C+n+%3E+7)
 
 
 Where,
 
-*   $M_n=$ Total summation of money supply up to the $n^{th}$ year
-*   $P=$  1 billion (Pre-mined coins.)
+*   ![M_n=](https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+M_n%3D)Total summation of money supply up to the ![n^{th}](https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+n%5E%7Bth%7D) year
+*   ![P=1](https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+P%3D1) billion (Pre-mined coins.)
 
-Mathematically it is easy to prove $E_n$ converges to zero, but $M_n$ diverges infinitely.
+Mathematically it is easy to prove ![E_n](https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+E_n) converges to zero, but ![M_n](https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+M_n) diverges infinitely.
 
-$$
-M_n=\infty\ where\ E_n=0
-$$
+![M_n=\infty\ where\ E_n=0](https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+M_n%3D%5Cinfty%5C+where%5C+E_n%3D0)
 
 
 
 Proof: 
 
-1. if $n→\infty$, then $log_2n→ \infty$ also $INT(log_2n) → \infty$ so that $(\frac12)→0, E_n=0$
-2. Since $INT()$ function takes the integer part of the given numbers so that $INT(log_2n)\leq{log_2n}$ is always true, therefore the following is also true. $(\frac12)^{log_2n} \leq (\frac12)^{INT(log_2n)}$ from the definition of the logarithm $(\frac12)^{log_2n}=\frac1n$ and the above relation we can see that $\frac1n \leq (\frac12)^{INT(log_2n)}$ using integral test $\int_{1}^{\infty}\frac1x dx \leq \int_{1}^{\infty}(\frac12)^{INT(log_2x)}dx, \int_{1}^{\infty}\frac1x dx =(1n(x))^\infty_1 =\infty \leq \int_{1}^{\infty}(\frac12)^{INT(log_2x)}dx$
+1. if ![n&#8594; \infty](https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+n%26%238594%3B+%5Cinfty), then  ![log_2n&#8594; \infty](https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+log_2n%26%238594%3B+%5Cinfty)also ![INT(log_2n) &#8594; \infty](https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+INT%28log_2n%29+%26%238594%3B+%5Cinfty) so that ![(\frac1 2)&#8594;0, E_n=0](https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+%28%5Cfrac1+2%29%26%238594%3B0%2C+E_n%3D0)
+2. Since ![INT()](https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+INT%28%29) function takes the integer part of the given numbers so that ![INT(log_2n)\leq{log_2n}](https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+INT%28log_2n%29%5Cleq%7Blog_2n%7D) is always true, therefore the following is also true. ![(\frac1 2)^{log_2n} \leq (\frac1 2)^{INT(log_2n)}](https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+%28%5Cfrac1+2%29%5E%7Blog_2n%7D+%5Cleq+%28%5Cfrac1+2%29%5E%7BINT%28log_2n%29%7D) from the definition of the logarithm  an![(\frac1 2)^{log_2n}=\frac1 n](https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+%28%5Cfrac1+2%29%5E%7Blog_2n%7D%3D%5Cfrac1+n)d the above relation we can see that ![\frac1n \leq (\frac1 2)^{INT(log_2n)}](https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+%5Cfrac1n+%5Cleq+%28%5Cfrac1+2%29%5E%7BINT%28log_2n%29%7D) using integral test![\int_{1}^{\infty}\frac1x dx \leq \int_{1}^{\infty}(\frac1 2)^{INT(log_2x)}dx, \int_{1}^{\infty}\frac1x dx =(1n(x))^\infty_1 =\infty \leq \int_{1}^{\infty}(\frac1 2)^{INT(log_2x)}dx
+   ](https://render.githubusercontent.com/render/math?math=%5Clarge+%5Ctextstyle+%5Cint_%7B1%7D%5E%7B%5Cinfty%7D%5Cfrac1x+dx+%5Cleq+%5Cint_%7B1%7D%5E%7B%5Cinfty%7D%28%5Cfrac1+2%29%5E%7BINT%28log_2x%29%7Ddx%2C+%5Cint_%7B1%7D%5E%7B%5Cinfty%7D%5Cfrac1x+dx+%3D%281n%28x%29%29%5E%5Cinfty_1+%3D%5Cinfty+%5Cleq+%5Cint_%7B1%7D%5E%7B%5Cinfty%7D%28%5Cfrac1+2%29%5E%7BINT%28log_2x%29%7Ddx%0A) 
 
-By the theorem of the integral test, since the integral on the left side diverges, the series on the right side also diverges. Hence $M_n=\infty$
+By the theorem of the integral test, since the integral on the left side diverges, the series on the right side also diverges. Hence ![M_n=\infty](https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+M_n%3D%5Cinfty) 
 
 Proof end.
 
 
 
 Using the above equation, money supply for 100 years can be calculated by substituting _n_ to 100. 
-$$
-M_{100}=P+7*340,000,000 +\sum_{n=8}^{100}(GDP_n + TPS_n) * (\frac12)^{INT(log_2n)}
-$$
+
+![M_{100}=P+7*340,000,000 +\sum_{n=8}^{100}(GDP_n + TPS_n) * (\frac1 2)^{INT(log_2n)}](https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+M_%7B100%7D%3DP%2B7%2A340%2C000%2C000+%2B%5Csum_%7Bn%3D8%7D%5E%7B100%7D%28GDP_n+%2B+TPS_n%29+%2A+%28%5Cfrac1+2%29%5E%7BINT%28log_2n%29%7D)
 
 
 ![Figure 8](images/Xank-Money-Supply-for-100-years-en.png "Xank Money Supply for 100 years")
@@ -1021,9 +1069,9 @@ $$
 <div align="center"><strong>Figure 8</strong>: Xank Money Supply for 100 years</div>
 
 
-We have not set a maximum coin supply and the amount of Xank emitted in a year depends on the GDP and TPS of that respective year.  The emission volume, per year, is reduced by $(GDP_n + TPS_n)$ times every 2n years. 
+We have not set a maximum coin supply and the amount of Xank emitted in a year depends on the GDP and TPS of that respective year.  The emission volume, per year, is reduced by ![(GDP_n + TPS_n)](https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+%28GDP_n+%2B+TPS_n%29) times every ![2_n](https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+2_n) years. 
 
-Eg: Considering current GDP and average TPS of 10, In the 4th logarithmic cycle(Year 8 -Year 15) 111.2M Xank is released,  in the 5th cycle(Year 16 - Year 31) 55.6M Xank and next cycle $(GDP_n + TPS_n)$ each, and so on. In this distribution formula, it is self-evident that the summation of coins in the 2n period is always equal to the average value of $(GDP_n + TPS_n)$ over the period. So the coin issue rate converges to zero, but the sum of them diverges infinitely.
+Eg: Considering current GDP and average TPS of 10, In the 4th logarithmic cycle(Year 8 -Year 15) 111.2M Xank is released,  in the 5th cycle(Year 16 - Year 31) 55.6M Xank and next cycle ![(GDP_n + TPS_n)](https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+%28GDP_n+%2B+TPS_n%29) each, and so on. In this distribution formula, it is self-evident that the summation of coins in the 2n period is always equal to the average value of ![(GDP_n + TPS_n)](https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+%28GDP_n+%2B+TPS_n%29) over the period. So the coin issue rate converges to zero, but the sum of them diverges infinitely.
 
 
 ## **Xank Protocol Characteristics Comparison**
@@ -1122,36 +1170,34 @@ Bitcoin Cash and Avalanche Video:
 ## Notes
 
 [^1]:Ray Dalio’s meritocratic governance system, as outlined in his essay, which led to the success of the company he founded, Bridgewater
-
-     https://www.linkedin.com/pulse/key-bridgewaters-success-real-idea-meritocracy-ray-dalio
+    https://www.linkedin.com/pulse/key-bridgewaters-success-real-idea-meritocracy-ray-dalio
 
 [^2]:Avalanche, which reached 6,500 transactions per second on a test network of 1,000 nodes and stabilized at 5,000 transactions per second
-     https://medium.com/avalabs/avalanche-ava-monthly-update-may-2019-7a78657217f4
+    https://medium.com/avalabs/avalanche-ava-monthly-update-may-2019-7a78657217f4
 
 [^3]:Samourai Wallet
-     https://samouraiwallet.com/
+    https://samouraiwallet.com/
 
 [^4]:Wasabi Wallet
-     https://wasabiwallet.io/
+    https://wasabiwallet.io/
 
 [^5]:As of September 2017, 204.2 billion SDRs ($291 billion USD equivalent) had been created and allocated to the member states.
-     https://www.imf.org/en/About/Factsheets/Sheets/2016/08/01/14/51/Special-Drawing-Right-SDR
+    https://www.imf.org/en/About/Factsheets/Sheets/2016/08/01/14/51/Special-Drawing-Right-SDR
 
 [^6]:IMF’s 2016 factsheet
-     https://www.imf.org/external/np/exr/facts/sdrcb.htm 
+    https://www.imf.org/external/np/exr/facts/sdrcb.htm 
 
 [^7]:How a meritocratic governance system and the implementation of its key principles and components were intricate to the success of the Bridgewater venture.
-     https://www.linkedin.com/pulse/key-bridgewaters-success-real-idea-meritocracy-ray-dalio
+    https://www.linkedin.com/pulse/key-bridgewaters-success-real-idea-meritocracy-ray-dalio
 
 [^8]:Seeing as the SDR rate is measured against a basket of weighted currencies and is announced and published by the IMF on its website.
-     https://www.imf.org/external/np/fin/data/rms_sdrv.aspx
+    https://www.imf.org/external/np/fin/data/rms_sdrv.aspx
 
 [^9]:Multisignature security, cold and hot wallet usage, Hierarchical Deterministic (HD) wallets (BIP32)
-
-     https://bitcoin.org/en/glossary/hd-protocol
+    https://bitcoin.org/en/glossary/hd-protocol
 
 [^10]:Sustainable Development Goals (SDGs)
-     https://www.un.org/sustainabledevelopment/
+    https://www.un.org/sustainabledevelopment/
 
 [^11]:A commentary, analysis, observations and extracts based on a post by Haseeb Qureshi on Hackernoon, where he explains the key concepts behind the current batch of stablecoins.
-     https://hackernoon.com/stablecoins-designing-a-price-stable-cryptocurrency-6bf24e2689e5
+    https://hackernoon.com/stablecoins-designing-a-price-stable-cryptocurrency-6bf24e2689e5
