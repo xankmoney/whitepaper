@@ -782,7 +782,7 @@ We are the same people even though we came to speak different languages and have
 
 The act of moving assets away from government-backed fiat currencies and establishing assets in decentralized self-funding and self-governed cryptocurrencies can alleviate much of the government-sponsored oppression and corruption that is rampant in the world, should the required scale be achieved. Ultimately, the governments of the world are collectively sponsored by citizens in the form of taxes collected in fiat. When assets are moved off the balance sheets of centralizing forces, such as governments, central banks, and corporations, and move into decentralized human-powered networks, the governments of the world will lose their self-imposed influence and lordship over the people’s wealth and the allocation thereof. As governments are no longer able to sustain monopolies over the people’s wealth through taxation and reallocation, they will lose their ability to sustain large centralized infrastructure, such as is required to maintain large militaries and wage senseless and unnecessary wars.  Centralized government will give way to more decentralized governance structures that empower locally based communities that exercise governance in transparent ways to provide for the required levels of community protection, health, education, well-being, and prosperity. Nation-state-backed fiat currencies will lose their relevance as nation-states themselves become less relevant. Currency wars and inflationary monetary policies will no longer have such degrading influence over the people's wealth. Locally based community governance structures can be held more accountable, which will degrade the scale of corruption that is rampant in centralized, opaque government structures and institutions.
 
-The Xank Constitution will act as a mechanism to guide network proposals and initiatives that are beyond the scope of network maintenance, development, upgrades, and promotion. The Xank Reputation Index criteria will allow masternode operators to gain voting influence over the network each time they back initiatives that are beneficial to the network or in line with the Xank Constitution - and this will be the basis for building a meritocratic network that benefits all users and humanity. As more proposals that benefit humanity get funded, a positive feedback loop that will attract more involvement by the wider community will be created. This will further fund and grow the Xank network and fulfill it’s imbued intention to be of service to humanity by building a better society.
+The Xank Constitution<sup id="a9">[9](#f9)</sup>: will act as a mechanism to guide network proposals and initiatives that are beyond the scope of network maintenance, development, upgrades, and promotion. The Xank Reputation Index criteria will allow masternode operators to gain voting influence over the network each time they back initiatives that are beneficial to the network or in line with the Xank Constitution - and this will be the basis for building a meritocratic network that benefits all users and humanity. As more proposals that benefit humanity get funded, a positive feedback loop that will attract more involvement by the wider community will be created. This will further fund and grow the Xank network and fulfill it’s imbued intention to be of service to humanity by building a better society.
 
 
 # Conclusion
@@ -796,7 +796,7 @@ In this paper, we introduced Xank, a robust, decentralized, autonomous organizat
 
 ## Pros and Cons of Existing Stablecoins
 
-It is important to consider what problems certain cryptocurrencies have attempted to solve and how their efforts have resulted in gaining a better understanding of the Xank proposition. Below are commentary, analysis, observations and extracts based on a post by Haseeb Qureshi on Hackernoon, where he explains the key concepts behind the current batch of stablecoins (full text<sup id="a9">[9](#f9)</sup>).
+It is important to consider what problems certain cryptocurrencies have attempted to solve and how their efforts have resulted in gaining a better understanding of the Xank proposition. Below are commentary, analysis, observations and extracts based on a post by Haseeb Qureshi on Hackernoon, where he explains the key concepts behind the current batch of stablecoins (full text<sup id="a10">[10](#f10)</sup>).
 
 
 ### Tether
@@ -1190,5 +1190,8 @@ Bitcoin Cash and Avalanche Video:
 <b id="f8">8</b>:Sustainable Development Goals (SDGs) [↩](#a8)
     https://www.un.org/sustainabledevelopment/
 
-<b id="f9">9</b>:A commentary, analysis, observations and extracts based on a post by Haseeb Qureshi on Hackernoon, where he explains the key concepts behind the current batch of stablecoins. [↩](#a9)
+<b id="f9">9</b>:The Constitution of the Xank Decentralized Autonomous Organization [↩](#a9)
+    https://github.com/xankmoney/governance/blob/master/xank-constitution.md/
+
+<b id="f10">10</b>:A commentary, analysis, observations and extracts based on a post by Haseeb Qureshi on Hackernoon, where he explains the key concepts behind the current batch of stablecoins. [↩](#a10)
     https://hackernoon.com/stablecoins-designing-a-price-stable-cryptocurrency-6bf24e2689e5
