@@ -886,7 +886,7 @@ Carbon is a seigniorage shares style stablecoin that emerged in early 2018 with 
 
 | Masternode Cryptocurrency      |                             Dash                             |                             Pivx                             |                             Xank                             |
 | ------------------------------ | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
-| Consensus algorithm            |       Proof-of-Work (PoW)<br/>Proof-of-Service (PoSv)        |       Proof-of-Stake (PoS)<br>Proof-of-Service (PoSv)        |  Avalanche<br>Proof-of-Stake (PoS)<br>Proof-of-Merit (PoM)   |
+| Consensus algorithm            |        Proof-of-Work (PoW)<br>Proof-of-Service (PoSv)        |       Proof-of-Stake (PoS)<br>Proof-of-Service (PoSv)        |  Avalanche<br>Proof-of-Stake (PoS)<br>Proof-of-Merit (PoM)   |
 | Hashing algorithm              |                             X11                              |                            Quark                             |                            Quark                             |
 | Hardware mineable              |                             Yes                              |                No* (but multipool supported)                 |                No* (but multipool supported)                 |
 | Block time                     |                         150 seconds                          |            60 Seconds (Re-targeting every block)             |             60 Seconds (Time based Super-block)              |
