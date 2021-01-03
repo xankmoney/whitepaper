@@ -991,8 +991,7 @@ We use the binary logarithm to calculate the emission of the Xank coins in the n
 
 The general term of the emission sequence of Xank coins is:
 
-![E_n=(GDP_n + TPS_n) *(\frac{1}2)^{INT(log_2n)}
-](https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+E_n%3D%28GDP_n+%2B+TPS_n%29+%2A%28%5Cfrac%7B1%7D2%29%5E%7BINT%28log_2n%29%7D%0A)
+![E_n=(GDP_n + TPS_n) *(\frac{1}2)^{INT(log_2n)}](https://render.githubusercontent.com/render/math?math=%5CLarge+%5Cdisplaystyle+E_n%3D%28GDP_n+%2B+TPS_n%29+%2A%28%5Cfrac%7B1%7D2%29%5E%7BINT%28log_2n%29%7D)
 
 From the below graph, you can see that the amount of Xank released per year is very high during the initial years and gradually reduces over time. This gives rise to very high inflation during the initial period.  From the above link, you can see that any changes in GDP or TPS in the initial years cause significant variance in issuance amount. As seen in the table, this initial volatile years corresponds to the first three logarithmic cycles.
 
@@ -1005,21 +1004,21 @@ To mitigate the high volatility as well as high inflation of logarithmic emissio
 
 Hence we define the general term for Xank emission per year as,
 
-![E_n=340,000,000 , for\ n < = 7](https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+E_n%3D340%2C000%2C000+%2C+for%5C+n+%3C+%3D+7)
+![E_n=340,000,000 , for\ n < = 7](https://render.githubusercontent.com/render/math?math=%5CLarge+%5Cdisplaystyle+E_n%3D340%2C000%2C000+%2C+for%5C+n+%3C+%3D+7)
 
-![E_n=(GDP_n + TPS_n) *(\frac{1}2)^{INT(log_2n)}, for\ n > 7](https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+E_n%3D%28GDP_n+%2B+TPS_n%29+%2A%28%5Cfrac%7B1%7D2%29%5E%7BINT%28log_2n%29%7D%2C+for%5C+n+%3E+7)
+![E_n=(GDP_n + TPS_n) *(\frac{1}2)^{INT(log_2n)}, for\ n > 7](https://render.githubusercontent.com/render/math?math=%5CLarge+%5Cdisplaystyle+E_n%3D%28GDP_n+%2B+TPS_n%29+%2A%28%5Cfrac%7B1%7D2%29%5E%7BINT%28log_2n%29%7D%2C+for%5C+n+%3E+7)
 
 Where, 
 
-*   ![E_n=N^{th}](https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+E_n%3DN%5E%7Bth%7D) year emission
-*   ![GDP_n= N^{th}](https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+GDP_n%3D+N%5E%7Bth%7D) year Global GDP divided by 100K (Rounded off to Millions)
-*   ![TPS_n=N^{th}](https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+TPS_n%3DN%5E%7Bth%7D) year Xank network transactions per second
-*   ![INT()=](https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+INT%28%29%3D) Integer-valued function which takes integer part of the given number 
+*   ![E_n=N^{th}](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+E_n%3DN%5E%7Bth%7D) year emission
+*   ![GDP_n= N^{th}](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+GDP_n%3D+N%5E%7Bth%7D) year Global GDP divided by 100K (Rounded off to Millions)
+*   ![TPS_n=N^{th}](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+TPS_n%3DN%5E%7Bth%7D) year Xank network transactions per second
+*   ![INT()=](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+INT%28%29%3D) Integer-valued function which takes integer part of the given number 
     *   For instance 
-        *   ![INT(1.1)=1](https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+INT%281.1%29%3D1) 
-        *   ![INT(2)=2](https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+INT%282%29%3D2) 
-        *   ![INT(\sqrt2)=INT(1.414\.\.\.)=1](https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+INT%28%5Csqrt2%29%3DINT%281.414%5C.%5C.%5C.%29%3D1) 
-        *   ![log_23\approxeq1.58496](https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+log_23%5Capproxeq1.58496) so that ![INT(log_2 3)=1](https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+INT%28log_2+3%29%3D1)
+        *   ![INT(1.1)=1](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+INT%281.1%29%3D1) 
+        *   ![INT(2)=2](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+INT%282%29%3D2) 
+        *   ![INT(\sqrt2)=INT(1.414\.\.\.)=1](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+INT%28%5Csqrt2%29%3DINT%281.414%5C.%5C.%5C.%29%3D1) 
+        *   ![log_23\approxeq1.58496](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+log_23%5Capproxeq1.58496) so that ![INT(log_2 3)=1](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+INT%28log_2+3%29%3D1)
 
 
 ![Figure 7](images/Xank-Final-Emission-for-100-years-en.png "Xank Final Emission for 100 years")
@@ -1028,31 +1027,30 @@ Where,
 
 The partial sum of the sequence is:
 
-![M_n=P+\sum^n_{k=1n} E_k](https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+M_n%3DP%2B%5Csum%5En_%7Bk%3D1n%7D+E_k)
+![M_n=P+\sum^n_{k=1n} E_k](https://render.githubusercontent.com/render/math?math=%5CLarge+%5Cdisplaystyle+M_n%3DP%2B%5Csum%5En_%7Bk%3D1n%7D+E_k)
 
-![M_n=P +\sum^n_{k=1} E_{340,000,000} , for\ n < = 7](https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+M_n%3DP+%2B%5Csum%5En_%7Bk%3D1%7D+E_%7B340%2C000%2C000%7D+%2C+for%5C+n+%3C+%3D+7)
+![M_n=P +\sum^n_{k=1} E_{340,000,000} , for\ n < = 7](https://render.githubusercontent.com/render/math?math=%5CLarge+%5Cdisplaystyle+M_n%3DP+%2B%5Csum%5En_%7Bk%3D1%7D+E_%7B340%2C000%2C000%7D+%2C+for%5C+n+%3C+%3D+7)
 
-![M_n=P+7*340,000,000 +\sum_{k=8}^n E_k , for\ n > 7](https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+M_n%3DP%2B7%2A340%2C000%2C000+%2B%5Csum_%7Bk%3D8%7D%5En+E_k+%2C+for%5C+n+%3E+7)
+![M_n=P+7*340,000,000 +\sum_{k=8}^n E_k , for\ n > 7](https://render.githubusercontent.com/render/math?math=%5CLarge+%5Cdisplaystyle+M_n%3DP%2B7%2A340%2C000%2C000+%2B%5Csum_%7Bk%3D8%7D%5En+E_k+%2C+for%5C+n+%3E+7)
 
 
 Where,
 
-*   ![M_n=](https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+M_n%3D)Total summation of money supply up to the ![n^{th}](https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+n%5E%7Bth%7D) year
-*   ![P=1](https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+P%3D1) billion (Pre-mined coins.)
+*   ![M_n=](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+M_n%3D)Total summation of money supply up to the ![n^{th}](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+n%5E%7Bth%7D) year
+*   ![P=1](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+P%3D1) billion (Pre-mined coins.)
 
-Mathematically it is easy to prove ![E_n](https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+E_n) converges to zero, but ![M_n](https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+M_n) diverges infinitely.
+Mathematically it is easy to prove ![E_n](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+E_n) converges to zero, but ![M_n](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+M_n) diverges infinitely.
 
-![M_n=\infty\ where\ E_n=0](https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+M_n%3D%5Cinfty%5C+where%5C+E_n%3D0)
+![M_n=\infty\ where\ E_n=0](https://render.githubusercontent.com/render/math?math=%5CLarge+%5Cdisplaystyle+M_n%3D%5Cinfty%5C+where%5C+E_n%3D0)
 
 
 
 Proof: 
 
-1. if ![n&#8594; \infty](https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+n%26%238594%3B+%5Cinfty), then  ![log_2n&#8594; \infty](https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+log_2n%26%238594%3B+%5Cinfty)also ![INT(log_2n) &#8594; \infty](https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+INT%28log_2n%29+%26%238594%3B+%5Cinfty) so that ![(\frac1 2)&#8594;0, E_n=0](https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+%28%5Cfrac1+2%29%26%238594%3B0%2C+E_n%3D0)
-2. Since ![INT()](https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+INT%28%29) function takes the integer part of the given numbers so that ![INT(log_2n)\leq{log_2n}](https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+INT%28log_2n%29%5Cleq%7Blog_2n%7D) is always true, therefore the following is also true. ![(\frac1 2)^{log_2n} \leq (\frac1 2)^{INT(log_2n)}](https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+%28%5Cfrac1+2%29%5E%7Blog_2n%7D+%5Cleq+%28%5Cfrac1+2%29%5E%7BINT%28log_2n%29%7D) from the definition of the logarithm  an![(\frac1 2)^{log_2n}=\frac1 n](https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+%28%5Cfrac1+2%29%5E%7Blog_2n%7D%3D%5Cfrac1+n)d the above relation we can see that ![\frac1n \leq (\frac1 2)^{INT(log_2n)}](https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+%5Cfrac1n+%5Cleq+%28%5Cfrac1+2%29%5E%7BINT%28log_2n%29%7D) using integral test![\int_{1}^{\infty}\frac1x dx \leq \int_{1}^{\infty}(\frac1 2)^{INT(log_2x)}dx, \int_{1}^{\infty}\frac1x dx =(1n(x))^\infty_1 =\infty \leq \int_{1}^{\infty}(\frac1 2)^{INT(log_2x)}dx
-   ](https://render.githubusercontent.com/render/math?math=%5Clarge+%5Ctextstyle+%5Cint_%7B1%7D%5E%7B%5Cinfty%7D%5Cfrac1x+dx+%5Cleq+%5Cint_%7B1%7D%5E%7B%5Cinfty%7D%28%5Cfrac1+2%29%5E%7BINT%28log_2x%29%7Ddx%2C+%5Cint_%7B1%7D%5E%7B%5Cinfty%7D%5Cfrac1x+dx+%3D%281n%28x%29%29%5E%5Cinfty_1+%3D%5Cinfty+%5Cleq+%5Cint_%7B1%7D%5E%7B%5Cinfty%7D%28%5Cfrac1+2%29%5E%7BINT%28log_2x%29%7Ddx%0A) 
+1. If ![n&#8594; \infty](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+n%26%238594%3B+%5Cinfty), then  ![log_2n&#8594; \infty](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+log_2n%26%238594%3B+%5Cinfty)also ![INT(log_2n) &#8594; \infty](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+INT%28log_2n%29+%26%238594%3B+%5Cinfty) so that ![(\frac1 2)&#8594;0, E_n=0](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+%28%5Cfrac1+2%29%26%238594%3B0%2C+E_n%3D0)
+2. Since ![INT()](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+INT%28%29) function takes the integer part of the given numbers so that ![INT(log_2n)\leq{log_2n}](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+INT%28log_2n%29%5Cleq%7Blog_2n%7D) is always true, therefore the following is also true. ![(\frac1 2)^{log_2n} \leq (\frac1 2)^{INT(log_2n)}](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+%28%5Cfrac1+2%29%5E%7Blog_2n%7D+%5Cleq+%28%5Cfrac1+2%29%5E%7BINT%28log_2n%29%7D) from the definition of the logarithm  an![(\frac1 2)^{log_2n}=\frac1 n](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+%28%5Cfrac1+2%29%5E%7Blog_2n%7D%3D%5Cfrac1+n)d the above relation we can see that ![\frac1n \leq (\frac1 2)^{INT(log_2n)}](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+%5Cfrac1n+%5Cleq+%28%5Cfrac1+2%29%5E%7BINT%28log_2n%29%7D) using integral test![\int_{1}^{\infty}\frac1x dx \leq \int_{1}^{\infty}(\frac1 2)^{INT(log_2x)}dx, \int_{1}^{\infty}\frac1x dx =(1n(x))^\infty_1 =\infty \leq \int_{1}^{\infty}(\frac1 2)^{INT(log_2x)}dx](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+%5Cint_%7B1%7D%5E%7B%5Cinfty%7D%5Cfrac1x+dx+%5Cleq+%5Cint_%7B1%7D%5E%7B%5Cinfty%7D%28%5Cfrac1+2%29%5E%7BINT%28log_2x%29%7Ddx%2C+%5Cint_%7B1%7D%5E%7B%5Cinfty%7D%5Cfrac1x+dx+%3D%281n%28x%29%29%5E%5Cinfty_1+%3D%5Cinfty+%5Cleq+%5Cint_%7B1%7D%5E%7B%5Cinfty%7D%28%5Cfrac1+2%29%5E%7BINT%28log_2x%29%7Ddx) 
 
-By the theorem of the integral test, since the integral on the left side diverges, the series on the right side also diverges. Hence ![M_n=\infty](https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+M_n%3D%5Cinfty) 
+By the theorem of the integral test, since the integral on the left side diverges, the series on the right side also diverges. Hence ![M_n=\infty](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+M_n%3D%5Cinfty) 
 
 Proof end.
 
@@ -1060,7 +1058,7 @@ Proof end.
 
 Using the above equation, money supply for 100 years can be calculated by substituting _n_ to 100. 
 
-![M_{100}=P+7*340,000,000 +\sum_{n=8}^{100}(GDP_n + TPS_n) * (\frac1 2)^{INT(log_2n)}](https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+M_%7B100%7D%3DP%2B7%2A340%2C000%2C000+%2B%5Csum_%7Bn%3D8%7D%5E%7B100%7D%28GDP_n+%2B+TPS_n%29+%2A+%28%5Cfrac1+2%29%5E%7BINT%28log_2n%29%7D)
+![M_{100}=P+7*340,000,000 +\sum_{n=8}^{100}(GDP_n + TPS_n) * (\frac1 2)^{INT(log_2n)}](https://render.githubusercontent.com/render/math?math=%5CLarge+%5Cdisplaystyle+M_%7B100%7D%3DP%2B7%2A340%2C000%2C000+%2B%5Csum_%7Bn%3D8%7D%5E%7B100%7D%28GDP_n+%2B+TPS_n%29+%2A+%28%5Cfrac1+2%29%5E%7BINT%28log_2n%29%7D)
 
 
 ![Figure 8](images/Xank-Money-Supply-for-100-years-en.png "Xank Money Supply for 100 years")
@@ -1068,9 +1066,9 @@ Using the above equation, money supply for 100 years can be calculated by substi
 <div align="center"><strong>Figure 8</strong>: Xank Money Supply for 100 years</div>
 
 
-We have not set a maximum coin supply and the amount of Xank emitted in a year depends on the GDP and TPS of that respective year.  The emission volume, per year, is reduced by ![(GDP_n + TPS_n)](https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+%28GDP_n+%2B+TPS_n%29) times every ![2_n](https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+2_n) years. 
+We have not set a maximum coin supply and the amount of Xank emitted in a year depends on the GDP and TPS of that respective year.  The emission volume, per year, is reduced by ![(GDP_n + TPS_n)](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+%28GDP_n+%2B+TPS_n%29) times every ![2_n](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+2_n) years. 
 
-Eg: Considering current GDP and average TPS of 10, In the 4th logarithmic cycle(Year 8 -Year 15) 111.2M Xank is released,  in the 5th cycle(Year 16 - Year 31) 55.6M Xank and next cycle ![(GDP_n + TPS_n)](https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+%28GDP_n+%2B+TPS_n%29) each, and so on. In this distribution formula, it is self-evident that the summation of coins in the 2n period is always equal to the average value of ![(GDP_n + TPS_n)](https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+%28GDP_n+%2B+TPS_n%29) over the period. So the coin issue rate converges to zero, but the sum of them diverges infinitely.
+E.g.: Considering current GDP and average TPS of 10, In the 4th logarithmic cycle(Year 8 -Year 15) 111.2M Xank is released,  in the 5th cycle(Year 16 - Year 31) 55.6M Xank and next cycle ![(GDP_n + TPS_n)](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+%28GDP_n+%2B+TPS_n%29) each, and so on. In this distribution formula, it is self-evident that the summation of coins in the 2n period is always equal to the average value of ![(GDP_n + TPS_n)](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+%28GDP_n+%2B+TPS_n%29) over the period. So the coin issue rate converges to zero, but the sum of them diverges infinitely.
 
 
 ## **Xank Protocol Characteristics Comparison**
