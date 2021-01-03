@@ -982,7 +982,7 @@ Initially, there will be 1 billion Xank coins pre-mined that will be made availa
 
 In our initial design, a binary logarithmic emission based on the initial year issuance(800m) was used, where the supply will double in 1.5 years, triple by the fifth year, quadruple by the thirteenth year, and quintuple by the thirty-first year; and so on. 
 
-Emission volume is reduced by half every 2n years.  For example, the 1st year 800M, the next two years 400M each year, and the next 4 years 200M each, and so on. In this distribution formula, it is self-evident that the summation of coins in the 2n period always becomes 800M. So the coin issue rate converges to zero, but the sum of them diverges infinitely.
+Emission volume is reduced by half every ![2_n](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+2_n) years.  For example, the 1st year 800M, the next two years 400M each year, and the next 4 years 200M each, and so on. In this distribution formula, it is self-evident that the summation of coins in the ![2_n](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+2_n) period always becomes 800M. So the coin issue rate converges to zero, but the sum of them diverges infinitely.
 
 #### Current Design 
 
@@ -1067,7 +1067,7 @@ Using the above equation, money supply for 100 years can be calculated by substi
 
 We have not set a maximum coin supply and the amount of Xank emitted in a year depends on the GDP and TPS of that respective year.  The emission volume, per year, is reduced by ![(GDP_n + TPS_n)](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+%28GDP_n+%2B+TPS_n%29) times every ![2_n](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+2_n) years. 
 
-E.g.: Considering current GDP and average TPS of 10, In the 4th logarithmic cycle(Year 8 -Year 15) 111.2M Xank is released,  in the 5th cycle(Year 16 - Year 31) 55.6M Xank and next cycle ![(GDP_n + TPS_n)](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+%28GDP_n+%2B+TPS_n%29) each, and so on. In this distribution formula, it is self-evident that the summation of coins in the 2n period is always equal to the average value of ![(GDP_n + TPS_n)](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+%28GDP_n+%2B+TPS_n%29) over the period. So the coin issue rate converges to zero, but the sum of them diverges infinitely.
+E.g.: Considering current GDP and average TPS of 10, In the 4th logarithmic cycle(Year 8 -Year 15) 111.2M Xank is released,  in the 5th cycle(Year 16 - Year 31) 55.6M Xank and next cycle ![(GDP_n + TPS_n)](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+%28GDP_n+%2B+TPS_n%29) each, and so on. In this distribution formula, it is self-evident that the summation of coins in the ![2_n](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+2_n) period is always equal to the average value of ![(GDP_n + TPS_n)](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+%28GDP_n+%2B+TPS_n%29) over the period. So the coin issue rate converges to zero, but the sum of them diverges infinitely.
 
 
 ## **Xank Protocol Characteristics Comparison**
