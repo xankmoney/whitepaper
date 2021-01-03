@@ -1179,7 +1179,7 @@ Bitcoin Cash and Avalanche Video:
     https://www.imf.org/external/np/exr/facts/sdrcb.htm 
 
 <b id="f5">5</b>:How a meritocratic governance system and the implementation of its key principles and components were intricate to the success of the Bridgewater venture. [↩](#a5)
-    https://www.linkedin.com/pulse/key-bridgewaters-success-real-idea-meritocracy-ray-dalio
+    https://qz.com/1071749/bridgewater-associates-ceo-ray-dalio-explains-the-dot-collector-feedback-tool-his-company-uses-to-rate-employees/
 
 <b id="f6">6</b>:Seeing as the SDR rate is measured against a basket of weighted currencies and is announced and published by the IMF on its website. [↩](#a6)
     https://www.imf.org/external/np/fin/data/rms_sdrv.aspx
