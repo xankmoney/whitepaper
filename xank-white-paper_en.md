@@ -72,7 +72,7 @@ We propose Xank, a cryptocurrency that utilizes a soft price pegging mechanism t
       - [<span style="text-decoration:underline;">SDR and Currency Feeds</span>](#sdr-and-currency-feeds)
       - [<span style="text-decoration:underline;">Oracle System</span>](#oracle-system)
       - [<span style="text-decoration:underline;">Oracle Feed Redundancy</span>](#oracle-feed-redundancy)
-    + [Stable/Local Pay Transaction Lifecycle](#stablelocal-pay-transaction-lifecycle)
+    + [Stable Pay (or Local Pay) Transaction Lifecycle](#stable-pay-or-local-pay-transaction-lifecycle)
     + [Xank Multi-currency Support](#xank-multi-currency-support)
     + [Extreme Volatility Safeguard (EVS) Price Floor Mechanism](#extreme-volatility-safeguard-evs-price-floor-mechanism)
     + [Atomic Swap Basket](#atomic-swap-basket)
@@ -114,7 +114,7 @@ We propose Xank, a cryptocurrency that utilizes a soft price pegging mechanism t
 
 # Introduction
 
-Cryptocurrencies have not been embraced by the market for use in typical transactional scenarios. Traditional cryptocurrencies like Bitcoin and Ethereum are not able to scale to meet potential market demands. Cryptocurrencies that have difficulties scaling result in increased user transactional costs for entering their transactions in cumbersome blockchains. The latest breed of cryptocurrencies such as Dash and Bitcoin Cash make claims of being able to confirm transactions in under a second while also allowing for a higher transaction throughput per second along with cheap and declining transaction fees. These claims are particularly attractive to merchants who show a preference to cash over dealing with credit card fees. As cryptocurrencies are immune to chargebacks, it should only follow that merchants prefer cryptocurrencies that can perform as cash. 
+Cryptocurrencies have not been embraced by the market for use in typical transactional scenarios. Traditional cryptocurrencies like Bitcoin and Ethereum are not able to scale to meet potential market demands. Cryptocurrencies that have difficulties scaling result in increased user transactional costs for entering their transactions in cumbersome blockchains. The latest breed of cryptocurrencies such as Avalanche and Cosmos make claims of being able to confirm transactions in under a few seconds while also allowing for a higher transaction throughput per second along with cheap and declining transaction fees. These claims are particularly attractive to merchants who show a preference for cash over dealing with credit card fees. As cryptocurrencies are immune to chargebacks, it should only follow that merchants prefer cryptocurrencies that can perform as cash. 
 
 For merchants that already accept payments in cryptocurrencies, it is typical for them to immediately use a crypto-to fiat merchant service to convert their cryptocurrencies to fiat with some services able to achieve real-time conversions at the time of sale. Merchants typically convert back to fiat as they are in the business of providing goods and services to their customers and are not in the business of speculating on the price of cryptocurrencies or any other price volatile assets like gold. It is not uncommon for a cryptocurrency to experience a 50% price drop in a day, and this price drop can often carry on over a period of weeks, which is not merchant friendly as it can wipe out any profits as the costs and prices of merchants’ goods and services are usually static in fiat denominated terms.
 
@@ -146,10 +146,10 @@ _Leaderless Consensus_
 
 Avalanche follows these four basic protocols to achieve consensus:
 
-1. Slush: Metastability —> A node initiates a query to its peers and based on the response of other nodes (red or blue), the node updates its color to the one selected by the majority of its peers. As nodes perform such queries, the network will tip towards red or blue. 
-2. Snowflake: Byzantine fault-tolerance (BFT) —> Byzantine fault-tolerance is achieved by a counter that captures the strength of a node’s conviction. The counter goes up every time there is a successful query that indicates that the response is the same color as the node’s original color.
-3. Snowball: Boosting confidence —> Because Snowflake resets a node’s counter with each color flip, Snowball adds confidence counters that record the number of queries that have given a threshold result for their corresponding color. With every successful query, the node increments its confidence counter for that color. After a certain number of consecutive queries, a node switches colors if the confidence counter exceeds or falls below the other color.
-4. Avalanche: DAG —> Finally, a dynamic append-only Directed Acyclic Graph (DAG) with all known transactions is added for efficiency and security. 
+1. Slush: Metastability → A node initiates a query to its peers and based on the response of other nodes (red or blue), the node updates its color to the one selected by the majority of its peers. As nodes perform such queries, the network will tip towards red or blue. 
+2. Snowflake: Byzantine fault-tolerance (BFT) → Byzantine fault-tolerance is achieved by a counter that captures the strength of a node’s conviction. The counter goes up every time there is a successful query that indicates that the response is the same color as the node’s original color.
+3. Snowball: Boosting confidence → Because Snowflake resets a node’s counter with each color flip, Snowball adds confidence counters that record the number of queries that have given a threshold result for their corresponding color. With every successful query, the node increments its confidence counter for that color. After a certain number of consecutive queries, a node switches colors if the confidence counter exceeds or falls below the other color.
+4. Avalanche: DAG → Finally, a dynamic append-only Directed Acyclic Graph (DAG) with all known transactions is added for efficiency and security. 
 
 While Proof-of-Work or Proof-of-Stake elect one validator for block creation, Avalanche does not need to elect a leader in any form for consensus. Rather, the protocol, metastable by nature, is designed to tip one way or the other, steering all nodes to consensus. With no miners, delegates, or privileged nodes, Avalanche protocol yields an egalitarian network of equal-standing nodes. Thus, the protocol is inherently independent of a central figure or major player in the network. All nodes contribute equally to reaching consensus.
 
@@ -163,9 +163,9 @@ In addition to the element of decentralization, Avalanche provides several addit
 *   EOS — 50 transactions per second
 *   VISA — 2,000 transactions per second
 *   PayPal — 193 transactions per second
-*   Avalanche — 6,500 transactions per second (1,000 nodes hosted on AWS)
+*   Avalanche — 4,500 transactions per second (1,000 nodes hosted on AWS)
 
-As Xank becomes more widely adopted and used for various purposes, the number of transactions will naturally increase, and the Xank network will need the capacity to handle a growing number of transactions. Avalanche, which reached 6,500 transactions per second on a test network of 1,000 nodes and stabilized at 5,000 transactions per second<sup id="a2">[2](#f2)</sup>, has exhibited the ability to handle far more transactions per second than its predecessors. Therefore, Avalanche protocol is the optimal solution for a cryptocurrency like Xank, which will require both high throughput and scalability to function as a truly usable cryptocurrency.
+As Xank becomes more widely adopted and used for various purposes, the number of transactions will naturally increase, and the Xank network will need the capacity to handle a growing number of transactions. Avalanche, which reached 6,500 transactions per second on a test network of 1,000 nodes and stabilized at 4,500 transactions per second<sup id="a2">[2](#f2)</sup>, has exhibited the ability to handle far more transactions per second than its predecessors. Therefore, Avalanche protocol is the optimal solution for a cryptocurrency like Xank, which will require both high throughput and scalability to function as a truly usable cryptocurrency.
 
 _Environment-friendly_
 
