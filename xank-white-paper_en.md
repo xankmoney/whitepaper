@@ -346,7 +346,7 @@ If Alice decides to use the Xank Stable Pay (or Local Pay) feature to send $100.
 
 ### Stable Pay Functionality
 
-This protocol function described in the above scenarios is called Stable Pay and is an optional function. This means that the sender and receiver can mutually decide if they want to use the protocol for a stable transaction that is tracked to an underlying soft peg or alternatively decide to do a raw XANK coin transaction that is not pegged to an underlying asset.
+This protocol function described in the above scenarios is called Stable Pay and is an optional function. This means that the sender and receiver can mutually decide if they want to use the protocol for a stable transaction that is tracked to an underlying soft peg or alternatively decide to do a raw XANK coin transaction that is not pegged to an underlying asset. The Stable Pay works very similarly to how the FX forward contract works in the real world without an end date to mitigate any currency fluctuations when trading internationally. We want to bring this valuable service to the cryptocurrency level and remove the high costs associated with it.
 
 
 ### Local Pay Functionality
@@ -911,23 +911,23 @@ Carbon is a seigniorage shares style stablecoin that emerged in early 2018 with 
 Xank has a metric system of denominations used as units of Xank. Each denomination has its own unique name. The smallest denomination aka base unit of Xank is called a Ryu. Below is a list of the named denominations and their value in Ryu. Following a common pattern, Xank also designates a unit (of 1e16 or ten quadrillions Ryu) of the currency. 
 | Unit | Ryu                    | Symbol | Xank               | Symbol | Ryu Value |
 | ---- | ---------------------- | ------ | ------------------ | ------ | --------- |
-| Ryu  | 1                      | 𝔯 =    | 0.0000000000000001 | 𝔛      | 1 𝔯       |
-|      | 10                     | 𝔯 =    | 0.000000000000001  | 𝔛      | 1e1 𝔯     |
-|      | 100                    | 𝔯 =    | 0.00000000000001   | 𝔛      | 1e2 𝔯     |
-| Kryu | 1,000                  | 𝔯 =    | 0.0000000000001    | 𝔛      | 1e3 𝔯     |
-|      | 10,000                 | 𝔯 =    | 0.000000000001     | 𝔛      | 1e4 𝔯     |
-|      | 100,000                | 𝔯 =    | 0.00000000001      | 𝔛      | 1e5 𝔯     |
-| Mryu | 1,000,000              | 𝔯 =    | 0.0000000001       | 𝔛      | 1e6 𝔯     |
-|      | 10,000,000             | 𝔯 =    | 0.000000001        | 𝔛      | 1e7 𝔯     |
-|      | 100,000,000            | 𝔯 =    | 0.00000001         | 𝔛      | 1e8 𝔯     |
-| Bryu | 1,000,000,000          | 𝔯 =    | 0.0000001          | 𝔛      | 1e9 𝔯     |
-|      | 10,000,000,000         | 𝔯 =    | 0.000001           | 𝔛      | 1e10 𝔯    |
-|      | 100,000,000,000        | 𝔯 =    | 0.00001            | 𝔛      | 1e11 𝔯    |
-| Tryu | 1,000,000,000,000      | 𝔯 =    | 0.0001             | 𝔛      | 1e12 𝔯    |
-|      | 10,000,000,000,000     | 𝔯 =    | 0.001              | 𝔛      | 1e13 𝔯    |
-|      | 100,000,000,000,000    | 𝔯 =    | 0.01               | 𝔛      | 1e14 𝔯    |
-| Qryu | 1,000,000,000,000,000  | 𝔯 =    | 0.1                | 𝔛      | 1e15 𝔯    |
-| Xank | 10,000,000,000,000,000 | 𝔯 =    | 1                  | 𝔛      | 1e16 𝔯    |
+| Ryu  | 1                      | 𝔯      | 0.0000000000000001 | 𝔛      | 1 𝔯       |
+|      | 10                     | 𝔯      | 0.000000000000001  | 𝔛      | 1e1 𝔯     |
+|      | 100                    | 𝔯      | 0.00000000000001   | 𝔛      | 1e2 𝔯     |
+| Kryu | 1,000                  | 𝔯      | 0.0000000000001    | 𝔛      | 1e3 𝔯     |
+|      | 10,000                 | 𝔯      | 0.000000000001     | 𝔛      | 1e4 𝔯     |
+|      | 100,000                | 𝔯      | 0.00000000001      | 𝔛      | 1e5 𝔯     |
+| Mryu | 1,000,000              | 𝔯      | 0.0000000001       | 𝔛      | 1e6 𝔯     |
+|      | 10,000,000             | 𝔯      | 0.000000001        | 𝔛      | 1e7 𝔯     |
+|      | 100,000,000            | 𝔯      | 0.00000001         | 𝔛      | 1e8 𝔯     |
+| Bryu | 1,000,000,000          | 𝔯      | 0.0000001          | 𝔛      | 1e9 𝔯     |
+|      | 10,000,000,000         | 𝔯      | 0.000001           | 𝔛      | 1e10 𝔯    |
+|      | 100,000,000,000        | 𝔯      | 0.00001            | 𝔛      | 1e11 𝔯    |
+| Tryu | 1,000,000,000,000      | 𝔯      | 0.0001             | 𝔛      | 1e12 𝔯    |
+|      | 10,000,000,000,000     | 𝔯      | 0.001              | 𝔛      | 1e13 𝔯    |
+|      | 100,000,000,000,000    | 𝔯      | 0.01               | 𝔛      | 1e14 𝔯    |
+| Qryu | 1,000,000,000,000,000  | 𝔯      | 0.1                | 𝔛      | 1e15 𝔯    |
+| Xank | 10,000,000,000,000,000 | 𝔯      | 1                  | 𝔛      | 1e16 𝔯    |
 
 
 ## XANK Coin Supply Algorithm
@@ -1007,13 +1007,13 @@ Hence we define the general term for Xank emission per year as,
 
 ![E_n=(GDP_n + TPS_n) *(\frac{1}2)^{INT(log_2n)}, for\ n > 7](https://render.githubusercontent.com/render/math?math=%5CLarge+%5Cdisplaystyle+E_n%3D%28GDP_n+%2B+TPS_n%29+%2A%28%5Cfrac%7B1%7D2%29%5E%7BINT%28log_2n%29%7D%2C+for%5C+n+%3E+7)
 
-Where, 
+where, 
 
 *   ![E_n=N^{th}](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+E_n%3DN%5E%7Bth%7D) year emission
 *   ![GDP_n= N^{th}](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+GDP_n%3D+N%5E%7Bth%7D) year Global GDP divided by 100K (Rounded off to Millions)
 *   ![TPS_n=N^{th}](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+TPS_n%3DN%5E%7Bth%7D) year Xank network transactions per second
-*   ![INT()=](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+INT%28%29%3D) Integer-valued function which takes integer part of the given number 
-    *   For instance 
+*   ![INT()=](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+INT%28%29%3D) integer-valued function which takes integer part of the given number 
+    *   for instance 
         *   ![INT(1.1)=1](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+INT%281.1%29%3D1) 
         *   ![INT(2)=2](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+INT%282%29%3D2) 
         *   ![INT(\sqrt2)=INT(1.414\.\.\.)=1](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+INT%28%5Csqrt2%29%3DINT%281.414%5C.%5C.%5C.%29%3D1) 
@@ -1033,10 +1033,12 @@ The partial sum of the sequence is:
 ![M_n=P+7*340,000,000 +\sum_{k=8}^n E_k , for\ n > 7](https://render.githubusercontent.com/render/math?math=%5CLarge+%5Cdisplaystyle+M_n%3DP%2B7%2A340%2C000%2C000+%2B%5Csum_%7Bk%3D8%7D%5En+E_k+%2C+for%5C+n+%3E+7)
 
 
-Where,
+where,
 
 *   ![M_n=](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+M_n%3D)Total summation of money supply up to the ![n^{th}](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+n%5E%7Bth%7D) year
 *   ![P=1](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+P%3D1) billion (Pre-mined coins.)
+
+
 
 Mathematically it is easy to prove ![E_n](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+E_n) converges to zero, but ![M_n](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+M_n) diverges infinitely.
 
