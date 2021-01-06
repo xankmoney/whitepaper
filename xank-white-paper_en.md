@@ -1105,6 +1105,7 @@ To gain a better understanding of how the Xank network will work, it can be usef
 | Bitcoin            |     ✕     |      ✕      |    ✕    |     ✕      |
 | BitShares (BitUSD) |     ✓     |      ✕      |    ✕    |     ✕      |
 | Carbon             |     ✓     |      ✕      |    ✕    |     ✕      |
+| Cosmos             |     ✕     |      ✕      |    ✕    |     ✓      |
 | Dash               |     ✕     |      ✕      |    △    |     ✓      |
 | Digix (DGX)        |     ✓     |      ✕      |    ✕    |     ✕      |
 | EOS                |     ✕     |      ✕      |    ✕    |     ✓      |
@@ -1113,10 +1114,10 @@ To gain a better understanding of how the Xank network will work, it can be usef
 | Maker (DAI)        |     ✓     |      ✕      |    ✕    |     ✕      |
 | Monero             |     ✕     |      ✕      |    △    |     ✕      |
 | Pivx               |     ✕     |      ✕      |    △    |     ✓      |
+| Polkadot           |     ✕     |      ✕      |    ✕    |     ✓      |
 | XRP                |     ✕     |      ✕      |    ✕    |     ✕      |
 | Saga               |     ✓     |      ✕      |    ✕    |     ✕      |
 | Synthetix          |     ✓     |      ✕      |    ✕    |     ✓      |
-| Tendermint         |     ✕     |      ✕      |    ✕    |     ✓      |
 | Terra              |     ✓     |      ✕      |    ✕    |     ✓      |
 | Tether             |     ✓     |      ✕      |    ✕    |     ✕      |
 | Xank               |     ✓     |      ✓      |    ✓    |     ✓      |
