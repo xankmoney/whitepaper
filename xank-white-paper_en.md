@@ -525,7 +525,7 @@ SDR: Special drawing rights (ISO 4217 currency code XDR) are supplementary forei
 
 <div align="center"><strong>Figure 5</strong>: Extreme Volatility Safeguard (EVS) Price Floor Mechanism</div>
 
-The Xank Treasury has a minimum limit set to 5% of the total circulating supply of Xank. Therefore when the Xank Treasury falls beneath that level, it algorithmically stops any more funding. Because of how Stable Pay operates, the equilibrium state of the Xank Reserve is expected to retain 15% of the total circulating supply of Xank at all times. When extreme volatility hits, the first level of EVS is set at 50% price drop in a single day. When that happens, the Xank Reserve will automatically pull the escrow funds preserved in the Xank Treasury. The second level of EVS is set at 70% price drop in a single day. When that happens, the Xank Reserve will pull the escrow funds engaged in Xank Governors’ masternode collaterals automatically. The third level of EVS is set at 90% price drop in a single day. When that happens, the Xank Reserve will pull the escrow funds engaged in Xank Citizens’ staking collaterals automatically. On top of these measures, 30% of the Xank Reserve Pool will at all times be atomically swapped with five cryptocurrencies with a low or negative correlation to Xank in prorated percentages reviewed every year as an extra safety net. When volatility subsides and normal times return, all escrow collaterals from Xank Citizens will be returned first, and all escrow collaterals from Xank Governors will be subsequently returned.
+The Xank Treasury has a minimum limit set to 5% of the total coin supply of Xank. Therefore when the Xank Treasury falls beneath that level, it algorithmically stops any more funding. Because of how Stable Pay operates, the equilibrium state of the Xank Reserve is expected to retain 15% of the total coin supply of Xank at all times. When extreme volatility hits, the first level of EVS is set at 50% price drop in a single day. When that happens, the Xank Reserve will automatically pull the escrow funds preserved in the Xank Treasury. The second level of EVS is set at 70% price drop in a single day. When that happens, the Xank Reserve will pull the escrow funds engaged in Xank Governors’ masternode collaterals automatically. The third level of EVS is set at 90% price drop in a single day. When that happens, the Xank Reserve will pull the escrow funds engaged in Xank Citizens’ staking collaterals automatically. On top of these measures, 30% of the Xank Reserve Pool will at all times be atomically swapped with five cryptocurrencies with a low or negative correlation to Xank in prorated percentages reviewed every quarter as an extra safety net. When volatility subsides and normal times return, all escrow collaterals from Xank Citizens will be returned first, and all escrow collaterals from Xank Governors will be subsequently returned.
 
 Hence we define the general term for Xank Reserve Pool as,
 
@@ -533,11 +533,11 @@ Hence we define the general term for Xank Reserve Pool as,
 
 where, 
 
-*   ![Rp=](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+Rp%3D)Xank Reserve Pool (Total of 30%)
-*   ![Xr = ](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+Xr+%3D+)Xank Reserve (15% of Circulating Supply)
-*   ![Te = ](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+Te+%3D+)Xank Treasury Escrow (5% of Circulating Supply)
-*   ![Ge = ](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+Ge+%3D+)Xank Governors’ Escrow (5% of Circulating Supply)
-*   ![Ce = ](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+Ce+%3D+)Xank Citizens’ Escrow (5% of Circulating Supply)
+*   ![Rp=](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+Rp%3D)Xank Reserve Pool (30% of Total Coin Supply)
+*   ![Xr = ](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+Xr+%3D+)Xank Reserve (15% of Total Coin Supply)
+*   ![Te = ](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+Te+%3D+)Xank Treasury Escrow (5% of Total Coin Supply)
+*   ![Ge = ](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+Ge+%3D+)Xank Governors’ Escrow (5% of Total Coin Supply)
+*   ![Ce = ](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+Ce+%3D+)Xank Citizens’ Escrow (5% of Total Coin Supply)
 
 
 ### Atomic Swap Basket
@@ -559,8 +559,8 @@ Hence we define the general term for Xank Atomic Swap Basket as,
 where, 
 
 *   ![Sb = ](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+Sb+%3D+)Xank Atomic Swap Basket
-*   ![Rp=](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+Rp%3D)Xank Reserve Pool (Total of 30%)
-*   ![Xs = ](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+Xs+%3D+)Xank Total Coin Supply
+*   ![Rp=](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+Rp%3D)Xank Reserve Pool
+*   ![Xs = ](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+Xs+%3D+)Xank Total Coin Supply or ![M_n](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+M_n)
 
 
 ### Idea Meritocracy Governance
