@@ -1092,11 +1092,11 @@ E.g.: Considering current GDP and average TPS of 10, In the 4th logarithmic cycl
 
 ## **Xank Protocol Characteristics Comparison**
 
-To gain a better understanding of how the Xank network will work, it can be useful to compare the network’s characteristics against those of other cryptocurrency networks. The following metrics have been used in the comparison:
+Xank aims to solve the Cryptocurrency Quadrilemma: price stability, fee consistency, auditable privacy, and distributed governance to become a true medium of exchange cryptocurrency. To gain a better understanding of how the Xank network will work, it can be useful to compare the network’s characteristics against those of other cryptocurrency networks. The following metrics have been used in the comparison:
 
 *   **Stability** - can the network achieve price stability, either through network design or price stabilizing features?
 *   **Consistency** - can the network achieve transaction fee consistency, either through network design or fee stabilizing features?
-*   **Privacy** - are network users given the right tools to achieve adequate levels of anonymity and fungibility?
+*   **Privacy** - are network users given the right tools to achieve adequate levels of anonymity and fungibility while preserving public auditability?
 *   **Governance** - can the network’s governance remain independent from coercion and collusion by central authorities or major stakeholders?
 
 | Cryptocurrency     | Stability | Consistency | Privacy | Governance |
