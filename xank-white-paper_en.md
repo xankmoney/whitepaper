@@ -536,8 +536,8 @@ where,
 *   ![Rp=](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+Rp%3D)Xank Reserve Pool (30% of Total Coin Supply)
 *   ![Xr = ](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+Xr+%3D+)Xank Reserve (15% of Total Coin Supply)
 *   ![Te = ](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+Te+%3D+)Xank Treasury Escrow (5% of Total Coin Supply)
-*   ![Ge = ](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+Ge+%3D+)Xank Governors’ Escrow (5% of Total Coin Supply)
-*   ![Ce = ](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+Ce+%3D+)Xank Citizens’ Escrow (5% of Total Coin Supply)
+*   ![Ge = ](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+Ge+%3D+)Xank Governors Escrow (5% of Total Coin Supply)
+*   ![Ce = ](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+Ce+%3D+)Xank Citizens Escrow (5% of Total Coin Supply)
 
 
 ### Atomic Swap Basket
