@@ -527,7 +527,17 @@ SDR: Special drawing rights (ISO 4217 currency code XDR) are supplementary forei
 
 The Xank Treasury has a minimum limit set to 5% of the total circulating supply of Xank. Therefore when the Xank Treasury falls beneath that level, it algorithmically stops any more funding. Because of how Stable Pay operates, the equilibrium state of the Xank Reserve is expected to retain 15% of the total circulating supply of Xank at all times. When extreme volatility hits, the first level of EVS is set at 50% price drop in a single day. When that happens, the Xank Reserve will automatically pull the escrow funds preserved in the Xank Treasury. The second level of EVS is set at 70% price drop in a single day. When that happens, the Xank Reserve will pull the escrow funds engaged in Xank Governors’ masternode collaterals automatically. The third level of EVS is set at 90% price drop in a single day. When that happens, the Xank Reserve will pull the escrow funds engaged in Xank Citizens’ staking collaterals automatically. On top of these measures, 30% of the Xank Reserve Pool will at all times be atomically swapped with five cryptocurrencies with a low or negative correlation to Xank in prorated percentages reviewed every year as an extra safety net. When volatility subsides and normal times return, all escrow collaterals from Xank Citizens will be returned first, and all escrow collaterals from Xank Governors will be subsequently returned.
 
-> Xank Reserve Pool (Total of 30%) = Xank Reserve (15% of Circulating Supply) + Xank Treasury Escrow (5% of Circulating Supply) + Xank Governors’ Escrow (5% of Circulating Supply) + Xank Citizens’ Escrow (5% of Circulating Supply)
+Hence we define the general term for Xank Reserve Pool as,
+
+![Rp=Xr+Te+Ge+Ce](https://render.githubusercontent.com/render/math?math=%5CLarge+%5Cdisplaystyle+Rp%3DXr%2BTe%2BGe%2BCe)
+
+where, 
+
+*   ![Rp=](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+Rp%3D)Xank Reserve Pool (Total of 30%)
+*   ![Xr = ](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+Xr+%3D+)Xank Reserve (15% of Circulating Supply)
+*   ![Te = ](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+Te+%3D+)Xank Treasury Escrow (5% of Circulating Supply)
+*   ![Ge = ](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+Ge+%3D+)Xank Governors’ Escrow (5% of Circulating Supply)
+*   ![Ce = ](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+Ce+%3D+)Xank Citizens’ Escrow (5% of Circulating Supply)
 
 
 ### Atomic Swap Basket
@@ -542,7 +552,15 @@ The Atomic Swap Basket will be composed of tokenized assets and cryptocurrencies
 
 The composition and weighting of the Atomic Swap Basket will be voted on by Xank DAO quarterly. If Xank has a low correlation to BTC, we anticipate BTC to become a greater proportion within the basket. Tokenized commodities such as gold are currently not large enough to be included in the basket, but we hope to include commodities when liquidity is sufficient. 
 
-> Xank Atomic Swap Basket = Xank Reserve Pool 30% circulating supply x Atomic Swap Ratio 30% = 9% of Xank circulating value 
+Hence we define the general term for Xank Atomic Swap Basket as,
+
+![Sb = Rp*0.3 = Xs*0.09](https://render.githubusercontent.com/render/math?math=%5CLarge+%5Cdisplaystyle+Sb+%3D+Rp%2A0.3+%3D+Xs%2A0.09)
+
+where, 
+
+*   ![Sb = ](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+Sb+%3D+)Xank Atomic Swap Basket
+*   ![Rp=](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+Rp%3D)Xank Reserve Pool (Total of 30%)
+*   ![Xs = ](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+Xs+%3D+)Xank Total Coin Supply
 
 
 ### Idea Meritocracy Governance
