@@ -463,9 +463,9 @@ Similar to the SDR rate, the oracle will draw data from multiple exchanges, and 
 
 Let’s look at XDR/USD rate in the chart below. This should give you an idea of how the SDR rate (“XDR/USD Rate”) and the price of the XANK coin (“Xank Price in USD”) are used to calculate the Xank-XDR rate (“Xank Price in SDR”). Note that this local currency conversion takes place in the wallet and not in the protocol.
 
-|                       |    Close     | Price Increase |  Scenario   | Price Decrease |   Scenario   |
+|                       |  Transaction  | Price Increase |  Scenario   | Price Decrease |   Scenario   |
 | --------------------- | :----------: | :------------: | :---------: | :------------: | :----------: |
-|                       |              |  1 Year High   | 1 Year Low  |  1 Year High   |  1 Year Low  |
+|                       | Start |  1 Year High   | 1 Year Low  |  1 Year High   |  1 Year Low  |
 | XDR/USD Rate          |   1.38195    |    1.45998     |   1.37778   |    1.45998     |   1.37778    |
 | Xank Price in USD     |    \$10.00    |     \$20.00     |   \$20.00    |     \$5.00      |    \$5.00     |
 | Xank Price in XDR     |     7.24     |      13.7      |    14.52    |      3.42      |     3.63     |
@@ -598,7 +598,16 @@ The algorithm that allocates weighting for masternode voting powers will take ma
 
 ### Xank Budget Allocation
 
-Masternodes operators that have established their Self-sovereign Identity and have been awarded a weighted vote according to the Reputation Index criteria will be able to vote on network proposals. The total available budget of the network can be calculated by taking 15% of the block rewards over the period of time between two superblocks. Superblocks occur every 87,600 blocks, or approximately 30.41 days. A voting cutoff will occur prior to the superblock in order for the final votes to be tallied, and the results will be made available to the network so as all have time to prepare for the superblock event. A voting proposal must be formulated so that the resultant vote data can be presented as a boolean data type format where Yes/True = 1 and No/False = 0. Governors must also establish the desired funding amount, either as a total amount or a percentage of funds awarded between superblocks. 
+Masternodes operators that have established their Self-sovereign Identity and have been awarded a weighted vote according to the Reputation Index criteria will be able to vote on network proposals. The total available budget of the network can be calculated by taking 15% of the block rewards over the period of time between two superblocks. Superblocks occur every 87,600 blocks, or approximately 30.41 days. A voting cutoff will occur prior to the superblock in order for the final votes to be tallied, and the results will be made available to the network so as all have time to prepare for the superblock event. A voting proposal must be formulated so that the resultant vote data can be presented as a boolean data type format 
+
+where,![Yes/True = 1
+](https://render.githubusercontent.com/render/math?math=%5CLarge+%5Cdisplaystyle+Yes%2FTrue+%3D+1%0A)
+
+and 
+
+![No/False = 0](https://render.githubusercontent.com/render/math?math=%5CLarge+%5Cdisplaystyle+No%2FFalse+%3D+0)
+
+Governors must also establish the desired funding amount, either as a total amount or a percentage of funds awarded between superblocks. 
 
 A successful Yes vote will be indicated by the total number of weighted Yes votes being 50% or greater than the Total Voting Power allocated to the masternode network at that time. If multiple proposals are awarded funding rights, they will be ranked according to their voting margins and will receive a share of funding in proportion to their rank and voting margin up until the level of the entire budget being allocated or where all funding requests have been exhausted within budget. Any funds that remain after intra-superblock funding allocations will be deposited in the Xank Treasury and be made available for future funding proposals.
 
