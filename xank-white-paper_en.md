@@ -600,8 +600,9 @@ The algorithm that allocates weighting for masternode voting powers will take ma
 
 Masternodes operators that have established their Self-sovereign Identity and have been awarded a weighted vote according to the Reputation Index criteria will be able to vote on network proposals. The total available budget of the network can be calculated by taking 15% of the block rewards over the period of time between two superblocks. Superblocks occur every 87,600 blocks, or approximately 30.41 days. A voting cutoff will occur prior to the superblock in order for the final votes to be tallied, and the results will be made available to the network so as all have time to prepare for the superblock event. A voting proposal must be formulated so that the resultant vote data can be presented as a boolean data type format 
 
-where,![Yes/True = 1
-](https://render.githubusercontent.com/render/math?math=%5CLarge+%5Cdisplaystyle+Yes%2FTrue+%3D+1%0A)
+where,
+
+![Yes/True = 1](https://render.githubusercontent.com/render/math?math=%5CLarge+%5Cdisplaystyle+Yes%2FTrue+%3D+1%0A)
 
 and 
 
