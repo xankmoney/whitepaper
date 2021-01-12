@@ -780,6 +780,12 @@ The ultimate success of the Xank network can be measured by the degree to which 
 2. Inflation and Quantitative Easing
 3. Systemic Corruption
 
+**Abuse Clause** - efforts that aim to counter and curtail the abuse of:
+
+1. Human 
+2. Animal 
+3. Slaughter
+
 **Consumption Clause** - efforts that aim to counter and curtail the use of:
 
 1. Overconsumption
