@@ -1,6 +1,6 @@
 # Whitepapers
 
-
+How everything works in Xank.
 
 ## Network
 
