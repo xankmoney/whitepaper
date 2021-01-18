@@ -1,6 +1,6 @@
 # Whitepapers
 
-How everything works in Xank.
+Xank: A Reserve-backed Stable Transaction Cryptocurrency
 
 ## Network
 
