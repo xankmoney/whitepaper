@@ -789,7 +789,7 @@ The ultimate success of the Xank network can be measured by the degree to which 
 **Consumption Clause** - efforts that aim to counter and curtail the use of:
 
 1. Overconsumption
-2. Big houses
+2. Big Houses
 3. Food Waste
 
 **Sustainable Development Goals (SDGs)** - efforts that aim to support the UN initiative<sup id="a9">[9](#f9)</sup>:
