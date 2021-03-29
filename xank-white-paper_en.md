@@ -16,6 +16,8 @@ First published: April 7, 2018
 
 For the most updated version, check: [xank.io](https://xank.io/)
 
+Copyright © 2017-2020 Xank Holdings OÜ. All rights reserved.
+
 
 # Legal Disclaimer:
 
