@@ -1,4 +1,4 @@
-Copyright © 2017-2020 Xank Holdings OÜ. All rights reserved.
+Copyright © 2017-2021 Xank Holdings OÜ. All rights reserved.
 
 # Legal Disclaimer:
 
