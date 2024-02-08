@@ -1062,23 +1062,23 @@ where,
 
 The partial sum of the sequence is:
 
-![M_n=P+\sum^n_{k=1n} E_k](https://render.githubusercontent.com/render/math?math=%5CLarge+%5Cdisplaystyle+M_n%3DP%2B%5Csum%5En_%7Bk%3D1n%7D+E_k)
+$$M_n=P+\sum^n_{k=1n} E_k$$
 
-![M_n=P +\sum^n_{k=1} E_{340,000,000} , for\ n < = 7](https://render.githubusercontent.com/render/math?math=%5CLarge+%5Cdisplaystyle+M_n%3DP+%2B%5Csum%5En_%7Bk%3D1%7D+E_%7B340%2C000%2C000%7D+%2C+for%5C+n+%3C+%3D+7)
+$$M_n=P +\sum^n_{k=1} E_{340,000,000} , for\ n < = 7$$
 
-![M_n=P+7*340,000,000 +\sum_{k=8}^n E_k , for\ n > 7](https://render.githubusercontent.com/render/math?math=%5CLarge+%5Cdisplaystyle+M_n%3DP%2B7%2A340%2C000%2C000+%2B%5Csum_%7Bk%3D8%7D%5En+E_k+%2C+for%5C+n+%3E+7)
+$$M_n=P+7*340,000,000 +\sum_{k=8}^n E_k , for\ n > 7$$
 
 
 where,
 
-*   ![M_n=](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+M_n%3D)Total summation of money supply up to the ![N^{th}](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+N%5E%7Bth%7D) year
-*   ![P=1](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+P%3D1) billion (Pre-mined coins.)
+*   $M_n=$ Total summation of money supply up to the $N^{th}$ year
+*   $P=1$ billion (Pre-mined coins.)
 
 
 
-Mathematically it is easy to prove ![E_n](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+E_n) converges to zero, but ![M_n](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+M_n) diverges infinitely.
+Mathematically it is easy to prove $E_n$ converges to zero, but $M_n$ diverges infinitely.
 
-![M_n=\infty\ where\ E_n=0](https://render.githubusercontent.com/render/math?math=%5CLarge+%5Cdisplaystyle+M_n%3D%5Cinfty%5C+where%5C+E_n%3D0)
+$$M_n=\infty\ where\ E_n=0$$
 
 
 
@@ -1093,7 +1093,7 @@ Proof end.
 
 
 
-Using the above equation, money supply for 100 years can be calculated by substituting _n_ to 100. 
+Using the above equation, the money supply for 100 years can be calculated by substituting _n_ to 100. 
 
 $$M_{100}=P+7*340,000,000 +\sum_{n=8}^{100}(GDP_n + TPS_n) * (\frac1 2)^{INT(log_2n)}$$
 
