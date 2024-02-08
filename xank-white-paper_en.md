@@ -1084,10 +1084,10 @@ Mathematically it is easy to prove ![E_n](https://render.githubusercontent.com/r
 
 Proof: 
 
-1. If ![n&#8594; \infty](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+n%26%238594%3B+%5Cinfty), then  ![log_2n&#8594; \infty](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+log_2n%26%238594%3B+%5Cinfty)also ![INT(log_2n) &#8594; \infty](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+INT%28log_2n%29+%26%238594%3B+%5Cinfty) so that ![(\frac1 2)&#8594;0, E_n=0](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+%28%5Cfrac1+2%29%26%238594%3B0%2C+E_n%3D0)
-2. Since ![INT()](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+INT%28%29) function takes the integer part of the given numbers so that ![INT(log_2n)\leq{log_2n}](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+INT%28log_2n%29%5Cleq%7Blog_2n%7D) is always true, therefore the following is also true. ![(\frac1 2)^{log_2n} \leq (\frac1 2)^{INT(log_2n)}](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+%28%5Cfrac1+2%29%5E%7Blog_2n%7D+%5Cleq+%28%5Cfrac1+2%29%5E%7BINT%28log_2n%29%7D) from the definition of the logarithm  an![(\frac1 2)^{log_2n}=\frac1 n](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+%28%5Cfrac1+2%29%5E%7Blog_2n%7D%3D%5Cfrac1+n)d the above relation we can see that ![\frac1n \leq (\frac1 2)^{INT(log_2n)}](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+%5Cfrac1n+%5Cleq+%28%5Cfrac1+2%29%5E%7BINT%28log_2n%29%7D) using integral test![\int_{1}^{\infty}\frac1x dx \leq \int_{1}^{\infty}(\frac1 2)^{INT(log_2x)}dx, \int_{1}^{\infty}\frac1x dx =(1n(x))^\infty_1 =\infty \leq \int_{1}^{\infty}(\frac1 2)^{INT(log_2x)}dx](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+%5Cint_%7B1%7D%5E%7B%5Cinfty%7D%5Cfrac1x+dx+%5Cleq+%5Cint_%7B1%7D%5E%7B%5Cinfty%7D%28%5Cfrac1+2%29%5E%7BINT%28log_2x%29%7Ddx%2C+%5Cint_%7B1%7D%5E%7B%5Cinfty%7D%5Cfrac1x+dx+%3D%281n%28x%29%29%5E%5Cinfty_1+%3D%5Cinfty+%5Cleq+%5Cint_%7B1%7D%5E%7B%5Cinfty%7D%28%5Cfrac1+2%29%5E%7BINT%28log_2x%29%7Ddx) 
+1. If $$n&#8594; \infty$$, then  $$log_2n&#8594; \infty$$also $$INT(log_2n) &#8594; \infty$$ so that $$(\frac1 2)&#8594;0, E_n=0$$
+2. Since $$INT()$$ function takes the integer part of the given numbers so that $$INT(log_2n)\leq{log_2n}$$ is always true, therefore the following is also true. $$(\frac1 2)^{log_2n} \leq (\frac1 2)^{INT(log_2n)}$$ from the definition of the logarithm  an$$(\frac1 2)^{log_2n}=\frac1 n$$d the above relation we can see that $$\frac1n \leq (\frac1 2)^{INT(log_2n)}$$ using integral test$$\int_{1}^{\infty}\frac1x dx \leq \int_{1}^{\infty}(\frac1 2)^{INT(log_2x)}dx, \int_{1}^{\infty}\frac1x dx =(1n(x))^\infty_1 =\infty \leq \int_{1}^{\infty}(\frac1 2)^{INT(log_2x)}dx$$
 
-By the theorem of the integral test, since the integral on the left side diverges, the series on the right side also diverges. Hence ![M_n=\infty](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+M_n%3D%5Cinfty) 
+By the theorem of the integral test, since the integral on the left side diverges, the series on the right side also diverges. Hence $$M_n=\infty$$ 
 
 Proof end.
 
@@ -1103,9 +1103,9 @@ $$M_{100}=P+7*340,000,000 +\sum_{n=8}^{100}(GDP_n + TPS_n) * (\frac1 2)^{INT(log
 <div align="center"><strong>Figure 8</strong>: Xank Money Supply for 100 years</div>
 
 
-We have not set a maximum coin supply and the amount of Xank emitted in a year depends on the GDP and TPS of that respective year.  The emission volume, per year, is reduced by ![(GDP_n + TPS_n)](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+%28GDP_n+%2B+TPS_n%29) times every ![2_n](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+2_n) years. 
+We have not set a maximum coin supply and the amount of Xank emitted in a year depends on the GDP and TPS of that respective year.  The emission volume, per year, is reduced by $$(GDP_n + TPS_n)$$ times every $$2_n$$ years. 
 
-E.g.: Considering current GDP and average TPS of 10, In the 4th logarithmic cycle(Year 8 -Year 15) 111.2M Xank is released,  in the 5th cycle(Year 16 - Year 31) 55.6M Xank and next cycle ![(GDP_n + TPS_n)](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+%28GDP_n+%2B+TPS_n%29) each, and so on. In this distribution formula, it is self-evident that the summation of coins in the ![2_n](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+2_n) period is always equal to the average value of ![(GDP_n + TPS_n)](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+%28GDP_n+%2B+TPS_n%29) over the period. So the coin issue rate converges to zero, but the sum of them diverges infinitely.
+E.g.: Considering current GDP and average TPS of 10, In the 4th logarithmic cycle(Year 8 -Year 15) 111.2M Xank is released,  in the 5th cycle(Year 16 - Year 31) 55.6M Xank and next cycle $$(GDP_n + TPS_n)$$ each, and so on. In this distribution formula, it is self-evident that the summation of coins in the $$2_n$$ period is always equal to the average value of $$(GDP_n + TPS_n)$$ over the period. So the coin issue rate converges to zero, but the sum of them diverges infinitely.
 
 
 ## **Xank Protocol Characteristics Comparison**
@@ -1113,7 +1113,7 @@ E.g.: Considering current GDP and average TPS of 10, In the 4th logarithmic cycl
 Xank aims to solve the Cryptocurrency Quadrilemma: price stability, fee consistency, auditable privacy, and distributed governance to become a true medium of exchange cryptocurrency. To gain a better understanding of how the Xank network will work, it can be useful to compare the network’s characteristics against those of other cryptocurrency networks. The following metrics have been used in the comparison:
 
 *   **Stability** - can the network achieve price stability, either through network design or price stabilizing features?
-*   **Consistency** - can the network achieve transaction fee consistency, either through network design or fee stabilizing features?
+*   **Consistency** - can the network achieve transaction fee consistency, either through network design or fee-stabilizing features?
 *   **Privacy** - are network users given the right tools to achieve adequate levels of anonymity and fungibility while preserving public auditability?
 *   **Governance** - can the network’s governance remain independent from coercion and collusion by central authorities or major stakeholders?
 
