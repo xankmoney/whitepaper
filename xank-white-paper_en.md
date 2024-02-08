@@ -556,7 +556,7 @@ The composition and weighting of the Atomic Swap Basket will be voted on by Xank
 
 Hence we define the general term for Xank Atomic Swap Basket as,
 
-$$Sb = Rp*0.3 = Xs*0.09$$
+$$Sb = Rp * 0.3 = Xs * 0.09$$
 
 where, 
 
@@ -970,14 +970,14 @@ Xank has a metric system of denominations used as units of Xank. Each denominati
 
 ### Introduction
 
-Cryptocurrencies are produced through a sophisticated cryptographic process known as mining. Mining involves the use of high powered computers running hash algorithms to find solutions to cryptographic problems that vary in complexity, known as the mining difficulty.  A solution is discovered once a problem is solved and the miner is permitted to create new units of the currency. This is known as the block reward. To ensure that the currency is not subject to endless inflation, the block reward is reduced at regular intervals. The coin emission rate is the term used to describe the quantum at which new cryptocurrency is introduced into the system.
+Cryptocurrencies are produced through a sophisticated cryptographic process known as mining. Mining involves the use of high-powered computers running hash algorithms to find solutions to cryptographic problems that vary in complexity, known as the mining difficulty.  A solution is discovered once a problem is solved and the miner is permitted to create new units of the currency. This is known as the block reward. To ensure that the currency is not subject to endless inflation, the block reward is reduced at regular intervals. The coin emission rate is the term used to describe the quantum at which new cryptocurrency is introduced into the system.
 
 
 ### Limited Supply
 
 Bitcoin and Dash are two important cryptocurrencies that have upper boundaries on the amount of cryptocurrency that can be theoretically minted. Bitcoin’s total coin emission can be calculated as the sum of a geometric series, with the total emission approaching (but never reaching) 21,000,000 BTC. While Dash is based on Bitcoin, it significantly modifies the coin emission rate to offer a smoother reduction in coin emission over time. Bitcoin reduces the coin emission rate by 50% every 4 years, whereas Dash reduces the emission by one-fourteenth (approx. 7.14%) every 210,240 blocks (approx. 383.25 days). It can be seen that reducing the block reward by a smaller amount each year offers a smoother transition to a fee-based economy than Bitcoin.
 
-Dash’s total coin emission is also the sum of a geometric series, but the ultimate total coin emission is uncertain because it cannot be known a priori how much of the 10% block reward reserved for budget proposals will actually be allocated, since this depends on future voting behavior.
+Dash’s total coin emission is also the sum of a geometric series, but the ultimate total coin emission is uncertain because it cannot be known a priori how much of the 10% block reward reserved for budget proposals will actually be allocated since this depends on future voting behavior.
 
 
 ### Unlimited Supply and Inflation
@@ -993,7 +993,7 @@ At approximately the same time, the expected rate of annual loss and destruction
 
 Almost no coins use any economic indicators to assess the current growth of the economy. They hope to adjust the emission rate, to account for price deflation, through external community-based consensus, if needed. Xank uses the current global GDP value as an economic indicator inside the emission logic to reduce deflationary pressure in the future.
 
-GDP at purchaser's prices is the sum of gross value added by all resident producers in the economy plus any product taxes and minus any subsidies not included in the value of the products. It is calculated without making deductions for depreciation of fabricated assets or for depletion and degradation of natural resources. Data are in current U.S. dollars. Dollar figures for GDP are converted from domestic currencies using single year official exchange rates. World Bank national accounts data provide us with the current value at \$85 trillion USD.  The global GDP shows economic growth/decline, which will, in turn, increase or decrease Xank economy. Hence it is used as a primary factor in Xank emission. 
+GDP at purchaser's prices is the sum of gross value added by all resident producers in the economy plus any product taxes and minus any subsidies not included in the value of the products. It is calculated without making deductions for the depreciation of fabricated assets or for the depletion and degradation of natural resources. Data are in current U.S. dollars. Dollar figures for GDP are converted from domestic currencies using single-year official exchange rates. World Bank national accounts data provide us with the current value at \$85 trillion USD.  The global GDP shows economic growth/decline, which will, in turn, increase or decrease the Xank economy. Hence it is used as a primary factor in Xank emission. 
 
 
 ### Xank Network Transactions
@@ -1018,17 +1018,17 @@ Initially, there will be 1 billion Xank coins pre-mined that will be made availa
 
 In our initial design, a binary logarithmic emission based on the initial year issuance(800m) was used, where the supply will double in 1.5 years, triple by the fifth year, quadruple by the thirteenth year, and quintuple by the thirty-first year; and so on. 
 
-Emission volume is reduced by half every ![2_n](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+2_n) years.  For example, the 1st year 800M, the next two years 400M each year, and the next 4 years 200M each, and so on. In this distribution formula, it is self-evident that the summation of coins in the ![2_n](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+2_n) period always becomes 800M. So the coin issue rate converges to zero, but the sum of them diverges infinitely.
+Emission volume is reduced by half every $2_n$ years.  For example, the 1st year 800M, the next two years 400M each year, and the next 4 years 200M each, and so on. In this distribution formula, it is self-evident that the summation of coins in the $2_n$ period always becomes 800M. So the coin issue rate converges to zero, but the sum of them diverges infinitely.
 
 #### Current Design 
 
-We use the binary logarithm to calculate the emission of the Xank coins in the ![N^{th}](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+N%5E%7Bth%7D) year. The binary logarithm is the logarithm to the base 2. It is the inverse function of the power of two functions and is used to reduce the coin emission gradually. Instead of using a fixed issuance amount, Xank takes into account the current global GDP as an economic growth Indicator and Xank TPS as the network growth indicator. As the global GDP, as well as Xank TPS, is bound to increase over time, we can reduce them gradually by applying binary logarithm.
+We use the binary logarithm to calculate the emission of the Xank coins in the $N^{th}$ year. The binary logarithm is the logarithm to the base 2. It is the inverse function of the power of two functions and is used to reduce the coin emission gradually. Instead of using a fixed issuance amount, Xank takes into account the current global GDP as an economic growth Indicator and Xank TPS as the network growth indicator. As the global GDP, as well as Xank TPS, is bound to increase over time, we can reduce them gradually by applying binary logarithms.
 
 The general term of the emission sequence of Xank coins is:
 
-![E_n=(GDP_n + TPS_n) *(\frac{1}2)^{INT(log_2n)}](https://render.githubusercontent.com/render/math?math=%5CLarge+%5Cdisplaystyle+E_n%3D%28GDP_n+%2B+TPS_n%29+%2A%28%5Cfrac%7B1%7D2%29%5E%7BINT%28log_2n%29%7D)
+$$E_n=(GDP_n + TPS_n) *(\frac{1}2)^{INT(log_2n)}$$
 
-From the below graph, you can see that the amount of Xank released per year is very high during the initial years and gradually reduces over time. This gives rise to very high inflation during the initial period.  From the above link, you can see that any changes in GDP or TPS in the initial years cause significant variance in issuance amount. As seen in the table, this initial volatile years corresponds to the first three logarithmic cycles.
+From the below graph, you can see that the amount of Xank released per year is very high during the initial years and gradually reduces over time. This gives rise to very high inflation during the initial period.  From the above link, you can see that any changes in GDP or TPS in the initial years cause significant variance in issuance amounts. As seen in the table, these initial volatile years correspond to the first three logarithmic cycles.
 
 ![Figure 6](images/Xank-Emission-for-100-years-en.png "Xank Emission for 100 years")
 
@@ -1039,21 +1039,21 @@ To mitigate the high volatility as well as high inflation of logarithmic emissio
 
 Hence we define the general term for Xank emission per year as,
 
-![E_n=340,000,000 , for\ n < = 7](https://render.githubusercontent.com/render/math?math=%5CLarge+%5Cdisplaystyle+E_n%3D340%2C000%2C000+%2C+for%5C+n+%3C+%3D+7)
+$$E_n = 340,000,000, for\ n < = 7$$
 
-![E_n=(GDP_n + TPS_n) *(\frac{1}2)^{INT(log_2n)}, for\ n > 7](https://render.githubusercontent.com/render/math?math=%5CLarge+%5Cdisplaystyle+E_n%3D%28GDP_n+%2B+TPS_n%29+%2A%28%5Cfrac%7B1%7D2%29%5E%7BINT%28log_2n%29%7D%2C+for%5C+n+%3E+7)
+$$E_n=(GDP_n + TPS_n) *(\frac{1}2)^{INT(log_2n)}, for\ n > 7$$
 
 where, 
 
-*   ![E_n=N^{th}](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+E_n%3DN%5E%7Bth%7D) year emission
-*   ![GDP_n= N^{th}](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+GDP_n%3D+N%5E%7Bth%7D) year Global GDP divided by 100K (Rounded off to Millions)
-*   ![TPS_n=N^{th}](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+TPS_n%3DN%5E%7Bth%7D) year Xank network transactions per second
-*   ![INT()=](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+INT%28%29%3D) integer-valued function which takes integer part of the given number 
+*   $E_n=N^{th}$ year emission
+*   $GDP_n= N^{th}$ year Global GDP divided by 100K (Rounded off to Millions)
+*   $TPS_n=N^{th}$ year Xank network transactions per second
+*   $INT()=$ integer-valued function which takes the integer part of the given number 
     *   for instance 
-        *   ![INT(1.1)=1](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+INT%281.1%29%3D1) 
-        *   ![INT(2)=2](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+INT%282%29%3D2) 
-        *   ![INT(\sqrt2)=INT(1.414\.\.\.)=1](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+INT%28%5Csqrt2%29%3DINT%281.414%5C.%5C.%5C.%29%3D1) 
-        *   ![log_23\approxeq1.58496](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+log_23%5Capproxeq1.58496) so that ![INT(log_2 3)=1](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+INT%28log_2+3%29%3D1)
+        *   $INT(1.1)=1$
+        *   $INT(2)=2$
+        *   $INT(\sqrt2)=INT(1.414\.\.\.)=1$
+        *   $log_23\approxeq1.58496$ so that $INT(log_2 3)=1$
 
 
 ![Figure 7](images/Xank-Final-Emission-for-100-years-en.png "Xank Final Emission for 100 years")
