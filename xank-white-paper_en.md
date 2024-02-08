@@ -1084,10 +1084,10 @@ Mathematically it is easy to prove ![E_n](https://render.githubusercontent.com/r
 
 Proof: 
 
-1. If $$n&#8594; \infty$$, then  $$log_2n&#8594; \infty$$also $$INT(log_2n) &#8594; \infty$$ so that $$(\frac1 2)&#8594;0, E_n=0$$
-2. Since $$INT()$$ function takes the integer part of the given numbers so that $$INT(log_2n)\leq{log_2n}$$ is always true, therefore the following is also true. $$(\frac1 2)^{log_2n} \leq (\frac1 2)^{INT(log_2n)}$$ from the definition of the logarithm  an$$(\frac1 2)^{log_2n}=\frac1 n$$d the above relation we can see that $$\frac1n \leq (\frac1 2)^{INT(log_2n)}$$ using integral test$$\int_{1}^{\infty}\frac1x dx \leq \int_{1}^{\infty}(\frac1 2)^{INT(log_2x)}dx, \int_{1}^{\infty}\frac1x dx =(1n(x))^\infty_1 =\infty \leq \int_{1}^{\infty}(\frac1 2)^{INT(log_2x)}dx$$
+1. If $n&#8594; \infty$, then  $log_2n&#8594; \infty$ also $INT(log_2n) &#8594; \infty$ so that $(\frac1 2)&#8594;0, E_n=0$
+2. Since $INT()$ function takes the integer part of the given numbers so that $INT(log_2n)\leq{log_2n}$ is always true, therefore the following is also true. $(\frac1 2)^{log_2n} \leq (\frac1 2)^{INT(log_2n)}$ from the definition of the logarithm $(\frac1 2)^{log_2n}=\frac1$ and the above relation we can see that $\frac1n \leq (\frac1 2)^{INT(log_2n)}$ using integral test $\int_{1}^{\infty}\frac1x dx \leq \int_{1}^{\infty}(\frac1 2)^{INT(log_2x)}dx, \int_{1}^{\infty}\frac1x dx =(1n(x))^\infty_1 =\infty \leq \int_{1}^{\infty}(\frac1 2)^{INT(log_2x)}dx$
 
-By the theorem of the integral test, since the integral on the left side diverges, the series on the right side also diverges. Hence $$M_n=\infty$$ 
+By the theorem of the integral test, since the integral on the left side diverges, the series on the right side also diverges. Hence $M_n=\infty$ 
 
 Proof end.
 
@@ -1103,9 +1103,9 @@ $$M_{100}=P+7*340,000,000 +\sum_{n=8}^{100}(GDP_n + TPS_n) * (\frac1 2)^{INT(log
 <div align="center"><strong>Figure 8</strong>: Xank Money Supply for 100 years</div>
 
 
-We have not set a maximum coin supply and the amount of Xank emitted in a year depends on the GDP and TPS of that respective year.  The emission volume, per year, is reduced by $$(GDP_n + TPS_n)$$ times every $$2_n$$ years. 
+We have not set a maximum coin supply and the amount of Xank emitted in a year depends on the GDP and TPS of that respective year.  The emission volume, per year, is reduced by $(GDP_n + TPS_n)$ times every $2_n$ years. 
 
-E.g.: Considering current GDP and average TPS of 10, In the 4th logarithmic cycle(Year 8 -Year 15) 111.2M Xank is released,  in the 5th cycle(Year 16 - Year 31) 55.6M Xank and next cycle $$(GDP_n + TPS_n)$$ each, and so on. In this distribution formula, it is self-evident that the summation of coins in the $$2_n$$ period is always equal to the average value of $$(GDP_n + TPS_n)$$ over the period. So the coin issue rate converges to zero, but the sum of them diverges infinitely.
+E.g.: Considering current GDP and average TPS of 10, In the 4th logarithmic cycle(Year 8 -Year 15) 111.2M Xank is released,  in the 5th cycle(Year 16 - Year 31) 55.6M Xank and next cycle $(GDP_n + TPS_n)$ each, and so on. In this distribution formula, it is self-evident that the summation of coins in the $2_n$ period is always equal to the average value of $(GDP_n + TPS_n)$ over the period. So the coin issue rate converges to zero, but the sum of them diverges infinitely.
 
 
 ## **Xank Protocol Characteristics Comparison**
