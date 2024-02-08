@@ -1095,7 +1095,7 @@ Proof end.
 
 Using the above equation, money supply for 100 years can be calculated by substituting _n_ to 100. 
 
-![M_{100}=P+7*340,000,000 +\sum_{n=8}^{100}(GDP_n + TPS_n) * (\frac1 2)^{INT(log_2n)}](https://render.githubusercontent.com/render/math?math=%5CLarge+%5Cdisplaystyle+M_%7B100%7D%3DP%2B7%2A340%2C000%2C000+%2B%5Csum_%7Bn%3D8%7D%5E%7B100%7D%28GDP_n+%2B+TPS_n%29+%2A+%28%5Cfrac1+2%29%5E%7BINT%28log_2n%29%7D)
+$$M_{100}=P+7*340,000,000 +\sum_{n=8}^{100}(GDP_n + TPS_n) * (\frac1 2)^{INT(log_2n)}$$
 
 
 ![Figure 8](images/Xank-Money-Supply-for-100-years-en.png "Xank Money Supply for 100 years")
