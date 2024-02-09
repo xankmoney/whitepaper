@@ -535,11 +535,11 @@ $$Rp=Xr+Te+Ge+Ce$$
 
 where, 
 
-*   $Rp = Xank Reserve Pool$ (30% of Total Coin Supply)
-*   $Xr = Xank Reserve$ (15% of Total Coin Supply)
-*   $Te = Xank Treasury Escrow$ (5% of Total Coin Supply)
-*   $Ge = Xank Governors Escrow$ (5% of Total Coin Supply)
-*   $Ce = Xank Citizens Escrow$ (5% of Total Coin Supply)
+*   $Rp = Xank \\ Reserve \\ Pool$ (30% of Total Coin Supply)
+*   $Xr = Xank \\ Reserve$ (15% of Total Coin Supply)
+*   $Te = Xank \\ Treasury \\ Escrow$ (5% of Total Coin Supply)
+*   $Ge = Xank \\ Governors \\ Escrow$ (5% of Total Coin Supply)
+*   $Ce = Xank \\ Citizens \\ Escrow$ (5% of Total Coin Supply)
 
 
 ### Atomic Swap Basket
