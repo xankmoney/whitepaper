@@ -560,9 +560,9 @@ $$Sb = Rp * 0.3 = Xs * 0.09$$
 
 where, 
 
-*   $Sb = Xank Atomic Swap Basket$
-*   $Rp = Xank Reserve Pool$
-*   $Xs = Xank Total Coin Supply$ or $M_n$
+*   $Sb = Xank // Atomic // Swap Basket$
+*   $Rp = Xank // Reserve // Pool$
+*   $Xs = Xank // Total // Coin // Supply$ or $M_n$
 
 
 ### Idea Meritocracy Governance
