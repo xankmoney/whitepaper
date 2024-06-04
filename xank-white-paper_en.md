@@ -1055,7 +1055,7 @@ where,
     *   for instance 
         *   $INT(1.1)=1$
         *   $INT(2)=2$
-        *   $INT(\sqrt2)$ $=INT(1.414$\.\.\.$)$ $=1$
+        *   $INT(\sqrt2)$ $=INT(1.414$ \.\.\. $)=1$
         *   $log_23\approxeq1.58496$ so that $INT(log_2 3)=1$
 
 
