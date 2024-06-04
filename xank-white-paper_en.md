@@ -51,67 +51,70 @@ We propose Xank, a cryptocurrency that utilizes a soft price-pegging mechanism t
 
 # Table of Contents
 
+- [Xank: A Reserve-backed Stable Transaction Cryptocurrency](#xank-a-reserve-backed-stable-transaction-cryptocurrency)
+- [Legal Disclaimer:](#legal-disclaimer)
 - [Abstract](#abstract)
+- [Table of Contents](#table-of-contents)
 - [Introduction](#introduction)
 - [Xank Design Considerations: Implementing Price Stability](#xank-design-considerations-implementing-price-stability)
-  * [Avalanche Protocol for the Xank Network](#avalanche-protocol-for-the-xank-network)
-  * [Adoption of a Self-funding Treasury System](#adoption-of-a-self-funding-treasury-system)
-  * [Soft-pegging to the IMF’s SDR (Special Drawing Rights)](#soft-pegging-to-the-imfs-sdr-special-drawing-rights)
-    + [**A brief history of the IMF’s SDR**](#a-brief-history-of-the-imfs-sdr)
-  * [Xank and the Bridgewater Idea Meritocracy System](#xank-and-the-bridgewater-idea-meritocracy-system)
-  * [**Idea Meritocracy**](#idea-meritocracy)
-    + [Meaningful Work](#meaningful-work)
-    + [Meaningful Relationships](#meaningful-relationships)
-    + [Radical Truthfulness](#radical-truthfulness)
-    + [Radical Transparency](#radical-transparency)
-  * [The Xank Protocol](#the-xank-protocol)
-    + [Stable Pay Functionality](#stable-pay-functionality)
-    + [Local Pay Functionality](#local-pay-functionality)
-    + [Xank Proof-of-Stake (PoS) Governance](#xank-proof-of-stake-pos-governance)
-    + [The Xank Reserve](#the-xank-reserve)
-    + [Go-to-market Strategy](#go-to-market-strategy)
-    + [Measuring the Exchange Rate](#measuring-the-exchange-rate)
-      - [<span style="text-decoration:underline;">SDR and Currency Feeds</span>](#sdr-and-currency-feeds)
-      - [<span style="text-decoration:underline;">Oracle System</span>](#oracle-system)
-      - [<span style="text-decoration:underline;">Oracle Feed Redundancy</span>](#oracle-feed-redundancy)
-    + [Stable Pay (or Local Pay) Transaction Lifecycle](#stable-pay-or-local-pay-transaction-lifecycle)
-    + [Xank Multi-currency Support](#xank-multi-currency-support)
-    + [Extreme Volatility Safeguard (EVS) Price Floor Mechanism](#extreme-volatility-safeguard-evs-price-floor-mechanism)
-    + [Atomic Swap Basket](#atomic-swap-basket)
-    + [Idea Meritocracy Governance](#idea-meritocracy-governance)
-    + [Xank Self-sovereign Identity and Xank Reputation Index](#xank-self-sovereign-identity-and-xank-reputation-index)
-    + [Xank Budget Allocation](#xank-budget-allocation)
+  - [Avalanche Protocol for the Xank Network](#avalanche-protocol-for-the-xank-network)
+  - [Adoption of a Self-funding Treasury System](#adoption-of-a-self-funding-treasury-system)
+  - [Soft-pegging to the IMF’s SDR (Special Drawing Rights)](#soft-pegging-to-the-imfs-sdr-special-drawing-rights)
+    - [**A brief history of the IMF’s SDR**](#a-brief-history-of-the-imfs-sdr)
+  - [Xank and the Bridgewater Idea Meritocracy System](#xank-and-the-bridgewater-idea-meritocracy-system)
+  - [**Idea Meritocracy**](#idea-meritocracy)
+    - [Meaningful Work](#meaningful-work)
+    - [Meaningful Relationships](#meaningful-relationships)
+    - [Radical Truthfulness](#radical-truthfulness)
+    - [Radical Transparency](#radical-transparency)
+  - [The Xank Protocol](#the-xank-protocol)
+    - [Stable Pay Functionality](#stable-pay-functionality)
+    - [Local Pay Functionality](#local-pay-functionality)
+    - [Xank Proof-of-Stake (PoS) Governance](#xank-proof-of-stake-pos-governance)
+    - [The Xank Reserve](#the-xank-reserve)
+    - [Go-to-market Strategy](#go-to-market-strategy)
+    - [Measuring the Exchange Rate](#measuring-the-exchange-rate)
+      - [SDR and Currency Feeds](#sdr-and-currency-feeds)
+      - [Oracle System](#oracle-system)
+      - [Oracle Feed Redundancy](#oracle-feed-redundancy)
+    - [Stable Pay (or Local Pay) Transaction Lifecycle](#stable-pay-or-local-pay-transaction-lifecycle)
+    - [Xank Multi-currency Support](#xank-multi-currency-support)
+    - [Extreme Volatility Safeguard (EVS) Price Floor Mechanism](#extreme-volatility-safeguard-evs-price-floor-mechanism)
+    - [Atomic Swap Basket](#atomic-swap-basket)
+    - [Idea Meritocracy Governance](#idea-meritocracy-governance)
+    - [Xank Self-sovereign Identity and Xank Reputation Index](#xank-self-sovereign-identity-and-xank-reputation-index)
+    - [Xank Budget Allocation](#xank-budget-allocation)
 - [Applications and Use Cases](#applications-and-use-cases)
-  * [Exchanges](#exchanges)
-  * [Individuals](#individuals)
-  * [Merchants](#merchants)
-  * [Business and Startup Funding](#business-and-startup-funding)
-  * [Activism](#activism)
+  - [Exchanges](#exchanges)
+  - [Individuals](#individuals)
+  - [Merchants](#merchants)
+  - [Business and Startup Funding](#business-and-startup-funding)
+  - [Activism](#activism)
 - [Xank in a Post-fiat World](#xank-in-a-post-fiat-world)
-  * [Soft-pegging to a Consumer Price Index](#soft-pegging-to-a-consumer-price-index)
-  * [Giving Power Back to the People](#giving-power-back-to-the-people)
-  * [A Preamble to the Xank Constitution](#a-preamble-to-the-xank-constitution)
+  - [Soft-pegging to a Consumer Price Index](#soft-pegging-to-a-consumer-price-index)
+  - [Giving Power Back to the People](#giving-power-back-to-the-people)
+  - [A Preamble to the Xank Constitution](#a-preamble-to-the-xank-constitution)
 - [Conclusion](#conclusion)
 - [Appendix](#appendix)
-  * [Pros and Cons of Existing Stablecoins](#pros-and-cons-of-existing-stablecoins)
-    + [Tether](#tether)
-    + [Maker (Dai)](#maker-dai)
-    + [Carbon](#carbon)
-  * [**Xank Network Specifications and Comparisons**](#xank-network-specifications-and-comparisons)
-  * [**Xank Units of Measure**](#xank-units-of-measure)
-  * [XANK Coin Supply Algorithm](#xank-coin-supply-algorithm)
-    + [Introduction](#introduction-1)
-    + [Limited Supply](#limited-supply)
-    + [Unlimited Supply and Inflation](#unlimited-supply-and-inflation)
-    + [GDP](#gdp)
-    + [Xank Network Transactions](#xank-network-transactions)
-    + [Xank Coin Supply](#xank-coin-supply)
-    + [Xank Emission Algorithm](#xank-emission-algorithm)
+  - [Pros and Cons of Existing Stablecoins](#pros-and-cons-of-existing-stablecoins)
+    - [Tether](#tether)
+    - [Maker (Dai)](#maker-dai)
+    - [Carbon](#carbon)
+  - [**Xank Network Specifications and Comparisons**](#xank-network-specifications-and-comparisons)
+  - [**Xank Units of Measure**](#xank-units-of-measure)
+  - [XANK Coin Supply Algorithm](#xank-coin-supply-algorithm)
+    - [Introduction](#introduction-1)
+    - [Limited Supply](#limited-supply)
+    - [Unlimited Supply and Inflation](#unlimited-supply-and-inflation)
+    - [GDP](#gdp)
+    - [Xank Network Transactions](#xank-network-transactions)
+    - [Xank Coin Supply](#xank-coin-supply)
+    - [Xank Emission Algorithm](#xank-emission-algorithm)
       - [Initial Design](#initial-design)
       - [Current Design](#current-design)
-  * [**Xank Protocol Characteristics Comparison**](#xank-protocol-characteristics-comparison)
+  - [**Xank Protocol Characteristics Comparison**](#xank-protocol-characteristics-comparison)
 - [References and Resources](#references-and-resources)
-  * [Notes](#notes)
+  - [Notes](#notes)
 
 
 # Introduction
@@ -535,11 +538,11 @@ $$Rp=Xr+Te+Ge+Ce$$
 
 where, 
 
-*   $Rp = Xank \\ Reserve \\ Pool$ (30% of Total Coin Supply)
-*   $Xr = Xank \\ Reserve$ (15% of Total Coin Supply)
-*   $Te = Xank \\ Treasury \\ Escrow$ (5% of Total Coin Supply)
-*   $Ge = Xank \\ Governors \\ Escrow$ (5% of Total Coin Supply)
-*   $Ce = Xank \\ Citizens \\ Escrow$ (5% of Total Coin Supply)
+*   $Rp = Xank \ Reserve \ Pool$ (30% of Total Coin Supply)
+*   $Xr = Xank \ Reserve$ (15% of Total Coin Supply)
+*   $Te = Xank \ Treasury \ Escrow$ (5% of Total Coin Supply)
+*   $Ge = Xank \ Governors \ Escrow$ (5% of Total Coin Supply)
+*   $Ce = Xank \ Citizens \ Escrow$ (5% of Total Coin Supply)
 
 
 ### Atomic Swap Basket
@@ -560,9 +563,9 @@ $$Sb = Rp * 0.3 = Xs * 0.09$$
 
 where, 
 
-*   $Sb = Xank \\ Atomic \\ Swap \\ Basket$
-*   $Rp = Xank \\ Reserve \\ Pool$
-*   $Xs = Xank \\ Total \\ Coin \\ Supply$ or $M_n$
+*   $Sb = Xank \ Atomic \ Swap \ Basket$
+*   $Rp = Xank \ Reserve \ Pool$
+*   $Xs = Xank \ Total \ Coin \ Supply$ or $M_n$
 
 
 ### Idea Meritocracy Governance
@@ -1052,7 +1055,7 @@ where,
     *   for instance 
         *   $INT(1.1)=1$
         *   $INT(2)=2$
-        *   $INT(\sqrt2)=INT(1.414\.\.\.)=1$
+        *   $INT(\sqrt2)$ $=INT(1.414$\.\.\.$)$ $=1$
         *   $log_23\approxeq1.58496$ so that $INT(log_2 3)=1$
 
 
@@ -1084,7 +1087,7 @@ $$M_n=\infty\ where\ E_n=0$$
 
 Proof: 
 
-1. If $n&#8594; \infty$, then  $log_2n&#8594; \infty$ also $INT(log_2n) &#8594; \infty$ so that $(\frac1 2)&#8594;0, E_n=0$
+1. If $n$ &#8594; $\infty$, then  $log_2n$ &#8594; $\infty$ also $INT(log_2n)$ &#8594; $\infty$ so that $(\frac1 2)$ &#8594; $0, E_n=0$
 2. Since $INT()$ function takes the integer part of the given numbers so that $INT(log_2n)\leq{log_2n}$ is always true, therefore the following is also true. $(\frac1 2)^{log_2n} \leq (\frac1 2)^{INT(log_2n)}$ from the definition of the logarithm $(\frac1 2)^{log_2n}=\frac1 n$ and the above relation we can see that $\frac1n \leq (\frac1 2)^{INT(log_2n)}$ using integral test $$\int_{1}^{\infty}\frac1x dx \leq \int_{1}^{\infty}(\frac1 2)^{INT(log_2x)}dx, \int_{1}^{\infty}\frac1x dx =(1n(x))^\infty_1 =\infty \leq \int_{1}^{\infty}(\frac1 2)^{INT(log_2x)}dx$$
 
 By the theorem of the integral test, since the integral on the left side diverges, the series on the right side also diverges. Hence $M_n=\infty$ 
