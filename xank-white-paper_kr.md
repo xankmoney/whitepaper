@@ -86,17 +86,17 @@ Xank는 여기서 설명한 기능을 제공하기 위해 구축되고 있습니
     - [Xank 예산 할당](#xank-예산-할당)
 - [응용 및 사용 사례](#응용-및-사용-사례)
   - [암호화폐 거래소](#암호화폐-거래소)
-  - [Individuals](#individuals)
-  - [Merchants](#merchants)
-  - [Business and Startup Funding](#business-and-startup-funding)
-  - [Activism](#activism)
-- [Xank in a Post-fiat World](#xank-in-a-post-fiat-world)
-  - [Soft-pegging to a Consumer Price Index](#soft-pegging-to-a-consumer-price-index)
-  - [Giving Power Back to the People](#giving-power-back-to-the-people)
-  - [A Preamble to the Xank Constitution](#a-preamble-to-the-xank-constitution)
-- [Conclusion](#conclusion)
-- [Appendix](#appendix)
-  - [Pros and Cons of Existing Stablecoins](#pros-and-cons-of-existing-stablecoins)
+  - [개인 사용자](#개인-사용자)
+  - [상인들](#상인들)
+  - [기업 및 스타트업 자금 지원](#기업-및-스타트업-자금-지원)
+  - [운동권](#운동권)
+- [법정화폐 이후 세계에서의 Xank](#법정화폐-이후-세계에서의-xank)
+  - [소비자물가지수에 연동된 소프트 페그](#소비자물가지수에-연동된-소프트-페그)
+  - [권력을 다시 사람들에게](#권력을-다시-사람들에게)
+  - [Xank 헌법 서문](#xank-헌법-서문)
+- [결론](#결론)
+- [부록](#부록)
+  - [기존 스테이블코인의 장단점](#기존-스테이블코인의-장단점)
     - [Tether](#tether)
     - [Maker (Dai)](#maker-dai)
     - [Carbon](#carbon)
@@ -657,238 +657,237 @@ Xank 자기주권 신원 시스템을 사용하여 관리자 또는 위원회가
 거래소 사용자는 거래소에서 법정화폐를 보유할 때 위험을 감수하며, 은행 계좌 한도를 초과하는 법정화폐 금액으로 거래소에서 나가는 데 어려움을 겪을 수 있습니다. 거래소는 Xank Stable Pay 기능을 지원하여 사용자가 법정화폐로 표시된 암호화폐로 인출을 비공개로 저장하고, 은행 계좌 한도 내에서 가치를 유지할 수 있도록 할 수 있습니다. 거래소는 사용자에 대한 상대방 위험 감소를 활용하여 더 많은 사용자를 유치할 수 있습니다.
 
 
-## Individuals
+## 개인 사용자
 
-From traders looking to find value in digital assets; to cryptocurrency holders that are looking at a long-term value proposition for storing their wealth with potential upside; to the technology savvy who are looking to avoid credit card and remittance fees when transacting and shopping; to the philosophically inclined that see digital assets as revolutionary with the potential to save the world; to those looking to accept payments internationally more effectively; to those in third world nations looking for access to financial services for the first time; to developers that create new technologies; and to those who have found other applications for Bitcoin and cryptocurrencies that are not mentioned here - we believe that Xank offers similar utility with additional features, for example:
+개인 사용자들은 디지털 자산에서 가치를 찾고자 하는 거래자들, 장기적인 가치 제안을 통해 자산을 보관하려는 암호화폐 보유자들, 거래 및 쇼핑 시 신용카드 및 송금 수수료를 피하고자 하는 기술에 정통한 사람들, 디지털 자산을 세상을 구할 혁신적인 수단으로 보는 철학적 성향을 가진 사람들, 국제적으로 결제를 보다 효과적으로 수락하고자 하는 사람들, 처음으로 금융 서비스에 접근하고자 하는 제3세계 국가의 사람들, 새로운 기술을 창조하는 개발자들, 그리고 여기서 언급되지 않은 비트코인 및 암호화폐의 다른 응용 프로그램을 발견한 사람들에게까지 이릅니다. 우리는 Xank가 다음과 같은 추가 기능과 함께 유사한 유용성을 제공한다고 믿습니다 :
 
-*   Transact with a fiat denominated digital asset, pseudo-anonymously, without any middlemen/intermediaries
-*   Fiat value digital asset storage, including cold storage and multisig private keys outside of the financial system
-*   Avoid the risk of storing fiat on exchanges — move crypto­fiat in and out of exchanges faster
-*   Avoid having to open a fiat bank account to store wealth in a fiat denominated value
-*   Anything you can do with Bitcoin as an individual, one can also do with Xank
-
-
-## Merchants
-
-Merchants need payments systems that work seamlessly with their operations so that they can focus on their business. In an increasingly connected world where payments need to be made inexpensively across borders, there is a lack of inexpensive, near-instant and ubiquitous payments systems that don’t rely on the legacy financial system, which leaves merchants as a captive audience. Earlier cryptocurrencies also came with the promise of cheap and fast transactions, but their price volatility is not compatible with merchant services. Additionally, cryptocurrency transaction fees have often rivaled and sometimes exceeded those of the legacy financial system. Waiting for block confirmations before a customer leaves with the goods has also not helped the cryptocurrency use case for merchants. Merchants large and small deserve better. Here are some of the ways Xank can help:
-
-*   Goods and services can be valued and invoiced in fiat values by requesting payments that use the Xank Stable Pay or Local Pay feature (no moving conversion rates/purchase windows)
-*   Prevent the need to regularly convert cryptocurrencies to fiat as well as remove all associated fees and procedures
-*   Prevent chargebacks, reduce fees, and gain greater transactional privacy
-*   Provide novel services that derive from cryptocurrency features, such as privacy, cold-storage, escrow accounts, and multisignature private-keys
-*   Token-specific, data-rich features such as customer loyalty points, gift cards, promotions, affiliate programs, and more
-*   Additional Xank features that are useful to merchants that are not offered by Bitcoin, such as stable transactions functionality, fast confirmations, additional privacy features, and near-instant transactions
+*   법정화폐로 표시된 디지털 자산을 중개자 없이 준익명으로 거래
+*   금융 시스템 외부에서의 콜드 스토리지 및 멀티시그 개인 키를 포함한 법정화폐 가치 디지털 자산 저장
+*   거래소에 법정화폐를 저장하는 위험 회피 — 암호화된 법정화폐를 거래소에서 빠르게 입출금
+*   법정화폐로 가치를 저장하기 위해 법정화폐 은행 계좌를 개설할 필요 없음
+*   개인으로서 비트코인으로 할 수 있는 모든 것을 Xank로도 할 수 있음
 
 
-## Business and Startup Funding
+## 상인들
 
-In the data and information age, new businesses and startups need to be more responsive to environmental concerns and differentiate themselves from business practices that were more common during the industrial age. Running a business that is eco-friendly and that complies with new environmental and employment regulations is becoming more costly while there is an increasing lack of government support, consumer awareness, and other funding initiatives. Sometimes these higher costs prohibit new businesses from entering the market altogether. The Xank protocol seeks to help businesses and startups achieve their funding goals if their behaviour is congruent and in principle with the Xank Constitution. Here are a few potential use case scenarios and ways Xank can help:
+상인들은 원활하게 운영되는 결제 시스템이 필요하며, 이를 통해 사업에 집중할 수 있습니다. 국경을 넘어 저렴하게 결제를 해야 하는 점점 더 연결된 세계에서, 기존 금융 시스템에 의존하지 않는 저렴하고 거의 즉각적인 결제 시스템이 부족합니다. 이는 상인들을 기존 시스템에 종속되게 만듭니다. 이전의 암호화폐들도 저렴하고 빠른 거래를 약속했지만, 그 가격 변동성은 상인 서비스와 호환되지 않습니다. 또한, 암호화폐 거래 수수료는 종종 기존 금융 시스템의 수수료와 맞먹거나 이를 초과하는 경우도 있었습니다. 고객이 상품을 가져가기 전에 블록 확인을 기다리는 것도 상인들에게 암호화폐 사용 사례를 악화시켰습니다. 대형 상인과 소형 상인 모두 더 나은 서비스를 받을 자격이 있습니다. 다음은 Xank가 도울 수 있는 몇 가지 방법입니다 :
 
-*   Fund composting toilets and alternative septic systems startups that can drastically reduce waste, chemicals, and general pollution that reaches the oceans
-*   Fund high-rise aquaponics farm startups that can drastically reduce soil pollution and degradation
-*   Fund plant-based diet campaigns and support research grants that can drastically reduce global warming
-*   Fund clinical experiments of natural medicine that can drastically improve human health
-*   Fund startups and individuals in the tiny house movement to reduce carbon footprint at the household level
-*   Fund Tesla-style wall battery installations to homes and offices around the world to improve air quality
-*   Other proposals that are aligned with the Xank Constitution can seek funding as a viable alternative to Initial Coin Offering (ICO) fundraising, something that is facing increased regulatory capture and compliance costs as a funding model
-
-
-## Activism
-
-Community-driven events and organizations that seek to foster improved human relationships often lack appropriate funding to create positive community awareness. Activist organizations are typically poorly funded, lack government support, and struggle to gain recognition for causes that can potentially improve human behavior and promote peaceful interactions. The Xank protocol seeks to help activists, communities, and non-governmental organizations (NGOs) achieve their funding goals when their intent is congruent and in alignment with the Xank Constitution. Here are a few potential use case scenarios and ways Xank can help:
-
-*   Foster cultural exchanges and understanding through sponsoring K-pop, anime, food, and other cultural aspects
-*   Advocate for LGBTQ equality by lobbying for LGBTQ rights at federal, state, and local government levels
-*   Advocate for equality by lobbying for women’s rights at federal, state, and local government levels
-*   Advocate for racial equality by lobbying for different ethnicity rights at federal, state, and local government levels
-*   Support non-violent anti-hate rallies to counter negativism and encourage positive engagement by the larger population
-*   Fund and foster awareness in installing accessibility equipment, custom roads, and pathways for the disabled in public and private spaces
-*   Other proposals that are aligned with the Xank Constitution can seek funding as a viable alternative to NGO fundraising
+*   Xank 스테이블페이 또는 로컬페이 기능을 사용하여 지불을 요청함으로써 법정 화폐 값으로 상품 및 서비스의 가치를 평가하고 청구 (변동 환율/구매 창 없음)
+*   암호화폐를 정기적으로 법정 화폐로 변환할 필요를 제거하고 모든 관련 수수료 및 절차를 제거
+*   차지백을 방지하고 수수료를 줄이며 더 큰 거래 프라이버시 확보
+*   프라이버시, 콜드 스토리지, 에스크로 계정 및 멀티시그 개인 키와 같은 암호화폐 기능에서 파생된 새로운 서비스 제공
+*   고객 로열티 포인트, 기프트 카드, 프로모션, 제휴 프로그램 등과 같은 토큰 특정 데이터 풍부한 기능 제공
+*   안정적인 거래 기능, 빠른 확인, 추가 프라이버시 기능 및 거의 즉각적인 거래와 같은 비트코인이 제공하지 않는 상인들에게 유용한 추가 Xank 기능 제공
 
 
-# Xank in a Post-fiat World
+## 기업 및 스타트업 자금 지원
 
-By soft-pegging to the IMF SDR, Xank will be able to leverage all of the economic stabilization policies and efforts that are pursued by the world’s most dominant central banks. Xank’s stable transactions functionality offers the world a currency with stable buying power. This feature alone is aligned with the concept of an ideal money that is set to attract individuals, businesses, communities, and organizations to use it. As the Xank ecosystem grows through increased adoption and use, so too will it’s self-funding Reserve and Treasury grow, offering transactional stability and funding opportunities that are rarely seen outside institutional and governmental organizations that rely on taxing populations. 
+데이터와 정보의 시대에 새로운 기업과 스타트업은 환경 문제에 더 민감하게 대응하고, 산업 시대에 흔했던 비즈니스 관행과 차별화할 필요가 있습니다. 친환경적이고 새로운 환경 및 고용 규정을 준수하는 비즈니스를 운영하는 것은 점점 더 비용이 많이 들고 있으며, 정부 지원, 소비자 인식, 기타 자금 지원 프로그램의 부족이 증가하고 있습니다. 이러한 높은 비용은 새로운 기업이 시장에 진입하는 것을 전면적으로 금지하기도 합니다. Xank 프로토콜은 Xank 헌법과 일치하고 원칙에 부합하는 행동을 하는 기업과 스타트업이 자금 조달 목표를 달성하도록 도울 수 있습니다. 다음은 Xank가 도움을 줄 수 있는 몇 가지 잠재적인 사용 사례 시나리오와 방법입니다 :
 
-It should be emphasized that the SDR facility is only offered to participating central banks that are members of the IMF. This means that until now, only these member banks could benefit from the stabilizing currency forces offered by the SDR facility. Xank is set to distribute this stabilizing power right down to the individual level in an effort to truly democratize this currency stabilizing functionality. This sets the scene for Xank’s increasing adoption as a widely used medium of exchange with the potential to even displace fiat currencies in trade volume. Were this to happen, Xank would present the world with both the technology and the chance to develop an independent, transparent, and possibly a more stable financial system with a more reliable infrastructure than the current central bank-based financial system.
-
-What are the possible future implications? What follows is an exploration of several scenarios.
-
-
-## Soft-pegging to a Consumer Price Index
-
-Should Xank begin to control a significant share of the world's transaction volume, we could assume that some goods will begin to be offered at costs denominated in Xank. In such a world, the Xank protocol could be updated to a peg that is independent of any currency that is denominated in a nation-based currency or even a basket of currencies, such as the SDR. It is probable that Xank would move to a peg that reflects the value of a Xank denominated basket of products. Functionally, this could be similar to the way the central banks currently implement monetary policies based on a Consumer Price Index (CPI) to maintain a purchasing power equilibrium for their respective national currencies.
-
-A Xank protocol pegged to the Xank denominated CPI-like basket would be an implementation of a monetary policy that is independent of any government with the potential to achieve a global trade scale. 
-
-At the highest level of consideration, we believe that governments provide two critical solutions for their citizens in preserving control over the money supply: verifiability and price stability. Regarding verifiability, governments can issue cash notes and coins and create the legal protections against counterfeiting. Regarding price stability, central banks are able to intervene in an economy through the use of monetary and fiscal policies with the intent to provide stability to the financial system and encourage financial demand. Financial stability in an economy can encourage growth, reduce unemployment, and attract investment. Most central banks have a mandate to provide stable conditions to the local economies.
-
-Bitcoin provided a solution to the double spend problem that doesn’t need enforcement by a central authority, thereby removing the need for centralized verifiability. Xank is proposed as a solution to the current reliance on centralized economic interventions for achieving relative price equilibrium. As well-intentioned and well-insulated central banks might be, authorities often exert pressure on them to inflate the money supply when their economies end up in too much debt. This increases inflationary pressure and results in the value of government-issued currencies eroding over time, sometimes even catastrophically as countries end up in default on their debts. 
-
-We believe that when cryptocurrencies mature to the point where they can fulfill all the necessary functions of money, they will be preferred by citizens and taxpayers to replace the legacy financial and governance system. Digital money alternatives can offer society independent, transparent, cryptocurrency-based monetary policies that offer degrees of accountability to the likes never been seen in history.
+*   해양에 도달하는 폐기물, 화학물질, 일반 오염을 크게 줄일 수 있는 퇴비화 화장실 및 대체 정화조 시스템 스타트업 자금 지원
+*   토양 오염 및 황폐화를 크게 줄일 수 있는 고층 아쿠아포닉스 농장 스타트업 자금 지원
+*   지구 온난화를 크게 줄일 수 있는 식물 기반 식단 캠페인 및 연구 보조금 지원
+*   인간 건강을 크게 개선할 수 있는 자연 의학 임상 실험 자금 지원
+*   가정 수준에서 탄소 발자국을 줄이기 위해 작은 집 운동에 참여하는 스타트업 및 개인 자금 지원
+*   전 세계 가정과 사무실에 테슬라 스타일의 벽 배터리 설치를 통해 공기 질을 개선하는 프로젝트 자금 지원
+*   Xank 헌법과 일치하는 기타 제안은 증가하는 규제와 준수 비용을 겪고 있는 초기 코인 제공(ICO) 자금 조달 모델에 대한 실질적인 대안으로 자금을 신청할 수 있습니다.
 
 
-## Giving Power Back to the People
+## 운동권
 
-When Oda Nobunaga found himself in fragmented feudal Japan in the mid-sixteenth century, he sought to unify Japan into a modern state through military force taking territories controlled by many warlords at that period. 500 years later, we find ourselves similarly fragmented - into some 200 nation states controlled by many local governments (akin to modern-day warlords) even as the globe has been connected on the Internet for some time now. The increased interconnectedness of the world brought about by advances in communications, transportation, and trade have made the use of national currencies and passports cumbersome, which have increasingly become more of a hindrance to trade and human global relations. 
+사람 간의 관계를 개선하고자 하는 커뮤니티 주도의 이벤트와 조직은 종종 긍정적인 커뮤니티 인식을 창출하기 위한 적절한 자금이 부족합니다. 운동 단체는 대체로 자금이 부족하고, 정부 지원이 부족하며, 인간 행동을 개선하고 평화로운 상호 작용을 촉진할 수 있는 대의를 위한 인식을 얻는 데 어려움을 겪습니다. Xank 프로토콜은 Xank 헌법과 일치하고 원칙에 부합하는 의도를 가진 활동가, 커뮤니티 및 비정부 기구(NGO)가 자금 조달 목표를 달성할 수 있도록 돕고자 합니다. 다음은 Xank가 도움을 줄 수 있는 몇 가지 잠재적인 사용 사례 시나리오와 방법입니다 :
 
-Multinational corporations that span the globe, communities, NGOs, and increasingly, individuals, face bureaucratic friction when navigating multiple jurisdictions and their regulations, to perform otherwise simple tasks, such as electronically engaging in commerce across borders. As these technologies become more ubiquitous in our daily lives, the need to rely on central banks and nation states will dissolve.
+*   K-pop, 웹툰, 음식 등 문화적 요소를 후원하여 문화 교류와 이해 증진
+*   연방, 주/도/현/성, 지방 정부 수준에서 LGBTQ 권리를 위한 로비 활동을 통해 LGBTQ 평등을 옹호
+*   연방, 주/도/현/성, 지방 정부 수준에서 여성 권리를 위한 로비 활동을 통해 평등 옹호
+*   연방, 주/도/현/성, 지방 정부 수준에서 다양한 민족 권리를 위한 로비 활동을 통해 인종 평등을 옹호
+*   비폭력적인 반혐오 집회를 지원하여 부정적인 분위기를 반대하고 더 큰 인구의 긍정적인 참여를 장려
+*   공공 및 민간 공간에 장애인을 위한 접근성 장비 설치, 맞춤 도로 및 경로 설치에 대한 인식을 지원하고 조성
+*   Xank 헌법과 일치하는 기타 제안은 NGO 자금 조달에 대한 실질적인 대안으로 자금을 신청할 수 있습니다.
 
-In his era, Nobunaga had to resolve territorial disputes in order to unite the world. Thanks to Nakamoto’s blockchain technology, we no longer need to resort to this kind of hard power to unite the world. The widespread use and adoption of blockchain technology can be the soft power humanity needs to establish a global currency and governance. This change need not happen through violent revolution or the destruction of the nation-state world. Instead, as technology thrives and evolves, it will leave the nation-state model behind, and history will see its era of rule as a remnant of its time. The transformation will be a grassroots change as humanity moves toward using more efficient technological alternatives to the current paradigm.
 
-Having lived in both South Korea and the United States for more than ten years in each country, both two of the most successful economies in the world, I have developed an understanding of how these governments operate. Both governments proclaim to serve their people, as servants. Instead, I observed the citizens of both countries becoming more aware that they were watching big-brother states being built around them. The authorities increasingly grant themselves more power, which results in systemic corruption. Instead of serving the best interests and the will of the people, those in power devote most of their time to special interest groups and corporate lobbyists, not the general population.
+# 법정화폐 이후 세계에서의 Xank
 
-In the last century, two dominant political systems emerged to govern over most populations: autocracies, as seen in North Korea, and liberal democracies as seen in South Korea and the United States. Both political systems are equally prone to failure at serving their populations. It can be argued that liberal democratic systems have performed better than their autocratic counterparts; yet these results are often only apparent on the surface level. Even the liberal democracies that oversee successful market-based economies have managed to create a huge divide between the haves and the have-nots.
+Xank는 IMF SDR에 연동된 소프트 페그를 통해 세계에서 가장 강력한 중앙은행들이 추진하는 모든 경제 안정화 정책과 노력을 활용할 수 있습니다. Xank의 안정적인 거래 기능은 안정적인 구매력을 제공하는 통화를 세계에 제시합니다. 이 기능만으로도 이상적인 화폐의 개념과 일치하여 개인, 기업, 커뮤니티, 조직이 이를 사용할 수 있도록 유도합니다. Xank 생태계가 더 많이 채택되고 사용됨에 따라 자율적으로 자금을 조달하는 준비금과 재무부도 성장하여 기관 및 정부 조직 외에는 거의 볼 수 없는 거래 안정성과 자금 조달 기회를 제공합니다.
 
-> “The top 1/10 of 1% of the population has a net worth that is equal to the bottom 90% combined. The wealth gap is the largest wealth gap that there has been since the 1935 to 1940 period. And so while we have good conditions here, for the bottom 60% of the population, we have bad conditions. So, the averages don’t convey what the picture is because of this disparity. And so, what was tapped into and what we see is there’s a large percentage of the population who is hurting, and that there is a conflict between the “haves” and the “have-nots” and liberal ideas and conservative ideas and all of that. And we have a greater polarity.”
+강조해야 할 점은 SDR 시설이 IMF 회원국 중앙은행에게만 제공된다는 점입니다. 이는 지금까지 이 회원 은행들만이 SDR 시설이 제공하는 안정적인 통화 힘의 혜택을 누릴 수 있다는 것을 의미합니다. Xank는 이러한 안정화 힘을 개인 수준까지 분배하여 진정한 통화 안정화 기능의 민주화를 목표로 하고 있습니다. 이는 Xank가 널리 사용되는 교환 수단으로 점점 더 많이 채택되어 심지어 거래량에서 법정 화폐를 대체할 가능성을 염두에 둡니다. 만약 이것이 실현된다면, Xank는 세계에 현재 중앙은행 기반의 금융 시스템보다 더 안정적이고 투명한 독립적인 금융 시스템을 개발할 수 있는 기술과 기회를 제공할 것입니다.
+
+가능한 미래의 영향은 무엇일까요? 다음은 몇 가지 시나리오에 대한 탐구입니다.
+
+
+## 소비자물가지수에 연동된 소프트 페그
+
+만약 Xank가 세계 거래량의 상당 부분을 통제하게 된다면, 일부 상품은 Xank로 명명된 가격으로 제공되기 시작할 가능성이 있습니다. 이러한 세계에서는 Xank 프로토콜이 SDR과 같은 국가 기반 통화 또는 통화 바스켓에 명명된 통화와 독립적으로 업데이트될 수 있습니다. Xank는 Xank로 명명된 상품 바스켓의 가치를 반영하는 페그로 이동할 가능성이 큽니다. 기능적으로 이는 중앙은행이 자국 통화의 구매력 균형을 유지하기 위해 소비자물가지수(CPI)를 기반으로 통화 정책을 구현하는 방식과 유사할 수 있습니다.
+
+Xank로 명명된 CPI 유사 바스켓에 연동된 Xank 프로토콜은 정부와 독립적인 통화 정책을 구현하여 글로벌 무역 규모를 달성할 수 있는 잠재력을 가집니다.
+
+최고 수준에서 우리는 정부가 화폐 공급에 대한 통제력을 유지하는 데 있어서 시민들에게 두 가지 중요한 해결책을 제공한다고 믿습니다: 검증 가능성과 가격 안정성. 검증 가능성에 관해서는, 정부는 현금 지폐와 동전을 발행하고 위조 방지에 대한 법적 보호를 제공합니다. 가격 안정성에 관해서는, 중앙은행은 통화 및 재정 정책을 통해 경제에 개입하여 금융 시스템의 안정성을 제공하고 금융 수요를 장려할 수 있습니다. 경제의 금융 안정성은 성장을 촉진하고 실업률을 감소시키며 투자를 유치할 수 있습니다. 대부분의 중앙은행은 지역 경제에 안정적인 조건을 제공할 의무를 가지고 있습니다.
+
+비트코인은 중앙 권위자의 개입 없이도 이중 지불 문제를 해결하여 중앙 집중화된 검증 필요성을 제거했습니다. Xank는 현재의 중앙 집중화된 경제 개입에 의존하지 않고 상대적 가격 균형을 달성할 수 있는 해결책으로 제안됩니다. 중앙은행이 아무리 선의로 잘 보호받는다 하더라도, 당국은 경제가 과도한 부채에 빠졌을 때 화폐 공급을 팽창시키도록 압력을 가하는 경우가 많습니다. 이는 인플레이션 압력을 증가시켜 정부 발행 통화의 가치가 시간이 지남에 따라, 때로는 나라가 부채를 상환하지 못할 경우 극단적으로 침식되게 만듭니다.
+
+우리는 암호화폐가 화폐의 모든 필요한 기능을 충족할 수 있을 정도로 성숙해지면, 시민들과 납세자들이 기존의 금융 및 거버넌스 시스템을 대체하기 위해 이를 선호할 것이라고 믿습니다. 디지털 화폐 대안은 사회에 독립적이고 투명한 암호화폐 기반의 통화 정책을 제공하여 역사상 유례없는 수준의 책임성을 제공할 수 있습니다.
+
+
+## 권력을 다시 사람들에게
+
+16세기 중반, 오다 노부나가는 분열된 일본을 군사력으로 통일하여 현대 국가로 만들고자 하였습니다. 당시 일본은 수많은 지방 영주들이 지배하는 영토들로 나뉘어 있었습니다. 500년 후, 우리는 비슷하게도 약 200개의 국가들로 분열되어 있으며, 각 지역 정부(현대의 영주들과 유사)가 통제하고 있습니다. 이와 동시에 인터넷을 통해 전 세계가 연결된 지는 꽤 되었습니다. 통신, 교통, 무역의 발전으로 인해 세계가 더욱 연결되면서 국가 통화와 여권의 사용은 점점 더 불편해지고, 이는 무역과 인적 관계에 있어 장애물이 되고 있습니다.
+
+전 세계에 걸친 다국적 기업들, 커뮤니티, NGO들, 그리고 점점 더 많은 개인들이 여러 관할 구역의 규제를 준수하며 단순한 작업을 수행할 때도 관료적 마찰을 겪고 있습니다. 국경을 넘어 전자상거래에 참여하는 것도 예외가 아닙니다. 이러한 기술들이 우리의 일상 생활에서 더 널리 사용됨에 따라 중앙은행과 국가에 의존해야 할 필요성은 사라질 것입니다.
+
+노부나가가 살던 시대에는 영토 분쟁을 해결해야 세상을 통합할 수 있었습니다. 나카모토의 블록체인 기술 덕분에 이제 우리는 세상을 통합하기 위해 이러한 강력한 힘을 사용할 필요가 없습니다. 블록체인 기술의 광범위한 사용과 채택은 인류가 글로벌 통화와 거버넌스를 수립하는 데 필요한 소프트 파워가 될 수 있습니다. 이 변화는 폭력적인 혁명이나 국가 기반 세계의 파괴를 통해 일어날 필요는 없습니다. 대신 기술이 발전하고 진화함에 따라 국가 기반 모델을 뒤로 하고 역사적인 지배 시대를 잔재로 남길 것입니다. 이 변화는 인류가 현재의 패러다임보다 더 효율적인 기술적 대안을 사용하게 되면서 일어나는 풀뿌리 변화가 될 것입니다.
+
+한국과 미국에서 각각 10년 이상 살면서 두 나라의 정부가 어떻게 운영되는지 이해하게 되었습니다. 두 나라의 정부는 모두 국민을 섬기는 공복임을 주장합니다. 그러나 나는 두 나라의 시민들이 자신들을 둘러싼 빅브라더 국가의 형성을 점점 더 인식하고 있다는 것을 목격했습니다. 당국은 점점 더 많은 권력을 부여받고 있으며, 이는 체계적인 부패로 이어집니다. 권력을 가진 사람들은 대부분의 시간을 특별 이익 단체와 기업 로비스트들을 위해 할애하고, 일반 대중을 위해 봉사하는 데에는 신경 쓰지 않습니다.
+
+지난 세기 동안, 두 개의 지배적인 정치 체제가 대부분의 인구를 다스리기 위해 등장했습니다: 북한에서 볼 수 있는 독재체제와 한국과 미국에서 볼 수 있는 자유민주주의 체제입니다. 두 정치 체제 모두 국민에게 봉사하는 데 실패할 가능성이 있습니다. 자유민주주의 체제가 독재체제보다 더 나은 성과를 냈다고 주장할 수 있지만, 이러한 결과는 종종 표면적으로만 드러납니다. 성공적인 시장 기반 경제를 감독하는 자유민주주의 체제조차도 가진 자와 가지지 못한 자 사이에 큰 격차를 만들어냈습니다.
+
+> “상위 0.1%의 인구가 하위 90%의 인구를 합친 것과 같은 순자산을 가지고 있습니다. 부의 격차는 1935년에서 1940년 기간 이래 가장 큰 격차입니다. 그래서 여기에 좋은 조건이 있지만, 하위 60%의 인구에게는 나쁜 조건이 있습니다. 따라서 평균이 그 그림을 전달하지 못합니다. 그래서 우리가 보는 것은 고통받는 인구의 큰 비율이 있으며, ‘가진 자’와 ‘가지지 못한 자’ 사이, 그리고 자유주의적 아이디어와 보수적 아이디어 사이의 큰 갈등이 있다는 것입니다. 그리고 우리는 더 큰 양극화를 가지고 있습니다.”
 >
-> – Ray Dalio, Founder of Bridgewater Associates
+> – 레이 달리오, 브리지워터 어소시에이츠 창립자
+
+싱가포르를 제외하고, 독재체제는 실패했습니다. 북한과 한국을 예로 들어보면, 두 나라는 같은 민족을 공유하고 있으며, 명확한 차이점은 정치 체제뿐입니다. 남한은 GDP 대비 100 대 1의 비율로 경제적으로 번영하고 있는 반면, 북한 주민들은 생존을 위해 매일 고군분투하고 있습니다. 두 나라 국민들이 공통적으로 가지고 있는 것은 기술의 발전으로 인해 국가의 감시가 점점 더 가능해지고 있다는 점입니다.
+
+패권을 유지하기 위해 한 체제는 세금을 걷고, 다른 체제는 임금을 배분합니다. 두 통치 체제 모두 지구가 황폐화되고, 수로가 오염되고, 기업이 공기 질을 파괴하며, 산업 농업이 토양을 고갈시키고, 많은 지역이 인간, 토착 생물, 식물이 거주할 수 없게 되는 상황에서 실패했습니다.
+
+두 체제 모두 부채를 상환하는 비용을 관리하기 위해 화폐 공급을 팽창시켜 자산과 국가 부를 감소시킵니다.
+
+두 체제 모두 교육, 건강, 연구, 사회적 복지 대신 군사 증강과 종종 무의미한 전쟁에 세금을 소비합니다. 이러한 체제는 부패하고 과도하게 부담스러워지며, 결국 원래의 의도와는 상관없이 억압적으로 변할 수 있습니다.
 
 
-With the exception of Singapore, autocratic systems all but failed. Consider North Korea and South Korea, for example, where both populations share the same ethnicity and where the only clear division is their political systems. The South is economically flourishing to the degree of 100 to 1 in terms of GDP per person while their northern counterparts are daily preoccupied with their survival. One thing both populations do have in common is that they are both increasingly being surveilled by the state as technology has made it more feasible for mass surveillance.
+## Xank 헌법 서문
 
-To maintain hegemony, one system collect taxes, and the other distributes wages. Both governance systems have failed as the Earth is being ravaged, waterways are increasingly becoming polluted, corporations are allowed to run rampant and destroy air-quality, industrial farming is depleting the soils, and many regions are becoming uninhabitable for humans, native species, and plants. 
+여기서 우리는 Xank 헌법의 전체 버전에 포함될 원칙들을 문서화합니다. 이 헌법은 우선적으로 Xank DAO에 의해 비준되고 통과될 것입니다.
 
-Both systems fail us economically as they resort to inflating the money supply to manage ever-increasing costs of servicing debt, which in turn deflates our assets and national wealth. 
+초안은 주로 레이 달리오의 책, _Principles_ 에서 제시된 작업을 모델로 하고 있습니다. 레이 달리오는 현대의 아담 스미스와 카를 마르크스로 자주 비유됩니다. 그는 무엇보다도 사업가이지만, 또한 철학자입니다.
 
-Both systems fail us as they spend taxes on military buildup and often senseless wars instead of education, health, research, and societal well-being. These systems become corrupt, overbearing, and ultimately can turn oppressive, often in spite of their original intent.
+레이는 원래 자신과 자신의 회사에 이익이 되는 실적주의 시스템을 만들고자 했으나, 결과적으로 이는 사회 전반에 걸쳐 훨씬 더 넓은 기관 수준의 함의를 가질 수 있는 시스템으로 발전했습니다.
 
+Xank 네트워크의 궁극적인 성공은 전 세계 사람들에게 글로벌 규모로 확장될 수 있는 진정한 실적주의를 통해 얼마나 풍요로움을 제공하는지에 따라 측정될 수 있습니다. 이것이 우리의 의도입니다. 따라서 Xank가 레이 달리오의 실적주의 모델과 특성을 공유하게 되는 것은 우연이 아닙니다. Xank는 현재의 정부와 기업들이 해결하지 못하고 있는 인간 생존과 번영에 가장 중요한 문제들을 해결하고자 합니다. Xank 헌법은 Xank 경제로 사람들을 끌어들이는 자석 역할을 할 것이며, 이 사람들은 실적에 따라 Xank 재무부 자금이 어떻게 사용될지를 지도할 수 있는 능력을 얻게 될 것입니다. 이러한 자금 사용은 지구 및 그 너머에서 인간의 지속 가능성을 연장하는 데 목적이 있습니다.
 
-## A Preamble to the Xank Constitution
+**오염 조항** - 다음을 목표로 하는 노력 :
 
-Here we document the principles that will be drafted to be embedded in the full version of the Xank Constitution, which will be ratified and passed by the Xank DAO as a priority.
+1. 깨끗한 공기
+2. 깨끗한 토양
+3. 깨끗한 물
 
-The draft is primarily modeled from the work laid out in Ray Dalio’s book, _Principles_. Ray Dalio is often fondly thought of as a modern-day Adam Smith and Karl Marx. A businessman foremost, Ray is also a philosopher. 
+**차별 조항** - 다음을 목표로 차별을 없애기 위한 노력 :
 
-Ray originally set out to create a meritocratic system that would be of benefit to himself and his company, but what emerged is a system that can have much wider institutional level implications throughout society. 
+1. 민족 또는 장애
+2. 종교 또는 이념
+3. 성별 또는 성적 지향
 
-The ultimate success of the Xank network can be measured by the degree to which it enriches the people of the world with a true meritocracy that can scale to a global level - this is our intent. It is, therefore, no coincidence that Xank will share characteristics with Ray Dalio’s meritocratic model. Xank sets out to address the problems that are most vital to human survival and prosperity that are not being addressed by the current crop of governments and corporations. The Xank Constitution will act as a magnet to attract people to the Xank economy based on their merit. These people will earn the ability to guide how the Xank Treasury funds are to be spent with a view of prolonging human sustainability on this Earth and beyond.
+**억압 조항** - 파괴적인 힘을 반대하고 제거하기 위한 노력 :
 
-**Pollution Clause** - efforts that aim to provide for:
+1. 전쟁과 군사 확장
+2. 인플레이션과 양적 완화
+3. 체계적인 부패
 
-1. Clean Air
-2. Clean Soil
-3. Clean Water
+**학대 조항** - 학대를 반대하고 억제하기 위한 노력 :
 
-**Discrimination Clause** - efforts that aim to eliminate discrimination of:
+1. 인간에 대한 학대
+2. 동물에 대한 학대
+3. 인도적인 도축
 
-1. Ethnicity or Disability
-2. Religion or Ideology
-3. Sex or Sexual Orientation
+**소비 조항** - 과소비를 반대하고 억제하기 위한 노력 :
 
-**Oppression Clause** - efforts that aim to counter and eliminate the destructive forces of:
+1. 과소비
+2. 대형 주택
+3. 음식 낭비
 
-1. War and Military Buildup
-2. Inflation and Quantitative Easing
-3. Systemic Corruption
+**지속 가능한 개발 목표 (SDG)** - 유엔 이니셔티브를 지원하기 위한 노력<sup id="a9">[9](#f9)</sup> :
 
-**Abuse Clause** - efforts that aim to counter and curtail the abuse of:
+1. 빈곤 종식
+2. 기아 종식
+3. 건강과 웰빙
+4. 양질의 교육
+5. 성평등
+6. 깨끗한 물과 위생
+7. 정직한 청정 에너지
+8. 양질의 일자리와 경제성장
+9. 산업, 혁신과 사회기반시설
+10. 불평등 감소
+11. 지속가능한 도시와 공동체
+12. 책임감 있는 소비와 생산
+13. 기후변화 대응
+14. 해양 생태계
+15. 육상 생태계
+16. 평화, 정의와 제도
+17. SDG를 위한 파트너십
 
-1. Human 
-2. Animal 
-3. Slaughter
+우리는 서로 다른 언어를 사용하고 다른 피부색을 가지고 있을지라도, 같은 행성을 공유하는 형제자매들입니다. 우리는 서로에게 더 친절하고 존중할 수 있습니다. 사람들을 차별하는 한, 더 평화롭고 사랑이 넘치며 자비로운 세계를 달성할 수 없습니다. 모든 사람들은 고유하며, 이는 축하해야 할 일입니다. 사람들이 민족, 사회 계층, 경제적 영향력, 종교와 이념, 인종, 성별, 성적 지향 등으로 인해 분열되는 세력을 허용한다면 더 나은 세계를 만들 수 없습니다. Xank는 오염, 차별, 억압을 없애고 소비를 억제하기 위한 프로젝트에 자금을 지원할 수 있도록 헌법에 조항을 추가할 것입니다.
 
-**Consumption Clause** - efforts that aim to counter and curtail the use of:
+정부 지원의 피아트 통화에서 자산을 이동시키고, 자금을 자체적으로 지원하고 자치하는 암호화폐에 자산을 배치하면, 필요한 규모가 달성될 경우, 세계적으로 만연한 정부 지원 억압과 부패를 상당 부분 완화할 수 있습니다. 궁극적으로, 세계의 정부는 피아트로 징수된 세금 형태로 시민들에 의해 집단적으로 지원받습니다. 자산이 정부, 중앙은행, 기업과 같은 중앙 집중 세력의 재무제표에서 벗어나 분산된 인적 네트워크로 이동하면, 세계 정부는 사람들의 부와 그 할당에 대한 자주적인 영향력을 잃게 될 것입니다. 정부가 세금과 재분배를 통해 사람들의 부에 대한 독점을 유지할 수 없게 되면, 대규모 군사 유지와 무의미한 전쟁을 지속하기 위해 필요한 대규모 중앙 집중 인프라를 유지할 수 없게 될 것입니다. 중앙 집중 정부는 지역 사회 기반의 투명한 방식으로 커뮤니티 보호, 건강, 교육, 복지 및 번영을 제공하는 자치 구조로 대체될 것입니다. 국가가 덜 관련성 있게 되면서 국가가 지원하는 피아트 통화도 그 중요성을 잃게 될 것입니다. 통화 전쟁과 인플레이션 정책은 더 이상 사람들의 부에 악영향을 미치지 않을 것입니다. 지역 사회 기반의 자치 구조는 더 큰 책임을 지게 되어 중앙 집중적이고 불투명한 정부 구조와 기관에서 만연한 부패의 규모를 줄일 것입니다.
 
-1. Overconsumption
-2. Big Houses
-3. Food Waste
-
-**Sustainable Development Goals (SDGs)** - efforts that aim to support the UN initiative<sup id="a9">[9](#f9)</sup>:
-
-1. No Poverty
-2. Zero Hunger
-3. Good Health and Well-being
-4. Quality Education
-5. Gender Equality
-6. Clean Water and Sanitation
-7. Affordable and Clean Energy
-8. Decent Work and Economic Growth
-9. Industry, Innovation, and Infrastructure
-10. Reducing Inequality
-11. Sustainable Cities and Communities
-12. Responsible Consumption and Production
-13. Climate Action
-14. Life Below Water
-15. Life On Land
-16. Peace, Justice, and Strong Institutions
-17. Partnerships for the Goals
-
-We are the same people even though we came to speak different languages and have different skin colors. We are all brothers and sisters sharing the same planet. We can be more friendly toward each other and respect each other. A more peaceful, loving, and compassionate world cannot be achieved as long as people hate others based on their differences. As all people are unique, we are all different from each other, and this should be celebrated. A better world cannot be built if people allow forces that divide us into opposing groups that are often based on ethnicity, social class, economic clout, religious and ideological beliefs, race, gender, sexual orientation, and all other perceived human differences to exist. Xank will add clauses in its constitution to allow for the funding of projects that work toward the elimination of pollution, discrimination, oppression, and curtail consumption.
-
-The act of moving assets away from government-backed fiat currencies and establishing assets in decentralized self-funding and self-governed cryptocurrencies can alleviate much of the government-sponsored oppression and corruption that is rampant in the world, should the required scale be achieved. Ultimately, the governments of the world are collectively sponsored by citizens in the form of taxes collected in fiat. When assets are moved off the balance sheets of centralizing forces, such as governments, central banks, and corporations, and move into decentralized human-powered networks, the governments of the world will lose their self-imposed influence and lordship over the people’s wealth and the allocation thereof. As governments are no longer able to sustain monopolies over the people’s wealth through taxation and reallocation, they will lose their ability to sustain large centralized infrastructure, such as is required to maintain large militaries and wage senseless and unnecessary wars.  Centralized government will give way to more decentralized governance structures that empower locally based communities that exercise governance in transparent ways to provide for the required levels of community protection, health, education, well-being, and prosperity. Nation-state-backed fiat currencies will lose their relevance as nation-states themselves become less relevant. Currency wars and inflationary monetary policies will no longer have such degrading influence over the people's wealth. Locally based community governance structures can be held more accountable, which will degrade the scale of corruption that is rampant in centralized, opaque government structures and institutions.
-
-The Xank Constitution<sup id="a10">[10](#f10)</sup>: will act as a mechanism to guide network proposals and initiatives that are beyond the scope of network maintenance, development, upgrades, and promotion. The Xank Reputation Index criteria will allow masternode operators to gain voting influence over the network each time they back initiatives that are beneficial to the network or in line with the Xank Constitution - and this will be the basis for building a meritocratic network that benefits all users and humanity. As more proposals that benefit humanity get funded, a positive feedback loop that will attract more involvement by the wider community will be created. This will further fund and grow the Xank network and fulfill it’s imbued intention to be of service to humanity by building a better society.
+Xank 헌법<sup id="a10">[10](#f10)</sup> : 은 네트워크 유지, 개발, 업그레이드 및 홍보 범위를 넘는 네트워크 제안 및 이니셔티브를 안내하는 메커니즘 역할을 할 것입니다. Xank 평판 지수 기준은 관료들이 네트워크에 유익하거나 Xank 헌법에 부합하는 이니셔티브를 지원할 때 네트워크에 대한 투표 영향력을 얻을 수 있도록 할 것입니다. 이를 통해 모든 사용자와 인류에게 혜택을 주는 실적주의 네트워크를 구축할 수 있습니다. 인류에게 유익한 제안이 더 많이 자금 지원을 받을수록, 더 넓은 커뮤니티의 참여를 유도하는 긍정적인 피드백 루프가 형성될 것입니다. 이는 Xank 네트워크를 더욱 발전시키고 인류에 봉사하여 더 나은 사회를 만드는 데 기여하는 의도를 실현할 것입니다.
 
 
-# Conclusion
+# 결론
 
-The birth of Bitcoin gave rise to the idea of cryptocurrencies competing with fiat currencies for transactional usage and removing the world’s reliance on centralized institutions that make up the legacy financial system. However, Bitcoin’s inherent price volatility does not lend itself to such use cases. 
+비트코인의 탄생은 법정화폐와 경쟁하여 거래에 사용되고, 기존 금융 시스템을 구성하는 중앙 집중식 기관에 대한 세계의 의존을 제거하는 암호화폐의 아이디어를 불러일으켰습니다. 그러나 비트코인의 본질적인 가격 변동성은 이러한 용도에 적합하지 않습니다.
 
-In this paper, we introduced Xank, a robust, decentralized, autonomous organization, a reserve-backed stable transaction cryptocurrency. Xank’s stable transactions functionality will act to stabilize the purchasing power and offer protection against price volatility. Xank, therefore, stands as a network that can be used for price stable payments and wealth storage. As Xank’s unique stable transactions characteristics and use cases gain traction and adoption, we believe this contribution will cause cryptocurrencies to experience a virtuous cycle of adoption and help them transition into a mainstream medium of exchange.
+이 백서에서는 Xank를 소개했습니다. Xank는 견고하고 분산된 자율 조직이며, 준비금으로 뒷받침되는 안정적인 거래 암호화폐입니다. Xank의 안정적인 거래 기능은 구매력을 안정화시키고 가격 변동성으로부터 보호할 것입니다. 따라서 Xank는 가격 안정적인 결제와 자산 저장에 사용할 수 있는 네트워크로 자리매김합니다. Xank의 독특한 안정적인 거래 특성과 사용 사례가 주목받고 채택됨에 따라, 우리는 이 기여가 암호화폐가 선순환적인 채택을 경험하게 하고 주류 교환 수단으로 전환하는 데 도움이 될 것이라고 믿습니다.
 
 
-# Appendix
+# 부록
 
-## Pros and Cons of Existing Stablecoins
+## 기존 스테이블코인의 장단점
 
-It is important to consider what problems certain cryptocurrencies have attempted to solve and how their efforts have resulted in gaining a better understanding of the Xank proposition. Below are commentary, analysis, observations and extracts based on a post by Haseeb Qureshi on Hackernoon, where he explains the key concepts behind the current batch of stablecoins (full text<sup id="a11">[11](#f11)</sup>).
+특정 암호화폐가 해결하려고 시도한 문제와 이러한 시도가 Xank 제안을 더 잘 이해하는 데 어떻게 기여했는지를 고려하는 것이 중요합니다. 아래는 Haseeb Qureshi가 Hackernoon에 게시한 글을 바탕으로 현재 스테이블코인의 주요 개념에 대해 설명한 내용에 대한 논평, 분석, 관찰 및 발췌문입니다 (전체 텍스트<sup id="a11">[11](#f11)</sup>는 여기서 확인 가능합니다).
 
 
 ### Tether
 
-Tether’s attempt at a stablecoin was to create an IOU-based debt instrument that is redeemable for \$1.00 USD. By depositing dollars into a bank account, you can issue Tether on a 1:1 basis. Users that wish to redeem their value are paid back the Tether value in fiat and the Tether coins are destroyed so as to maintain the 1:1 ratio in the available supply and the amount in the bank account.
+Tether의 스테이블코인 시도는 $1.00 USD와 상환 가능한 IOU 기반 부채 상품을 만드는 것이었습니다. 은행 계좌에 달러를 예치함으로써 1:1 비율로 Tether를 발행할 수 있습니다. 가치를 상환받고자 하는 사용자는 법정화폐로 Tether 가치를 되돌려받고, Tether 코인은 파기되어 사용 가능한 공급량과 은행 계좌에 할당된 금액 간의 1:1 비율을 유지합니다.
 
-This simple setup requires trust in a central Tether issuer who constitutes a single point of failure. Trust can be minimized through periodic audits or full level transparency which is lacking.
+이 단순한 설정은 단일 실패 지점을 구성하는 중앙 Tether 발행자에 대한 신뢰를 필요로 합니다. 신뢰는 주기적인 감사 또는 부족한 전체 수준의 투명성을 통해 최소화할 수 있습니다.
 
-The peg should remain stable as long as the amounts issued match with the funds that are allocated in the bank account.
+발행된 금액이 은행 계좌에 할당된 자금과 일치하는 한, 페그는 안정적으로 유지됩니다.
 
-Tether can be useful for price stable payments, but the U.S. dollar is a currency that is continually inflated and experiences value degradation over time, which does not make it ideal for wealth preservation and a store of value. Furthermore, it cannot attract a rate of interest on deposits as can its fiat counterpart in a savings account, which further degrades its value proposition.
+Tether는 가격이 안정적인 결제에 유용할 수 있지만, 미 달러는 지속적으로 인플레이션을 겪으며 시간이 지남에 따라 가치가 저하되어 부의 보존 및 가치 저장 수단으로 이상적이지 않습니다. 또한, 저축 계좌의 법정화폐와 달리 예금에 대한 이자율을 끌어들일 수 없어 가치 제안을 더욱 악화시킵니다.
 
-Fiat-backed schemes are also highly regulated and constrained by legacy payment rails that involve bank wires and cheques when cashing out back into fiat.
+법정화폐로 뒷받침되는 계획은 또한 법정화폐로 환전할 때 은행 송금 및 수표를 포함한 기존 결제 레일에 의해 매우 규제되고 제한됩니다.
 
-**Pros:**
+**장점 :**
 
-*   100% price-stable
-*   Simplest (a big virtue)
-*   Less vulnerable to hacks, since no collateral is held on the blockchain
+*   100% 가격 안정성
+*   가장 단순함(큰 장점)
+*   블록체인에 담보가 보관되지 않아 해킹에 덜 취약함
 
-**Cons:**
+**단점 :**
 
-*   Centralized — need a trusted custodian to store the fiat (otherwise vulnerable to brick and mortar theft)
-*   Expensive and slow liquidation into fiat
-*   Highly regulated
-*   Need regular audits to ensure transparency
+*   중앙 집중화 — 법정화폐를 보관할 신뢰할 수 있는 수탁자가 필요함(그렇지 않으면 물리적 절도에 취약)
+*   법정화폐로 청산하는 데 비용이 많이 들고 느림
+*   강력한 규제 대상
+*   투명성을 보장하기 위해 정기적인 감사가 필요
 
-Tether recently avoided an audit which allows room for doubt on whether they hold the funds they purport to hold. Other stablecoins like Saga are trying to do the same thing but with more transparency. Digix Gold is a similar scheme, except that the collateral is gold instead of fiat. Nevertheless, such stablecoins share the same fundamental properties.
+Tether는 최근까지 감사를 피했으며, 이는 그들이 주장하는 자금을 실제로 보유하고 있는지에 대한 의문을 남깁니다. 다른 스테이블코인인 Saga는 더 많은 투명성을 가지고 동일한 일을 시도하고 있습니다. Digix Gold는 담보가 법정화폐가 아닌 금이라는 점을 제외하고는 유사한 개념입니다. 그럼에도 불구하고 이러한 스테이블코인은 동일한 기본 특성을 공유합니다.
 
 
 ### Maker (Dai)
 
-The basic concept here is to peg to a fiat currency by reserving collateral in a cryptocurrency. To combat the price volatility of the underlying cryptocurrency, one must establish an overcollateralized pool of funds that can absorb price shocks. The incentive for someone to ‘lock-up’ their funds as collateral is that their position can be leveraged against the base cryptocurrency in fiat value terms. 
+기본 개념은 암호화폐를 담보로 보유하여 법정화폐에 페그하는 것입니다. 기본 암호화폐의 가격 변동성을 극복하기 위해 가격 충격을 흡수할 수 있는 초과 담보화된 자금 풀을 설정해야 합니다. 자금을 담보로 '잠그는' 사람에게 주어지는 인센티브는 기본 암호화폐에 대해 법정화폐 가치로 레버리지 포지션을 취할 수 있다는 점입니다.
 
-> ...if a depositor locks up \$200 of Ether, they can create \$100 of stablecoins. If they use the 100 stablecoins to buy another \$100 of Ether, they now have a leveraged position of \$300 Ether, backed by \$200 in collateral. If Ether goes up 2x, they now have \$600, instead of the \$400 they’d otherwise make.
+> ...만약 예치자가 $200 상당의 이더를 잠그면 $100의 스테이블코인을 생성할 수 있습니다. 그들이 100 스테이블코인을 사용하여 $100 상당의 이더를 다시 구매하면, 이제 $200의 담보로 뒷받침된 $300의 레버리지 포지션을 갖게 됩니다. 이더의 가치가 2배로 상승하면, 그들은 $400 대신 $600을 얻게 됩니다.
 
-This mechanism can be set up to operate on a transparent blockchain and thereby eliminate the need to trust the amounts held in collateral. However, it has one required feature, and that is a constant price feed that records price fluctuations on the blockchain to keep the peg ‘informed’. This means that although trust is eliminated in the collateralization, the trust has now shifted onto the trusted feed. 
+이 메커니즘은 투명한 블록체인에서 작동하도록 설정할 수 있어 담보로 보유된 금액을 신뢰할 필요가 없습니다. 그러나 이는 가격 변동을 기록하여 페그를 '알려주는' 지속적인 가격 피드가 필요하다는 특징을 갖고 있습니다. 이는 담보화에서의 신뢰가 제거된 대신, 이제 신뢰가 신뢰할 수 있는 피드로 이동했음을 의미합니다.
 
-Crypto-collateralized coins are also exposed to sharp drops in the valuation of the underlying cryptocurrency asset. If the underlying asset drops in value to below the collateralized amounts, the coins will instantly be liquidated into the underlying asset, which then fully exposes the held value to the price volatility of the underlying cryptocurrency. This failing makes the crypto-collateralized stablecoin unlikely to be used by exchanges, which vastly reduces its adoption surface area. 
+암호화폐 담보화 코인은 기본 암호화폐 자산의 가치 급락에 노출됩니다. 기본 자산의 가치가 담보화된 금액보다 낮아지면, 코인은 즉시 기본 자산으로 청산되어 보유된 가치가 기본 암호화폐의 가격 변동성에 완전히 노출됩니다. 이 실패는 암호화폐 담보화 스테이블코인이 거래소에서 사용되기 어렵게 만들어 채택 표면적을 크게 줄입니다.
 
-**Pros:**
+**장점 :**
 
-*   More decentralized
-*   Can liquidate quickly and cheaply into underlying crypto collateral (a blockchain transaction)
-*   Very transparent — easy for everyone to inspect the collateralization ratio of the stablecoin
-*   Can be used to create leverage
+*   더 분산화됨
+*   블록체인 거래로 기본 암호화폐 담보로 빠르고 저렴하게 청산 가능
+*   매우 투명함 — 모든 사람이 스테이블코인의 담보화 비율을 쉽게 검사 가능
+*   레버리지 생성 가능
 
-**Cons:**
+**단점 :**
 
-*   Can be auto-liquidated during a price crash into underlying collateral
-*   Less price-stable than fiat
-*   Tied to the health of a particular cryptocurrency (or basket of cryptocurrencies)
-*   Inefficient use of capital
-*   Most complexity
+*   가격 폭락 시 기본 담보로 자동 청산될 수 있음
+*   법정화폐보다 가격 안정성이 낮음
+*   특정 암호화폐(또는 암호화폐 바구니)의 건강 상태에 따라 다름
+*   자본의 비효율적 사용
+*   가장 복잡함
 
-Thus, MakerDAO’s Dai crypto-collateralized stablecoin is collateralized by Ether. BitUSD is another example, the first crypto-collateralized stablecoin to be issued and collateralized with BitShares.
+따라서 MakerDAO의 Dai 암호화폐 담보화 스테이블코인은 이더로 담보화됩니다. BitUSD는 BitShares로 발행 및 담보화된 최초의 암호화폐 담보화 스테이블코인의 또 다른 예입니다.
 
 
 ### Carbon
