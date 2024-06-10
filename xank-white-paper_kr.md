@@ -1,78 +1,78 @@
-# Xank: A Reserve-backed Stable Transaction Cryptocurrency
+# Xank: 준비금으로 뒷받침되는 안정적인 거래 암호화폐
 
-Author:
+저자 :
 
-Kim Ryu Hyun ([ryu@xank.io](mailto:ryu@xank.io))
+김유현 ([ryu@xank.io](mailto:ryu@xank.io))
 
-Contributors:
+기여자 :
 
-Ryan Lee ([rl@xank.io](mailto:rl@xank.io))
+이성신 ([rl@xank.io](mailto:rl@xank.io))
 
-Sung Kim ([sung@xank.io](mailto:sung@xank.io))
+김성협 ([sung@xank.io](mailto:sung@xank.io))
 
-Version 0.99.9s
+버전 0.99.9s
 
-First published: April 7, 2018
+최초 발행일 : 2018년 4월 7일
 
-For the most updated version, check: [xank.io](https://xank.io/)
+최신 버전 확인 : [xank.io](https://xank.io/)
 
-Copyright © 2018-2024 Xank Holdings OÜ. All rights reserved.
-
-
-# Legal Disclaimer:
-
-Definitions
-
-**Whitepaper**: This informational document and all of the content presented in it. 
-
-**Company**: Xank and its associated members. 
-
-**Token**: Tokens created and distributed by Xank for use on the Xank platform.
-
-By making use of any information in this Whitepaper or available on the Xank website, you agree to the following:
-
-The purpose of this Whitepaper is to present information relating to the non-technical and technical aspects of the Xank project. This information is not intended to be exhaustive and does not constitute a contractual relationship. 
-
-This Whitepaper does not constitute a prospectus of any sort or a solicitation for investment, nor does it in any way amount to an offering or a solicitation of an offer to buy any securities in any jurisdiction. It is not, therefore, composed in accordance with, and is not subject to, laws or regulations designed to protect investors in any jurisdiction. Certain statements, estimates and financial information contained in this Whitepaper constitute forecasted statements or information. Such predictions involve both known and unknown risks and uncertainties which may cause actual events or results to differ materially from the estimates or the results implied or expressed in such forward-looking statements. 
-
-This English language Whitepaper is the primary official source of information about Xank and its project. The information herein may, from time to time be translated into other languages or used in the course of written or verbal communications with existing and prospective customers. In the course of such translation or communication, some of the information may be lost, corrupted or misrepresented/ mistranslated. The accuracy of such (alternative) communications cannot be warranted. In the event of any conflicts or inconsistencies between such translations and communications and this official English language Whitepaper, the provisions of this English language original document shall always prevail.
-
-Xank is being built to provide the functions described herein. The project and its Token are not being developed to provide users of the system with any financial product or investment opportunity. On the contrary, Xank and it’s Token is being developed as a product, not as a security or other investment opportunity. The Token is intended to function solely as described in these materials, and, except as described herein, will not give any holder voting rights over anything that Xank or the project may do.  Xank does not make any representation as to or otherwise guarantee, the potential future value of any Token. Once the project is launched, it is contemplated that holders of the Token will only engage with and use the Tokens as they are described herein and not for purposes of any speculative investment opportunity.
+저작권 © 2018-2024 Xank Holdings OÜ. 모든 권리 보유.
 
 
-# Abstract
+# 법적 면책 조항 :
 
-For any currency to be useful, it should at the very least display the following three qualities: it should serve as a medium of exchange, a store of value, and a unit of account. It has been observed that although cryptocurrencies can be used as a store of value, they have proved too volatile in terms of being dependable mediums of exchange and units of account. The stablecoin concept has emerged out of a need to address these weaknesses present in most cryptocurrencies to date. A stablecoin is a cryptocurrency whose price is pegged to another stable asset, such as the USD. What emerges is a price-stable cryptocurrency asset that can fulfill the medium of exchange and unit of account qualities alongside the store of value function. 
+정의
 
-Most dominant cryptocurrencies consistently show volatility in price. Although such volatility can attract speculative investment, the positive effect is often outweighed by hindering adoption as both consumers and merchants are reluctant to speculative price risk exposure if their purpose is to transact for goods and services. Simple financial transactions, like employee remuneration and the extending of credit services, are not easily embarked on because of the distorting effects of continuous price fluctuations.
+**백서** : 이 정보 문서와 그에 포함된 모든 내용.
 
-We propose Xank, a cryptocurrency that utilizes a soft price-pegging mechanism to achieve price stability while also remaining decentralized and free-floating. Xank will allow the soft peg to be set by a protocol governance mechanism where the price peg will be decided on at the network level. For example, a Xank transaction can be set by the network to simulate a peg against an amount of the IMF’s Special Drawing Right (SDR, or currency code XDR<sup id="a1">[1](#f1)</sup>, which will be used in the rest of this paper) or other supported fiat currencies of the world such as but not limited to the U.S. dollar (USD), euro (EUR), British pound sterling (GBP), Japanese yen (JPY), Chinese renminbi (RMB), Korean won (KRW), and New Taiwan dollar (TWD). At a subsequent stage, the network may decide to update the peg to a Consumer Price Index (CPI) of a basket of goods as is performed by central banks to achieve inflation targets. The Xank protocol achieves this by algorithmically adjusting the count of XANK coins on a per-transaction basis to maintain a floating price point between the XANK-XDR rate or XANK-Currency rate. The soft peg is activated during transaction life cycles, that is, during buying, selling, and settlement, which lets a supply and demand equilibrium be established, thus making Xank the only stable cryptocurrency designed to have investment value.
+**회사** : Xank 및 관련 구성원.
+
+**토큰** : Xank 플랫폼에서 사용하기 위해 Xank가 생성하고 배포한 토큰.
+
+이 백서 또는 Xank 웹사이트에 제공된 정보를 사용하는 경우, 귀하는 다음 사항에 동의하는 것입니다:
+
+이 백서의 목적은 Xank 프로젝트의 비기술적 및 기술적 측면에 관한 정보를 제공하는 것입니다. 이 정보는 포괄적이지 않으며 계약 관계를 구성하지 않습니다.
+
+이 백서는 어떤 형태로든 투자 청약서나 투자 권유를 구성하지 않으며, 어떤 관할권에서도 증권을 매수할 제안이나 제안의 권유로 간주되지 않습니다. 따라서 투자자를 보호하기 위해 설계된 법률이나 규정에 따라 작성되지 않았으며, 그러한 법률이나 규정의 적용을 받지 않습니다. 이 백서에 포함된 특정 진술, 추정치 및 재무 정보는 예측된 진술 또는 정보로 구성됩니다. 이러한 예측은 알려진 및 알려지지 않은 위험과 불확실성을 수반하며, 실제 사건이나 결과가 예측된 진술에 포함되거나 명시된 추정치나 결과와 실질적으로 다를 수 있습니다.
+
+영문 백서는 Xank 및 그 프로젝트에 대한 주요 공식 정보 출처입니다. 여기 포함된 정보는 때때로 국문 또는 다른 언어로 번역되거나 기존 및 잠재 고객과의 서면 또는 구두 의사소통 과정에서 사용될 수 있습니다. 이러한 번역 또는 의사소통 과정에서 일부 정보가 손실되거나 손상되거나 잘못 전달/번역될 수 있습니다. 그러한 (대체) 의사소통의 정확성은 보장되지 않습니다. 이러한 번역 및 의사소통과 이 공식 영문 백서 간에 충돌이나 불일치가 발생할 경우, 항상 영문 원본 문서의 조항이 우선합니다.
+
+Xank는 여기서 설명한 기능을 제공하기 위해 구축되고 있습니다. 이 프로젝트와 그 토큰은 시스템 사용자에게 금융 상품이나 투자 기회를 제공하기 위해 개발되는 것이 아닙니다. 반대로, Xank와 그 토큰은 제품으로 개발되고 있으며, 증권이나 기타 투자 기회로 개발되는 것이 아닙니다. 토큰은 이 자료에서 설명한 대로만 작동할 것이며, 여기에서 설명한 경우를 제외하고, Xank 또는 프로젝트가 수행할 수 있는 어떤 사항에 대해 토큰 보유자에게 투표 권리를 부여하지 않습니다. Xank는 토큰의 잠재적 미래 가치를 보장하거나 달리 표현하지 않습니다. 프로젝트가 시작되면, 토큰 보유자는 여기 설명된 대로만 토큰을 사용하고 투기적 투자 목적으로 사용하지 않을 것으로 예상됩니다.
 
 
-# Table of Contents
+# 요약
 
-- [Xank: A Reserve-backed Stable Transaction Cryptocurrency](#xank-a-reserve-backed-stable-transaction-cryptocurrency)
-- [Legal Disclaimer:](#legal-disclaimer)
-- [Abstract](#abstract)
-- [Table of Contents](#table-of-contents)
-- [Introduction](#introduction)
-- [Xank Design Considerations: Implementing Price Stability](#xank-design-considerations-implementing-price-stability)
-  - [Avalanche Protocol for the Xank Network](#avalanche-protocol-for-the-xank-network)
-  - [Adoption of a Self-funding Treasury System](#adoption-of-a-self-funding-treasury-system)
-  - [Soft-pegging to the IMF’s SDR (Special Drawing Rights)](#soft-pegging-to-the-imfs-sdr-special-drawing-rights)
-    - [**A brief history of the IMF’s SDR**](#a-brief-history-of-the-imfs-sdr)
-  - [Xank and the Bridgewater Idea Meritocracy System](#xank-and-the-bridgewater-idea-meritocracy-system)
-  - [**Idea Meritocracy**](#idea-meritocracy)
-    - [Meaningful Work](#meaningful-work)
-    - [Meaningful Relationships](#meaningful-relationships)
-    - [Radical Truthfulness](#radical-truthfulness)
-    - [Radical Transparency](#radical-transparency)
-  - [The Xank Protocol](#the-xank-protocol)
-    - [Stable Pay Functionality](#stable-pay-functionality)
-    - [Local Pay Functionality](#local-pay-functionality)
-    - [Xank Proof-of-Stake (PoS) Governance](#xank-proof-of-stake-pos-governance)
-    - [The Xank Reserve](#the-xank-reserve)
-    - [Go-to-market Strategy](#go-to-market-strategy)
+어떤 통화가 유용하려면 최소한 다음 세 가지 특성을 보여야 합니다 : 교환 매체로서의 기능, 가치 저장 수단으로서의 기능, 회계 단위로서의 기능. 암호화폐는 가치 저장 수단으로 사용할 수 있지만, 교환 매체와 회계 단위로서 신뢰할 수 있는 기능을 하기에는 너무 변동성이 크다는 점이 관찰되었습니다. 스테이블코인 개념은 현재 대부분의 암호화폐에서 나타나는 이러한 약점을 해결할 필요성에서 등장했습니다. 스테이블코인은 가격이 미국 달러(USD)와 같은 다른 안정적인 자산에 고정된 암호화폐입니다. 그 결과, 교환 매체와 회계 단위의 특성을 충족하면서 가치 저장 기능을 수행할 수 있는 가격 안정적인 암호화폐 자산이 탄생하게 됩니다.
+
+가장 지배적인 암호화폐는 지속적으로 가격 변동성을 보입니다. 이러한 변동성은 투기적 투자를 유치할 수 있지만, 그 긍정적인 효과는 소비자와 상인이 상품 및 서비스 거래의 목적으로 가격 위험에 노출되는 것을 꺼리는 경우가 많아 채택을 방해하는 부정적인 효과를 종종 발휘합니다. 직원 보수 지급이나 신용 서비스 연장과 같은 간단한 금융 거래도 지속적인 가격 변동의 왜곡 효과로 인해 쉽게 시작할 수 없습니다.
+
+우리는 가격 안정성을 달성하면서도 탈중앙화되고 자유 변동적인 암호화폐인 Xank를 제안합니다. Xank는 소프트 가격 고정 메커니즘을 사용하여 네트워크 수준에서 가격 고정을 결정하는 프로토콜 거버넌스 메커니즘에 의해 설정됩니다. 예를 들어, Xank 거래는 IMF의 특별인출권(SDR, 또는 이 문서에서 사용될 통화 코드 XDR<sup id="a1">[1](#f1)</sup>) 또는 미국 달러(USD), 유로(EUR), 영국 파운드 스털링(GBP), 일본 엔화(JPY), 중국 위안(RMB), 한국 원화(KRW), 신 타이완 달러(TWD) 등의 다른 지원되는 법정 화폐에 대한 금액에 대해 네트워크에 의해 고정되도록 설정될 수 있습니다. 이후 단계에서는 네트워크가 인플레이션 목표를 달성하기 위해 중앙은행이 수행하는 것처럼 상품 바스켓의 소비자 물가 지수(CPI)에 대한 고정을 업데이트할 수도 있습니다. Xank 프로토콜은 XANK-XDR 비율 또는 XANK-통화 비율 사이의 변동 가격을 유지하기 위해 거래별로 XANK 코인의 수를 알고리즘적으로 조정하여 이를 달성합니다. 소프트 페그는 구매, 판매 및 결제 동안 거래 수명 주기 동안 활성화되며, 이를 통해 수요와 공급의 균형을 확립할 수 있어 Xank를 투자 가치를 가진 유일한 안정적인 암호화폐로 만듭니다.
+
+
+# 차례
+
+- [Xank: 준비금으로 뒷받침되는 안정적인 거래 암호화폐](#xank-준비금으로-뒷받침되는-안정적인-거래-암호화폐)
+- [법적 면책 조항 :](#법적-면책-조항-)
+- [요약](#요약)
+- [차례](#차례)
+- [서론](#서론)
+- [Xank 설계 고려사항 : 가격 안정성 구현](#xank-설계-고려사항--가격-안정성-구현)
+  - [Xank 네트워크를 위한 Avalanche 프로토콜](#xank-네트워크를-위한-avalanche-프로토콜)
+  - [자체 자금 조달 재정부 시스템 채택](#자체-자금-조달-재정부-시스템-채택)
+  - [IMF의 SDR(특별인출권)에 대한 소프트 페깅](#imf의-sdr특별인출권에-대한-소프트-페깅)
+    - [**IMF의 SDR 역사 개요**](#imf의-sdr-역사-개요)
+  - [Xank와 Bridgewater의 실적주의 시스템](#xank와-bridgewater의-실적주의-시스템)
+  - [**아이디어 실적주의(Idea Meritocracy)**](#아이디어-실적주의idea-meritocracy)
+    - [의미 있는 일](#의미-있는-일)
+    - [의미 있는 관계](#의미-있는-관계)
+    - [극단적인 진정성](#극단적인-진정성)
+    - [극단적인 투명성](#극단적인-투명성)
+  - [Xank 프로토콜](#xank-프로토콜)
+    - [Stable Pay 기능](#stable-pay-기능)
+    - [Local Pay 기능](#local-pay-기능)
+    - [Xank 지분 증명(PoS) 거버넌스](#xank-지분-증명pos-거버넌스)
+    - [Xank 준비금](#xank-준비금)
+    - [시장 진출 전략](#시장-진출-전략)
     - [Measuring the Exchange Rate](#measuring-the-exchange-rate)
       - [SDR and Currency Feeds](#sdr-and-currency-feeds)
       - [Oracle System](#oracle-system)
@@ -103,7 +103,7 @@ We propose Xank, a cryptocurrency that utilizes a soft price-pegging mechanism t
   - [**Xank Network Specifications and Comparisons**](#xank-network-specifications-and-comparisons)
   - [**Xank Units of Measure**](#xank-units-of-measure)
   - [XANK Coin Supply Algorithm](#xank-coin-supply-algorithm)
-    - [Introduction](#introduction-1)
+    - [Introduction](#introduction)
     - [Limited Supply](#limited-supply)
     - [Unlimited Supply and Inflation](#unlimited-supply-and-inflation)
     - [GDP](#gdp)
@@ -117,302 +117,300 @@ We propose Xank, a cryptocurrency that utilizes a soft price-pegging mechanism t
   - [Notes](#notes)
 
 
-# Introduction
+# 서론
 
-Cryptocurrencies have not been embraced by the market for use in typical transactional scenarios. Traditional cryptocurrencies like Bitcoin and Ethereum are not able to scale to meet potential market demands. Cryptocurrencies that have difficulties scaling result in increased user transactional costs for entering their transactions in cumbersome blockchains. The latest breed of cryptocurrencies such as Avalanche and Cosmos make claims of being able to confirm transactions in under a few seconds while also allowing for a higher transaction throughput per second along with cheap and declining transaction fees. These claims are particularly attractive to merchants who show a preference for cash over dealing with credit card fees. As cryptocurrencies are immune to chargebacks, it should only follow that merchants prefer cryptocurrencies that can perform as cash. 
+암호화폐는 일반적인 거래 시나리오에서 시장에 받아들여지지 않았습니다. 비트코인과 이더리움 같은 전통적인 암호화폐는 잠재적인 시장 수요를 충족하기 위해 확장할 수 없습니다. 확장에 어려움을 겪는 암호화폐는 번거로운 블록체인에 거래를 기록하는 데 드는 사용자 거래 비용이 증가합니다. Avalanche와 Cosmos와 같은 최신 암호화폐는 몇 초 이내에 거래를 확인하고, 초당 더 높은 거래 처리량과 저렴하고 감소하는 거래 수수료를 제공할 수 있다고 주장합니다. 이러한 주장은 신용카드 수수료보다 현금을 선호하는 상인들에게 특히 매력적입니다. 암호화폐는 환불 불가능하므로 현금처럼 작동할 수 있는 암호화폐를 상인들이 선호할 가능성이 큽니다.
 
-For merchants that already accept payments in cryptocurrencies, it is typical for them to immediately use a crypto-to-fiat merchant service to convert their cryptocurrencies to fiat with some services able to achieve real-time conversions at the time of sale. Merchants typically convert back to fiat as they are in the business of providing goods and services to their customers and are not in the business of speculating on the price of cryptocurrencies or any other price-volatile assets like gold. It is not uncommon for a cryptocurrency to experience a 50% price drop in a day, and this price drop can often carry on over a period of weeks, which is not merchant-friendly as it can wipe out any profits as the costs and prices of merchants’ goods and services are usually static in fiat denominated terms.
+암호화폐로 결제를 이미 수락하는 상인들은 일반적으로 암호화폐를 법정화폐로 즉시 전환하는 암호화폐-법정화폐 상인 서비스를 사용합니다. 일부 서비스는 판매 시점에 실시간 전환을 제공합니다. 상인들은 고객에게 상품과 서비스를 제공하는 사업을 하기 때문에 암호화폐나 금과 같은 가격 변동성이 큰 자산에 투기하는 사업을 하지 않습니다. 암호화폐는 하루에 50%의 가격 하락을 경험할 수 있으며, 이러한 가격 하락은 몇 주 동안 지속될 수 있습니다. 이는 상인 친화적이지 않으며, 상인의 상품과 서비스의 비용과 가격은 일반적으로 법정화폐 기준으로 고정되어 있기 때문에 모든 이익을 없앨 수 있습니다.
 
-Ardent cryptocurrency proponents may show much enthusiasm for many of the attributes of cryptocurrencies, like having direct control over their wealth, the convenience of being able to transact at any time with anyone in the world, the pseudo-anonymity, or even high anonymity offered by some privacy coins. Yet, even the most outspoken proponents are shy to keep their entire life savings in cryptocurrencies and often advise friends, family, and newcomers to only invest a percentage of their savings that they are willing to lose in such volatile assets. 
+열성적인 암호화폐 지지자들은 재산에 대한 직접적인 통제, 언제 어디서나 누구와도 거래할 수 있는 편리함, 가명성 또는 일부 프라이버시 코인이 제공하는 높은 익명성 등 암호화폐의 많은 속성에 열광할 수 있습니다. 그러나 가장 열렬한 지지자조차도 전 재산을 암호화폐에 보유하는 것을 꺼리며, 친구, 가족 및 신규 투자자에게 이러한 변동성이 큰 자산에 기꺼이 잃을 수 있는 비율만 투자하도록 권장합니다.
 
-To move beyond the speculative phase of investment and to move into mainstream adoption, there is a great need for cryptocurrencies to tend toward and achieve price stability so as to become stable mediums of exchange - a key component of useful money.
+투기적 투자 단계를 넘어 주류 채택으로 나아가기 위해서는 암호화폐가 가격 안정성을 달성하여 안정적인 교환 매체가 되어야 합니다. 이는 유용한 화폐의 핵심 요소입니다.
 
-Although cryptocurrency speculators play a key role in price volatility, they are not the leading causal factor. Network-level issues can often be the main drivers for any price instability. 
+암호화폐 투기자들이 가격 변동성에서 중요한 역할을 하지만, 그들이 주요 원인은 아닙니다. 네트워크 수준의 문제가 종종 가격 불안정의 주요 요인이 될 수 있습니다.
 
-Let’s consider the Dash network, which has been designed in such a way so as to overcome the scalability and privacy issues that plague Bitcoin. To achieve this, Dash has implemented a masternode network layer. Because of the high levels of capital expenditure and network hardware requirements to run a masternode, the Dash network is assured a high level of transactional throughput and has also been able to introduce levels of transactional pricing. Achieving this level of scalability and throughput has propelled Dash to be one of the leading cryptocurrencies. However, it did require certain network tradeoffs. Masternodes have introduced an element of centralization and widened the network’s attack surface as a well-funded adversary can theoretically buy up as many masternodes as necessary to establish control of certain network functions. Dash also lends itself to a democratic model for network governance, which moves the network away from meritocratic governance into the foray of the wisdom of the crowd. This can lead to unskilled decision-making, further weakening the network. In time, as these network weaknesses are discovered by the market, price stability cannot be maintained, resulting in digital asset price volatility.
+비트코인을 괴롭히는 확장성 및 프라이버시 문제를 극복하기 위해 설계된 Dash 네트워크를 고려해 봅시다. 이를 달성하기 위해 Dash는 마스터노드 네트워크 레이어를 구현했습니다. 마스터노드를 운영하기 위한 높은 수준의 자본 지출과 네트워크 하드웨어 요구 사항 때문에, Dash 네트워크는 높은 수준의 거래 처리량을 보장받고 거래 가격 책정 수준을 도입할 수 있었습니다. 이러한 확장성과 처리량을 달성한 Dash는 주요 암호화폐 중 하나로 부상했습니다. 그러나 특정 네트워크 트레이드오프가 필요했습니다. 마스터노드는 중앙 집중화 요소를 도입하고 잘 자금 지원된 적대자가 이론적으로 필요한 만큼 마스터노드를 구매하여 특정 네트워크 기능을 제어할 수 있는 공격 표면을 넓혔습니다. Dash는 네트워크 거버넌스를 위한 민주적 모델도 도입하여 네트워크를 실적주의 거버넌스에서 군중의 지혜로 이동시켰습니다. 이는 비숙련 의사결정으로 이어져 네트워크를 약화시킬 수 있습니다. 시간이 지나면서 이러한 네트워크 약점이 시장에 의해 발견되면 가격 안정성을 유지할 수 없게 되어 디지털 자산의 가격 변동성이 발생합니다.
 
-For a cryptocurrency to achieve mass adoption, it must be designed in such a way that achieves a balance between price stability, fee consistency, auditable privacy, and decentralized governance. Unstable price and fee networks do not instill confidence in end consumers or merchants to choose cryptocurrencies over existing and mature fiat alternatives. Unscalable networks cannot handle many users on the network at the same time, and this hinders global-scale adoption. Networks that lack a certain level of privacy leave user details exposed to crypto-analysis and develop fungibility issues resulting in blacklisted and censored transactions. Networks that can not achieve a certain level of decentralized governance become exposed to corruption and value erosion (see [Xank Protocol Characteristics Comparison](#xank-protocol-characteristics-comparison) chart in Appendix).
+암호화폐가 대중 채택을 달성하려면 가격 안정성, 수수료 일관성, 감사 가능한 프라이버시, 탈중앙화된 거버넌스 사이에서 균형을 이루도록 설계되어야 합니다. 불안정한 가격과 수수료 네트워크는 최종 소비자나 상인이 기존의 성숙한 법정화폐 대안을 선택하는 데 자신감을 주지 않습니다. 확장할 수 없는 네트워크는 많은 사용자가 동시에 네트워크를 사용하는 것을 처리할 수 없으며, 이는 글로벌 규모의 채택을 방해합니다. 일정 수준의 프라이버시가 부족한 네트워크는 사용자의 세부 정보가 암호 분석에 노출되어 검열된 거래와 블랙리스트된 거래 문제를 초래합니다. 일정 수준의 탈중앙화된 거버넌스를 달성하지 못한 네트워크는 부패와 가치 침식에 노출됩니다(부록의 [Xank 프로토콜 특성 비교 차트](#xank-protocol-characteristics-comparison)를 참조하십시오).
 
-This paper describes how the Xank network achieves an essential balance between these competing network forces. In so doing, it describes how it can establish its place as the most useful stable cryptocurrency and is therefore set to achieve dominance among them all.
+이 문서는 Xank 네트워크가 이러한 경쟁적인 네트워크 요소들 사이에서 필수적인 균형을 어떻게 달성하는지 설명합니다. 이를 통해 가장 유용한 안정적인 암호화폐로 자리매김할 수 있는 방법과 그로 인해 모든 암호화폐 중에서 지배력을 갖출 수 있는 방법을 설명합니다.
 
 
-# Xank Design Considerations: Implementing Price Stability
+# Xank 설계 고려사항 : 가격 안정성 구현
 
-To achieve price stability, the Xank protocol has chosen design elements from leading cryptocurrencies and combined them with a conceptual framework based on the concepts of sound and stable money. Xank will technically be implemented as a fork of the Avalanche network and, therefore, will retain many of the Avalanche technical characteristics. The Xank protocol will also incorporate various adjustments and enhancements to the Avalanche protocol, designed to achieve the price stability necessary for Xank to serve and function as a stable cryptocurrency.
+가격 안정성을 달성하기 위해 Xank 프로토콜은 주요 암호화폐의 설계 요소를 선택하고 이를 건전하고 안정적인 화폐 개념에 기반한 개념적 프레임워크와 결합했습니다. Xank는 기술적으로 Avalanche 네트워크의 포크로 구현될 것이며, 따라서 Avalanche의 많은 기술적 특성을 유지할 것입니다. 또한 Xank 프로토콜은 Xank가 안정적인 암호화폐로서 기능하고 작동할 수 있도록 필요한 가격 안정성을 달성하기 위해 Avalanche 프로토콜에 다양한 조정과 개선을 통합할 것입니다.
 
-This section describes the importance of decentralized governance and a self-funded budget system as implemented on the other masternode networks. We then look at the concepts of the IMF's Special Drawing Rights (ISO 4217 currency code XDR (numeric: 960), also abbreviated SDR) instrument, which will be used as the first soft peg for the Xank network. In contrast to the democratic governance model, we also consider the advantages that can be gained by implementing Ray Dalio's meritocratic governance system, as outlined in his essay, which led to the success of the company he founded, Bridgewater<sup id="a2">[2](#f2)</sup>, and how this can be applied in the Xank network.
+이 섹션에서는 다른 마스터노드 네트워크에서 구현된 탈중앙화된 거버넌스와 자체 자금 조달 예산 시스템의 중요성을 설명합니다. 그런 다음 Xank 네트워크의 첫 번째 소프트 페그로 사용될 IMF의 특별인출권(ISO 4217 통화 코드 XDR (숫자: 960), 약칭 SDR) 도구의 개념을 살펴봅니다. 민주적 거버넌스 모델과 대조적으로, Ray Dalio가 창립한 회사 Bridgewater<sup id="a2">[2](#f2)</sup>의 성공을 이끈 그의 에세이에서 설명된 실적주의 거버넌스 시스템을 구현함으로써 얻을 수 있는 이점과 이를 Xank 네트워크에 적용하는 방법에 대해 고려합니다.
 
 
-## Avalanche Protocol for the Xank Network
+## Xank 네트워크를 위한 Avalanche 프로토콜
 
-Xank will inherit the Avalanche blockchain's properties, a new family of leaderless Byzantine fault tolerance protocols built on a metastable mechanism.
+Xank는 메타스테이블 메커니즘을 기반으로 구축된 새로운 리더리스 비잔틴 결함 허용 프로토콜의 속성을 상속받습니다.
 
-_Leaderless Consensus_
+_리더리스 합의_
 
-Avalanche follows these four basic protocols to achieve consensus:
+Avalanche는 다음 네 가지 기본 프로토콜을 사용하여 합의를 달성합니다 :
 
-1. Slush: Metastability → A node initiates a query to its peers and based on the response of other nodes (red or blue), the node updates its color to the one selected by the majority of its peers. As nodes perform such queries, the network will tip towards red or blue. 
-2. Snowflake: Byzantine fault-tolerance (BFT) → Byzantine fault-tolerance is achieved by a counter that captures the strength of a node’s conviction. The counter goes up every time there is a successful query that indicates that the response is the same color as the node’s original color.
-3. Snowball: Boosting confidence → Because Snowflake resets a node’s counter with each color flip, Snowball adds confidence counters that record the number of queries that have given a threshold result for their corresponding color. With every successful query, the node increments its confidence counter for that color. After a certain number of consecutive queries, a node switches colors if the confidence counter exceeds or falls below the other color.
-4. Avalanche: DAG → Finally, a dynamic append-only Directed Acyclic Graph (DAG) with all known transactions are added for efficiency and security. 
+1. Slush : 메타스테이빌리티 → 노드는 동료에게 쿼리를 시작하고 다른 노드(빨강 또는 파랑)의 응답에 따라 노드의 색상을 동료들의 다수가 선택한 색상으로 업데이트합니다. 노드가 이러한 쿼리를 수행함에 따라 네트워크는 빨간색 또는 파란색으로 기울어집니다.
+2. Snowflake : 비잔틴 결함 허용(BFT) → 비잔틴 결함 허용은 노드의 확신 강도를 캡처하는 카운터를 통해 달성됩니다. 응답이 노드의 원래 색상과 같은 것을 나타내는 성공적인 쿼리가 있을 때마다 카운터가 증가합니다.
+3. Snowball : 신뢰 증가 → Snowflake가 노드의 카운터를 각 색상 전환 시마다 재설정하기 때문에, Snowball은 해당 색상에 대한 임계치 결과를 제공한 쿼리 수를 기록하는 신뢰 카운터를 추가합니다. 성공적인 쿼리마다, 노드는 해당 색상에 대한 신뢰 카운터를 증가시킵니다. 일정 횟수의 연속된 쿼리 후에는 신뢰 카운터가 다른 색을 초과하거나 미달할 때 노드가 색을 전환합니다.
+4. Avalanche : DAG → 마지막으로, 효율성과 보안을 위해 모든 알려진 거래를 추가하는 동적 추가 전용 방향성 비순환 그래프(DAG)가 있습니다.
 
-While Proof-of-Work or Proof-of-Stake elects one validator for block creation, Avalanche does not need to elect a leader in any form for consensus. Rather, the protocol, metastable by nature, is designed to tip one way or the other, steering all nodes to consensus. With no miners, delegates, or privileged nodes, Avalanche protocol yields an egalitarian network of equal-standing nodes. Thus, the protocol is inherently independent of a central figure or major player in the network. All nodes contribute equally to reaching a consensus.
+작업 증명(Proof-of-Work) 또는 지분 증명(Proof-of-Stake)이 블록 생성을 위해 하나의 검증자를 선출하는 반면, Avalanche는 합의를 위해 어떠한 형태의 리더 선출도 필요로 하지 않습니다. 대신, 본질적으로 메타스테이블한 프로토콜은 한쪽으로 기울어져 모든 노드를 합의로 이끌도록 설계되었습니다. 채굴자, 대표자 또는 특권을 가진 노드가 없기 때문에, Avalanche 프로토콜은 동등한 지위를 가진 노드들의 평등한 네트워크를 만듭니다. 따라서 이 프로토콜은 네트워크의 중앙 인물이나 주요 플레이어에 독립적입니다. 모든 노드는 합의에 동등하게 기여합니다.
 
-_High Throughput and Scalability_
+_고 처리량과 확장성_
 
-In addition to the element of decentralization, Avalanche provides several additional critical benefits to the Xank network. First, Avalanche exhibits significantly higher throughput than that of its counterparts that rival widely accepted fiat payment systems.
+분산화 요소 외에도 Avalanche는 Xank 네트워크에 여러 가지 추가적인 중요한 이점을 제공합니다. 첫째, Avalanche는 널리 인정받는 법정 결제 시스템과 경쟁하는 동급의 다른 시스템보다 훨씬 높은 처리량을 보여줍니다.
 
-*   Bitcoin — 7 transactions per second
-*   Ethereum — 15 transactions per second
-*   XRP — 1,500 transactions per second
-*   EOS — 50 transactions per second
-*   VISA — 2,000 transactions per second
-*   PayPal — 193 transactions per second
-*   Avalanche — 4,500 transactions per second (1,000 nodes hosted on AWS)
+*   Bitcoin — 초당 7건의 거래
+*   Ethereum — 초당 15건의 거래
+*   XRP — 초당 1,500건의 거래
+*   EOS — 초당 50건의 거래
+*   VISA — 초당 2,000건의 거래
+*   PayPal — 초당 193건의 거래
+*   Avalanche — 초당 4,500건의 거래 (AWS에 호스팅된 1,000개의 노드 기준)
 
-As Xank becomes more widely adopted and used for various purposes, the number of transactions will naturally increase, and the Xank network will need the capacity to handle a growing number of transactions. Avalanche, which reached 6,500 transactions per second on a test network of 1,000 nodes and stabilized at 4,500 transactions per second<sup id="a3">[3](#f3)</sup>, has exhibited the ability to handle far more transactions per second than its predecessors. Therefore, Avalanche protocol is the optimal solution for a cryptocurrency like Xank, which will require both high throughput and scalability to function as a truly usable cryptocurrency.
+Xank가 더 널리 채택되고 다양한 목적으로 사용됨에 따라 거래 수는 자연스럽게 증가할 것이며, Xank 네트워크는 증가하는 거래 수를 처리할 수 있는 용량이 필요합니다. 1,000개의 노드로 구성된 테스트 네트워크에서 초당 6,500건의 거래를 달성하고 초당 4,500건의 거래<sup id="a3">[3](#f3)</sup>로 안정화된 Avalanche는 이전의 선례들보다 훨씬 더 많은 거래를 처리할 수 있는 능력을 보여주었습니다. 따라서 Avalanche 프로토콜은 실제로 사용 가능한 암호화폐로 기능하기 위해 높은 처리량과 확장성 모두가 필요한 Xank와 같은 암호화폐에 대한 최적의 솔루션입니다.
 
-_Environment-friendly_
+_환경 친화적_
 
-Bitcoin’s Proof-of-Work is notorious for its excessive consumption of electricity that rivals that of entire countries’ electricity usage. Unlike Proof-of-Work, Avalanche is a green, quiescent, and efficient protocol that does not use energy when there are no decisions to be made in the ecosystem. One of Xank’s core convictions is to eradicate pollution in the world, and Avalanche’s sustainability reduces the usage of electric power. Doing so will diminish the need for electricity generation, a process that emits greenhouse gases that contribute to air pollution. 
+비트코인의 작업 증명(Proof-of-Work)은 전체 국가의 전기 사용량에 맞먹는 과도한 전력 소비로 악명 높습니다. 작업 증명과 달리, Avalanche는 친환경적이고 조용하며 효율적인 프로토콜로, 생태계에서 결정이 내려질 필요가 없을 때 에너지를 사용하지 않습니다. Xank의 핵심 신념 중 하나는 세계의 오염을 근절하는 것이며, Avalanche의 지속 가능성은 전력 사용을 줄입니다. 이렇게 함으로써 전력 생산의 필요성이 줄어들고, 이는 대기 오염에 기여하는 온실 가스를 배출하는 과정을 감소시킵니다.
 
-_Auditable Privacy_
+_감사 가능한 프라이버시_
 
-Privacy, whether it is built into the blockchain or made possible through an external application, is essential for a cryptocurrency like Xank. Xank will enable auditable privacy that will be implemented at the network layer to allow for users to protect their identity and data, while using specialized zero-knowledge proofs to remain publicly auditable. With built-in privacy features, the Xank Universal Wallet will prevent the unwanted exposure of users’ personal information.
+프라이버시는 블록체인에 내장되어 있든 외부 애플리케이션을 통해 가능하든, Xank와 같은 암호화폐에 필수적입니다. Xank는 네트워크 계층에서 구현되는 감사 가능한 프라이버시를 통해 사용자가 신원과 데이터를 보호할 수 있게 하면서도, 전문화된 영지식 증명을 사용하여 공개적으로 감사 가능하도록 할 것입니다. 내장된 프라이버시 기능을 통해 Xank 유니버설 지갑은 사용자의 개인 정보가 원하지 않게 노출되는 것을 방지할 것입니다.
 
-In summary, Avalanche is a second-generation protocol that displays advantages over other protocols that are prevalent today. Avalanche will give the Xank network the decentralization, speed, security, and quiescence that is required for Xank to perform as the next-generational stable cryptocurrency.
+요약하자면, Avalanche는 오늘날 널리 사용되는 다른 프로토콜들보다 우위를 보이는 제2세대 프로토콜입니다. Avalanche는 Xank 네트워크에 탈중앙화, 속도, 보안 및 불정지 상태를 제공하여 Xank가 차세대 안정적인 암호화폐로서의 역할을 할 수 있도록 할 것입니다.
 
 
-## Adoption of a Self-funding Treasury System
+## 자체 자금 조달 재정부 시스템 채택
 
-Xank will implement the Dash-style self-funding treasury system, which has proven vital in overcoming the challenges faced by other cryptocurrencies, in particular, overcoming the challenges of building out the network while maintaining its decentralized system of governance, funding, development, system maintenance, and project expansion. The Dash network was the first cryptocurrency that attempted to solve these issues and successfully implemented a self-funding treasury system that has resulted in the project's development and expansion efforts remaining independent and well-funded. This ensures the network's perpetual success and minimizes the risk that the network can be corrupted or overtaken by bad actors.
+Xank는 다른 암호화폐들이 직면한 도전을 극복하는 데 중요한 역할을 한 Dash 스타일의 자체 자금 조달 재정부 시스템을 구현할 것입니다. 특히, 네트워크를 구축하면서 탈중앙화된 거버넌스 시스템, 자금 조달, 개발, 시스템 유지 보수 및 프로젝트 확장을 유지하는 도전을 극복하는 데 중요한 역할을 했습니다. Dash 네트워크는 이러한 문제를 해결하려고 시도한 최초의 암호화폐로, 프로젝트의 개발 및 확장 노력이 독립적이고 충분히 자금이 지원되는 자체 자금 조달 재정부 시스템을 성공적으로 구현했습니다. 이는 네트워크의 지속적인 성공을 보장하고, 네트워크가 부패하거나 악의적인 행위자에게 장악되는 위험을 최소화합니다.
 
-As Xank adopts a self-funding treasury system, it will set up a for-profit company that is tasked with maintaining the core protocol while also promoting the network and native Xank cryptocurrency. The company’s key directives will be activities that are beneficial to the network’s software development, constitutional development, community building and market adoption activities. Beyond adding value to the network, the Xank self-funding mechanism will assure that the development and well-being of the network does not rely on donations or the goodwill of the network’s major token holders in any meaningful way; this has plagued the development and upgrade process of other cryptocurrencies that are not self-funded.
+Xank가 자체 자금 조달 재정부 시스템을 채택함에 따라, 핵심 프로토콜을 유지하는 동시에 네트워크와 Xank 암호화폐를 홍보하는 임무를 맡은 영리 회사를 설립할 것입니다. 회사의 주요 지침은 네트워크의 소프트웨어 개발, 헌법 개발, 커뮤니티 구축 및 시장 채택 활동에 유익한 활동들입니다. 네트워크에 가치를 더하는 것을 넘어, Xank의 자체 자금 조달 메커니즘은 네트워크의 개발 및 안정성이 기부나 네트워크 주요 토큰 홀더의 선의에 크게 의존하지 않도록 보장합니다. 이는 자체 자금 조달이 되지 않은 다른 암호화폐의 개발 및 업그레이드 과정에서 발생하는 문제를 해결합니다.
 
-Xank has decided to use a for-profit company mechanism as opposed to a foundation setup. Although the company will be active in the initial development and setting up of the network, it will subsequently be competing in the open market for network funding proposals after the network launch. This is in line with the network’s meritocratic principles and sets it apart from other networks that set up non-profit foundations to serve this purpose. As observed with Bitcoin and other earlier cryptocurrencies, any such foundations that were established with the intention to support the development of the project were not directly related to the success of their platforms and were more prone to serve the interests of early adopters, large token holders, and foundation members themselves. These foundations struggled to get funding and were prone to imploding once the initial funding was spent. This resulted in protocol development being left to volunteers and enthusiasts who, although involved in valiant efforts to maintain said networks, would not be able to compete with a well-funded network development team that is dedicated to the task. Leaving the development team unfunded and only able to survive from donations also allows the centralizing element of the donors to have a say in the direction of the development of the network. When self-interested parties directly sponsor the development of the network, especially ones with competing interests like miners and exchanges, the network can find itself at odds with its users and the interests of other interested parties. 
+Xank는 재단 설립 대신 영리 회사 메커니즘을 사용하기로 결정했습니다. 회사는 초기 개발 및 네트워크 설정에 활발히 참여하겠지만, 네트워크 출시 후에는 네트워크 자금 제안에 대해 개방된 시장에서 경쟁하게 될 것입니다. 이는 네트워크의 실적주의 원칙과 일치하며, 이 목적을 위해 비영리 재단을 설립한 다른 네트워크와 차별화됩니다. 비트코인 및 초기 암호화폐에서 관찰된 바와 같이, 프로젝트 개발을 지원하려는 의도로 설립된 재단들은 플랫폼의 성공과 직접적으로 관련이 없으며, 초기 채택자, 대규모 토큰 홀더 및 재단 회원 자신의 이익을 봉사하는 경향이 있었습니다. 이러한 재단들은 자금을 모으는 데 어려움을 겪었으며, 초기 자금이 소진된 후에는 붕괴되기 쉬웠습니다. 결과적으로 프로토콜 개발은 자원 봉사자와 열정적인 사람들이 맡게 되었으며, 이는 네트워크를 유지하기 위한 노력에도 불구하고, 해당 작업에 전념한 자금이 충분한 네트워크 개발 팀과 경쟁할 수 없었습니다. 개발 팀을 자금 지원 없이 남겨두고 기부금으로만 생존하게 하면 기부자의 중앙 집중화 요소가 네트워크 개발 방향에 영향을 미치게 됩니다. 자기 이익을 추구하는 당사자가 네트워크 개발을 직접 지원할 때, 특히 채굴자 및 거래소와 같은 경쟁 관심사를 가진 경우, 네트워크는 사용자와 다른 이해관계자의 이익과 충돌할 수 있습니다.
 
-Some projects fund their development team by premining coins or running pre-launch sales. Although these fundraising efforts do not particularly harm the network and can provide for an adequate amount of funding to bootstrap the launch of a new project, the actual value of funds that are raised remains subject to market forces, and there is no way to predetermine the funding levels that will be achieved or if those funding levels will be sufficient for the continual development and future needs of the network. 
+일부 프로젝트는 코인을 사전 채굴하거나 사전 출시 판매를 통해 개발 팀을 자금화합니다. 이러한 모금 노력은 네트워크에 특별한 피해를 주지 않으며, 새로운 프로젝트의 출범을 위한 충분한 자금을 제공할 수 있습니다. 그러나 모금된 자금의 실제 가치는 시장 요인의 영향을 받으며, 달성될 자금 수준이나 그 자금 수준이 네트워크의 지속적인 개발 및 미래의 필요를 충족시킬지 여부를 미리 결정할 방법이 없습니다.
 
-Xank will also operate through a network of incentivized full nodes, also known as masternodes, that will be required to put up collateral to establish voting seats on the network. Masternode operators are invested in the success of the network and can act as stewards who can guide the network development process by applying their vote for network upgrades and direction. Unlike miners that can extend their mining investment to other altcoins, Xank masternode operators are paired with the network as their network infrastructure investment cannot be redirected to other cryptocurrencies. This mechanism thereby locks in their network loyalty and acts as an incentive.
+Xank는 또한 마스터노드라고 알려진 인센티브를 제공하는 전체 노드 네트워크를 통해 운영될 것입니다. 마스터노드는 네트워크에 투표권을 얻기 위해 담보를 제공해야 합니다. 마스터노드 운영자는 네트워크의 성공에 투자하며, 네트워크 업그레이드와 방향에 대해 투표함으로써 네트워크 개발 과정을 이끌어갈 수 있는 관리자의 역할을 할 수 있습니다. 다른 대체 코인에 채굴 투자를 확장할 수 있는 채굴자와 달리, Xank 마스터노드 운영자는 네트워크 인프라 투자를 다른 암호화폐로 전환할 수 없기 때문에 네트워크에 결속됩니다. 이 메커니즘은 네트워크에 대한 충성도를 올리고 인센티브 역할을 합니다.
 
-A percentage of each block reward will be held in escrow by the network for appropriation toward the expansion and continual development of the network and wider Xank ecosystem. The escrowed funds will be appropriated in accordance with the masternode voting preference. Funds will invariably be used for the promotion and development of the Xank coin and network, and the budgets for each use will be determined by the masternode voting mechanism in an open and transparent way. This process ensures that the budget policies and initiatives that are to be funded are decided on in a decentralized way that also assures that the Xank network can evolve and upgrade to any new market demands and adopt new emergent technologies in the future.
+각 블록 보상의 일정 비율은 네트워크에 의해 에스크로에 보관되어 네트워크와 넓은 Xank 생태계의 확장 및 지속적인 개발을 위해 할당될 것입니다. 에스크로된 자금은 마스터노드 투표 선호도에 따라 할당될 것입니다. 자금은 불변적으로 Xank 코인 및 네트워크의 홍보 및 개발을 위해 사용되며, 각 사용의 예산은 마스터노드 투표 메커니즘에 따라 개방적이고 투명하게 결정됩니다. 이 과정은 예산 정책 및 지원할 계획이 분산 방식으로 결정되며, Xank 네트워크가 미래의 새로운 시장 요구 사항에 대응하고 새로운 신생 기술을 채택할 수 있도록 보장합니다.
 
-A self-funded treasury system ensures that the Xank network will be able to hire core developers as funds will be appropriated for this specific purpose. People will be hired not by a company, but effectively by the network itself as a result of the decentralized votes cast by masternodes for this specific purpose. Masternode operators are replaceable to the extent that they can decide to leave the network and be replaced by a new operator who is willing to put up the same level of collateral, thereby acquiring a masternode voting seat. This means that the Xank network will continue to operate and thrive in perpetuity, even if all initial masternode operators are replaced.
+자체 자금 조달 재정부 시스템은 Xank 네트워크가 핵심 개발자를 고용할 수 있도록 보장합니다. 자금은 이 특정 목적을 위해 마스터노드에 의해 분산 투표 결과로 할당될 것이므로, 개발자는 회사가 아닌 실질적으로 네트워크 자체에 의해 고용됩니다. 마스터노드 운영자는 네트워크를 떠날 수 있으며, 동일한 수준의 담보를 제공할 새로운 운영자로 교체될 수 있습니다. 이는 Xank 네트워크가 초기 마스터노드 운영자가 모두 교체되더라도 지속적으로 운영되고 번창할 것임을 의미합니다.
 
 
-## Soft-pegging to the IMF’s SDR (Special Drawing Rights)
+## IMF의 SDR(특별인출권)에 대한 소프트 페깅
 
-The Xank cryptocurrency will initially set its soft peg functionality to the IMF's SDR at launch to assure its position as a stable cryptocurrency that is useful to the IMF member countries and, by extension, the rest of the world. At the time of Xank's launch and bootstrapping, the SDR can be considered the most stable international reserve asset, as its price is representative of a bundle of currencies and cannot be arbitrarily manipulated by any one of the member countries that may choose to employ its central bank to inflate the member states money supply. If a more stable measure of value emerges than the SDR in the future, the Xank network can adopt it through the masternode voting system as described above.
+Xank 암호화폐는 출시 시 IMF의 SDR에 소프트 페그 기능을 설정하여 IMF 회원국 및 나아가 전 세계에 유용한 안정적인 암호화폐로서의 위치를 확보할 것입니다. Xank의 출시 및 초기 단계에서 SDR은 여러 통화의 묶음을 대표하며, 회원국 중 어느 하나가 중앙은행을 통해 회원국의 통화 공급을 인위적으로 증가시키는 것을 방지하기 때문에 가장 안정적인 국제 예비 자산으로 간주될 수 있습니다. 미래에 SDR보다 더 안정적인 가치 측정 지표가 등장할 경우, Xank 네트워크는 앞서 설명한 마스터노드 투표 시스템을 통해 이를 채택할 수 있습니다.
 
 
-### **A brief history of the IMF’s SDR**
+### **IMF의 SDR 역사 개요**
 
-The SDR is an international reserve asset created by the IMF in 1969 to supplement the reserves of the member countries. As of September 2017, 204.2 billion SDRs<sup id="a4">[4](#f4)</sup> (\$291 billion USD equivalent) had been created and allocated to the member states. SDRs are freely interchangeable with other participant currencies. 
+SDR은 1969년 IMF에 의해 회원국의 예비 자산을 보충하기 위해 만들어진 국제 예비 자산입니다. 2017년 9월 기준으로 2042억 SDR<sup id="a4">[4](#f4)</sup>(2910억 달러 상당)이 생성되어 회원국에 할당되었습니다. SDR은 다른 참가 통화와 자유롭게 교환될 수 있습니다.
 
-The SDR was created as a supplementary international reserve asset within the context of the Bretton Woods fixed exchange rate system, where participating countries needed official reserves in the form of government or central bank holdings of gold and widely internationally accepted currencies in order to establish and maintain a fixed and balanced exchange rate. The expansion of international trade and finance was impaired, however, as there was an inadequate international supply and reserve of the two key reserve assets: gold and the U.S. dollar. This prompted the international community to decide on the creation of a new international reserve asset that was to operate under the auspices of the IMF. 
+SDR은 브레튼우즈 고정 환율 시스템의 맥락에서 보조 국제 예비 자산으로 만들어졌으며, 참여국들은 고정되고 균형 잡힌 환율을 설정하고 유지하기 위해 금과 널리 국제적으로 인정받는 통화를 정부 또는 중앙은행이 보유한 공식 예비 자산 형태로 필요로 했습니다. 그러나 두 가지 주요 예비 자산인 금과 미국 달러의 국제 공급 및 예비가 불충분하여 국제 무역과 금융의 확장이 저해되었습니다. 이로 인해 국제 사회는 IMF의 후원하에 운영될 새로운 국제 예비 자산의 창출을 결정했습니다.
 
-The SDR primarily serves as a supplementary reserve asset and also has secondary uses as the unit of account among IMF members along with some other international organizations.
+SDR은 주로 보조 예비 자산으로 사용되며, IMF 회원국과 일부 다른 국제 기구 간의 회계 단위로도 사용됩니다.
 
-Subsequently, the Bretton Woods system collapsed some years after the creation of the SDR, and the major currencies moved to a floating exchange rate. In the meantime, international capital markets had expanded due to new borrowing capabilities based on the creditworthiness of governments, which resulted in many countries being able to accumulate sizable international reserves. As such, the need to rely on the stability of the SDR as a global reserve asset was lessened. Reliance on the SDR was re-established around the time of the 2009 global financial crisis. At the time, the allocated SDR 182.6 billion played an important role in providing liquidity to the global economic system for supplementing member countries’ reserves. Subsequently, the SDR reclaimed its role as a stabilizing force in the world economy.
+그 후, SDR이 만들어진 몇 년 후 브레튼우즈 시스템이 붕괴되었고 주요 통화는 변동 환율제로 이동했습니다. 그동안 국제 자본 시장은 정부의 신용도에 기반한 새로운 차입 능력 덕분에 확장되었고, 많은 국가들이 상당한 국제 예비를 축적할 수 있게 되었습니다. 따라서 글로벌 예비 자산으로서의 SDR의 안정성에 대한 의존도가 줄어들었습니다. 2009년 글로벌 금융 위기 시기에 SDR에 대한 의존이 재확립되었습니다. 그 당시 할당된 1826억 SDR은 회원국 예비를 보충하기 위해 글로벌 경제 시스템에 유동성을 제공하는 데 중요한 역할을 했습니다. 그 후 SDR은 세계 경제에서 안정화의 역할을 되찾았습니다.
 
-The SDR itself cannot be considered a currency, and holding SDRs does not equivocate to a claim in reserves from the IMF. Instead, it is part of a mechanism that allows for claims against ‘freely usable currencies of IMF members’. This means that a holder of SDRs can make a claim against other member state currencies that are in free reserve in exchange for their SDR through a voluntary exchange between two member states set by agreement. SDR holders can also be called upon by the IMF if they have strong external positions to purchase SDRs from other member states that hold weak external positions.
+SDR 자체는 통화로 간주될 수 없으며, SDR을 보유하는 것은 IMF로부터의 예비금 청구권과 동일하지 않습니다. 대신, 이는 IMF 회원국의 '자유롭게 사용 가능한 통화'에 대한 청구를 허용하는 메커니즘의 일부입니다. 이는 SDR 보유자가 합의에 의해 설정된 두 회원국 간의 자발적 교환을 통해 자신의 SDR을 교환하여 다른 회원국의 자유 예비 통화에 대해 청구권을 행사할 수 있음을 의미합니다. SDR 보유자는 또한 강한 외부 포지션을 가진 경우 IMF에 의해 약한 외부 포지션을 가진 다른 회원국으로부터 SDR을 구매하도록 요청받을 수 있습니다.
 
-When the SDR scheme was launched in 1969, its value was initially set as equivalent to 0.888671 grams of fine gold. At the time, this rate was also a fixed equivalent of the U.S. dollar. It was with the collapse of the Bretton Woods agreements in 1973 that a basket of currencies was used to determine the rate of the SDR. The SDR basket that was settled was made up of the U.S. dollar, Japanese yen, and British pound sterling, with the Euro and the Chinese renminbi added later on.
+1969년 SDR 제도가 도입되었을 때, 그 가치는 0.888671그램의 순금에 상응하는 것으로 초기 설정되었습니다. 그 당시 이 비율은 미국 달러의 고정 동등치이기도 했습니다. 1973년 브레튼우즈 협정의 붕괴로 SDR의 환율을 결정하기 위해 통화 바스켓이 사용되었습니다. 최종적으로 결정된 SDR 바스켓은 미국 달러, 일본 엔, 영국 파운드 스털링으로 구성되었으며, 나중에 유로와 중국 위안이 추가되었습니다.
 
-The IMF posts the value of the SDR in U.S. dollar terms on its website, and its value is determined and updated on a daily basis. It is calculated as the sum of specific amounts of each basket currency valued in U.S. dollars, based on the spot exchange rates observed at around noon London time. 
+IMF는 SDR의 가치를 미국 달러 기준으로 웹사이트에 게시하며, 그 가치는 매일 결정되고 업데이트됩니다. 이는 런던 시간 정오 무렵에 관찰된 현물 환율을 기준으로 미국 달러로 평가된 각 바스켓 통화의 특정 금액을 합산하여 계산됩니다.
 
-Every five years, the composition of the basket is reviewed by the Executive Board of the IMF. This periodicity can be altered if there are compelling economic circumstances in the meantime between meetings. The Executive Board bases its determination of the basket composition in consideration of the relative importance of the position of the five main member states in terms of international trade. The most recent inclusion was the Chinese Renminbi (Chinese yuan) in October of 2016 in recognition that it met the criteria that had been set for inclusion. This also coincided with a new weighting algorithm that was adopted that same year, which incorporated the assignment of equal shares to the currency issuer’s exports and a composite financial indicator in the new weighting formula. According to the IMF’s 2016 factsheet<sup id="a5">[5](#f5)</sup>,
+IMF 집행이사회는 매 5년마다 바스켓의 구성을 검토합니다. 이 주기는 회의 간의 기간 동안 중요한 경제 상황이 발생할 경우 변경될 수 있습니다. 집행이사회는 국제 무역 측면에서 다섯 주요 회원국의 위치의 상대적 중요성을 고려하여 바스켓 구성을 결정합니다. 가장 최근에 포함된 통화는 2016년 10월에 포함된 중국 위안(중국 인민폐)으로, 이는 포함 기준을 충족했음을 인정받은 결과입니다. 이는 동일한 해에 채택된 새로운 가중치 알고리즘과도 일치하며, 새로운 가중치 공식에서는 통화 발행국의 수출과 종합 금융 지표에 동등한 비중을 할당하는 방식을 포함했습니다. IMF의 2016년 팩트시트<sup id="a5">[5](#f5)</sup>에 따르면,
 
-> The financial indicator comprises, in equal shares, official reserves denominated in the member’s (or monetary union’s) currency that are held by other monetary authorities that are not issuers of the relevant currency, foreign exchange turnover in the currency, and the sum of outstanding international bank liabilities and international debt securities denominated in the currency.
+> 금융 지표는 동등한 비중으로 다음을 포함합니다: 관련 통화를 발행하지 않는 다른 통화 당국이 보유한 해당 회원국(또는 통화 연합)의 통화로 표시된 공식 예비금, 해당 통화의 외환 거래량, 그리고 해당 통화로 표시된 미결제 국제 은행 부채 및 국제 채무 증권의 합계.
 
-The value of the SDR is algorithmically set on a basket of five major currencies weighted in the following proportions:
+SDR의 가치는 다음과 같은 비율로 가중치가 부여된 다섯 개 주요 통화 바스켓을 기반으로 알고리즘적으로 설정됩니다 :
 
-*   U.S. dollar - 41.73 percent (compared with 41.9 percent in the 2010 Review)
-*   Euro - 30.93 percent (compared with 37.4 percent in the 2010 Review)
-*   Chinese renminbi - 10.92 percent
-*   Japanese yen - 8.33 percent (compared with 9.4 percent in the 2010 Review)
-*   British Pound sterling - 8.09 percent (compared with 11.3 percent in the 2010 Review)
+*   미국 달러 - 41.73% (2010년 검토시 41.9% 대비)
+*   유럽 유로 - 30.93% (2010년 검토시 37.4% 대비)
+*   중국 위안 - 10.92%
+*   일본 엔화 - 8.33% (2010년 검토시 9.4% 대비)
+*   영국 파운드 - 8.09% (2010년 검토시 11.3% 대비)
 
-*figures obtained from the IMF’s 2016 factsheet.
+*수치는 IMF의 2016년 팩트시트에서 가져왔습니다.
 
-These weights will remain in place until the next review, which is currently scheduled to take place by September 2021, unless an earlier review is warranted by economic and financial developments that are deemed to be of global significance in the interim. 
+이 가중치는 다음 검토가 예정된 2021년 9월까지 유지되며, 그 중 경제 및 금융 발전이 글로벌 중요성을 갖는다고 판단될 경우, 그 이전에 검토가 이루어질 수 있습니다.
 
-This level of stability has been chosen to bootstrap the first three years of the Xank ecosystem.
+이 수준의 안정성은 Xank 생태계의 첫 3년을 부트스트랩하기 위해 선택되었습니다.
 
-## Xank and the Bridgewater Idea Meritocracy System
+## Xank와 Bridgewater의 실적주의 시스템
 
-The Xank network will employ meritocratic governance. The following key points on meritocracy have been extracted from an essay<sup id="a6">[6](#f6)</sup> written by Ray Dalio, the founder of Bridgewater, wherein he outlines how a meritocratic governance system and the implementation of its key principles and components were intricate to the success of the Bridgewater venture. We will also describe how some of these meritocratic principles will echo through the Xank network, in particular, the Xank governance system.
+Xank 네트워크는 실적주의적 거버넌스를 채택할 것입니다. 다음의 주요 실적주의 요소들은 Bridgewater의 창립자인 Ray Dalio가 작성한 에세이<sup id="a6">[6](#f6)</sup>에서 발췌한 내용으로, 실적주의적 거버넌스 시스템과 그 핵심 원칙 및 구성 요소의 구현이 Bridgewater의 성공에 어떻게 복잡하게 얽혀 있는지를 설명하고 있습니다. 우리는 또한 이러한 실적주의 원칙들이 Xank 네트워크, 특히 Xank 거버넌스 시스템에서 어떻게 반영될 것인지 설명할 것입니다.
 
-Ray summarises the idea in the following quote:
+Ray는 다음과 같은 인용문에서 이 아이디어를 요약합니다 :
 
-> In one long sentence, our success occurred because we created a real **idea meritocracy** in which the goal was to have **meaningful work** and **meaningful relationships** and the way we went after them was through **radical truthfulness** and **radical transparency**. 
+> 한 문장으로 우리의 성공은 **의미 있는 일**과 **의미 있는 관계**를 목표로 하는 진정한 실적주의를 창출했기 때문이며, 이를 추구하는 방법은 **극단적인 진정성**과 **극단적인 투명성**을 통해 이루어졌습니다.
 
-To get a feel for the Xank governance system, it is important to look at these key concepts. Let's look at these words individually so we are clear on what they mean.
+Xank 거버넌스 시스템을 이해하기 위해 이러한 주요 개념들을 살펴보는 것이 중요합니다. 이러한 단어들을 개별적으로 살펴보겠습니다.
 
 
-## **Idea Meritocracy**
+## **아이디어 실적주의(Idea Meritocracy)**
 
-An idea meritocracy is a decision-making system where the best ideas rise to the top and win out. Although many meritocratic systems have been theorized, few have been able to practically implement such a system within organizations or networks of people. For the idea meritocracy to succeed, it relies on all people involved to adhere to these three things paraphrased here:
+아이디어 실적주의는 최고의 아이디어가 선별되어 승리하는 의사 결정 시스템입니다. 많은 실적주의 시스템이 이론적으로 제시되었지만, 실제로 조직이나 사람들의 네트워크 내에서 이러한 시스템을 구현한 사례는 거의 없습니다. 아이디어 실적주의가 성공하려면 모든 관련자가 다음 세 가지 사항을 준수해야 합니다 :
 
-1. People have to put their honest thoughts on the table for everyone to see, not what they believe others want to see.
-2. People have to have thoughtful disagreements within a reasonable back-and-forth process. This process allows people to evolve their thinking so as to come up with better solutions and decisions than they could have come up with individually.
-3. If after this process the decisions remain unresolved, there are agreed-upon protocols in place that help guide people past their disagreements in idea-meritocratic ways.
+1. 사람들이 다른 사람들이 보고 싶어 하는 것이 아니라 자신의 솔직한 생각을 모두가 볼 수 있도록 테이블 위에 올려놓아야 합니다.
+2. 사람들은 합리적인 상호 작용 과정에서 신중하게 의견을 나눠야 합니다. 이 과정은 사람들이 자신의 사고를 발전시켜 개별적으로 도출할 수 있는 것보다 더 나은 해결책과 결정을 도출할 수 있도록 합니다.
+3. 이 과정을 거친 후에도 결정이 해결되지 않으면, 합의된 프로토콜이 있어 사람들이 아이디어 실적주의적인 방법으로 의견 차이를 극복할 수 있도록 돕습니다.
 
-The Xank governance mechanism provides governance tools to the network that are based on these concepts, and it implements this governance system at the protocol level.
+Xank 거버넌스 메커니즘은 이러한 개념을 기반으로 네트워크에 거버넌스 도구를 제공하며, 이 거버넌스 시스템을 프로토콜 수준에서 구현합니다.
 
 
-### Meaningful Work
+### 의미 있는 일
 
-Ray describes meaningful work as: “work that people get absorbed in, are excited about, and find that working collectively on becomes a common mission so that producing GREAT results is thrilling.” In terms of Xank governance, the participants on the network will be given a meaningful role in the network decision-making process so as to ensure the results are decentralized and, combined with the idea-meritocratic model, work in a way that reflects the best action that the network can take.
+Ray는 의미 있는 일을 다음과 같이 설명합니다 : "사람들이 몰입하고, 흥분하며, 함께 일함으로써 공통의 미션이 되어 훌륭한 결과를 만들어내는 과정이 흥미로운 일." Xank 거버넌스 측면에서 네트워크 참여자들은 네트워크 의사 결정 과정에서 의미 있는 역할을 부여받아 결과가 탈중앙화되고, 아이디어 실적주의 모델과 결합하여 네트워크가 취할 수 있는 최선의 행동을 반영하는 방식으로 작업할 수 있도록 할 것입니다.
 
+### 의미 있는 관계
 
-### Meaningful Relationships
+Ray는 의미 있는 관계를 다음과 같이 설명합니다: "서로의 복지에 진정으로 관심을 가지는 것이 강력한 공동체를 만든다." Xank 거버넌스 측면에서 네트워크의 참여자들은 네트워크의 최선의 이익을 보장하는 결정을 내리는 동시에 네트워크 내 개인을 강화할 수 있는 인센티브를 제공받을 것입니다.
 
-Ray describes meaningful relationships as: “the genuine caring about each other's well-being that makes for a strong community.” In terms of Xank governance, the participants of the network will be incentivized to ensure that decisions are in the best interests of the network while at the same time empowering the individuals on the network.
+그는 이를 '엄격한 사랑' 접근 방식이라고 설명하며, 결정이 네트워크 전체에 영향을 미친다는 것을 강조합니다. 그는 이것이 네트워크의 성공을 보장하기 위한 중요한 요소임을 발견했습니다. 그는 해군 특수부대(Navy SEALs)와 같이 이 엄격한 사랑 접근 방식을 사용하는 다른 조직에서도 이를 목격했습니다. 이 모델과 접근 방식을 최대한 활용하기 위해서는 두 가지 핵심 요소가 더 필요합니다.
 
-He describes this as a ‘tough love’ approach where decisions have consequences for the whole network. Yet he has found that this is a crucial element for ensuring the network’s success. He has seen this play out in other organizations, such as the Navy Seals, that also employ this tough-love approach. To get the most out of this model and approach, two more key elements are needed.
 
+### 극단적인 진정성
 
-### Radical Truthfulness
+여기서 Ray는 극단적인 진정성을 “특히 문제와 약점에 대해 자신의 생각과 질문을 걸러내지 않는 것”으로 설명합니다. 이는 이러한 것들을 공개적으로 이야기함으로써만 효과적으로 해결할 방법을 찾을 수 있기 때문에 이치에 맞습니다. Xank 거버넌스 모델은 모든 거버넌스 수준의 결정이 공개적으로 논의되고 비판된 후에야 결정되고 실행되도록 하여 극단적인 진정성을 준수할 것입니다. 아이디어는 잠재적인 약점이나 문제를 발견하기 위해 테스트 상황과 테스트넷에 배포될 수도 있습니다.
 
-Here, Ray describes radical truthfulness as “not filtering one’s thoughts and one’s questions, especially about problems and weaknesses. It makes sense because it's only by talking about these things openly that one can come up with paths for dealing with them effectively.” The Xank governance model will adhere to radical truthfulness as all governance-level decisions will be openly discussed and critiqued before they are decided on and implemented. Ideas can even be deployed in test situations and testnets to discover any potential weaknesses or problems that may arise.
 
+### 극단적인 투명성
 
-### Radical Transparency
+극단적인 투명성은 “대부분의 사람들에게 대부분의 것을 볼 수 있는 능력을 부여하는 것”으로 설명됩니다. 사람들에게 필요한 정보를 덜 제공하면 그들이 주변에서 일어나는 일에 대해 자신의 의견을 형성하는 데 필요한 것을 빼앗는 것이 됩니다. 이는 그들을 다른 사람들의 왜곡에 취약하게 만들고, 실적주의에서 배제시킬 것입니다.” Xank 거버넌스 모델에서는 사람들이 아이디어를 공개적으로 논의하고 비판할 수 있을 뿐만 아니라, 의사결정 과정의 모든 단계에서 각 참가자가 의사결정 과정에서 얼마나 큰 비중을 차지하는지 미리 알 수 있게 됩니다.
 
-Radical transparency is described as: “giving mostly everyone the ability to see mostly everything. To give people anything less would deny them what they need to form their own opinions about what’s happening around them. It would make them vulnerable to others’ spin and exclude them from the idea-meritocracy.” In the Xank governance model, not only will people be able to discuss and critique ideas openly, but they will also be aware at all stages of decision-making how much weight each participant has in the decision-making process beforehand.
+Ray는 그의 에세이에서 이 시스템이 효율성 측면에서 직관에 반하는 것처럼 보일 수 있지만, 조직 내 의사 결정 과정을 중앙 집중화함으로써 전통적으로 처리되었던 것과는 대조적으로, 이 과정이 놀라울 정도로 효율적이라는 것을 설명합니다. 중앙 집중화된 거버넌스 모델에서는 많은 참가자들이 소외감을 느끼고 조직이 나아가는 방향에 대해 덜 관심을 가지게 됩니다. Ray는 이후 실적주의 거버넌스 모델에 적합한 사람들이 끌리고, 이는 다시 모델로 돌아와 성공을 더욱 보장하게 된다고 설명합니다.
 
-In his essay, Ray describes that although this system seems counterintuitive in terms of efficiency, which has traditionally been dealt with through the centralization of the decision-making process in organizations, the process proves remarkably efficient in contrast to these centralized governance models where many of the participants feel detached and become less interested in the direction the organizations are going. Ray then goes on to explain how the right people get attracted to the meritocratic model of governance, and this, in turn, feeds back into the model to further ensure its success. 
+Xank 네트워크는 실적주의에 의해 뒷받침되고, 이러한 시스템이 번창할 수 있게 하는 관련 원칙들을 모방할 것입니다. 이러한 메커니즘이 자리 잡으면, 우리는 네트워크를 발전시키기 위한 모든 개인적 및 집단적 노력을 보상하는 올바른 인센티브의 조합이 존재하기 때문에 가장 재능 있는 참가자들을 네트워크로 끌어들일 것으로 기대합니다. 그들이 네트워크에 가치를 더함에 따라, 이는 모든 Xank 네트워크 참가자들을 강화시키고 네트워크 전체를 강화할 것입니다.
 
-The Xank network will be underpinned by an idea-meritocracy and emulate the associated principles that allow such a system to thrive. With such a mechanism in place, we expect to attract the most talented participants to the network, as there will exist the right mix of incentives to reward all individual and collective efforts to advance the Xank network. As they add value to the network, this will feed back into empowering all the Xank network participants and bolster the network as a whole.
 
+## Xank 프로토콜
 
-## The Xank Protocol
+Xank 프로토콜은 법정 화폐 형태로 표현된 거래 가치를 안정화하기 위한 자동 보조 메커니즘을 배치할 것입니다. 이 자동 메커니즘은 Xank 준비금에 할당된 자금을 조정하여 환율 가치를 안정화시키는 탈중앙화 자율 조직(DAO)으로 배치될 것입니다.
 
-The Xank protocol will deploy an automated subsidizing mechanism for stabilizing the transaction value expressed in the form of a fiat currency. This automated mechanism will be deployed as a Decentralized Autonomous Organization (DAO) that will calibrate the funds allocated in the Xank Reserve to offer exchange value stability.
+이 메커니즘은 이 논문 전체에서 Xank 준비금이라고 언급될 것입니다. 이 메커니즘은 Xank Stable Pay(또는 Local Pay) 기능이 사용될 때 네트워크의 소프트 페그 통화의 가치를 거래당 동등한 법정 화폐 가치로 보정하도록 설계되었습니다.
 
-This mechanism will be referred to as the Xank Reserve throughout this paper. This mechanism is designed to calibrate the value of the soft-pegged currency of the network on a per-transaction basis to an equalized fiat value when the Xank Stable Pay (or Local Pay) feature is used. 
+Xank 프로토콜을 고려할 때, Xank는 Avalanche 프로토콜의 포크로 시작되며 따라서 Avalanche 프로토콜과 동일한 기본 기술적 특성을 갖게 될 것이며, 다음과 같은 추가 특성을 통해 Xank 프로토콜을 정의합니다 :
 
-When considering the Xank protocol, it is useful to understand that Xank will be initiated as a fork of the Avalanche protocol and therefore have the same base technical characteristics as the Avalanche protocol together with the following additional characteristics that define the Xank protocol:
+* **Xank 준비금은 블록 보상의 일부로 자금이 지원될 것입니다.** Xank 코인 발행에서 모든 코인의 15%가 Xank 준비금을 지원하며, 이는 Stable Pay 및 Local Pay 거래를 조정하는 탈중앙화 및 자율 메커니즘입니다. Stable Pay 및 Local Pay 거래에 대해서는 다음에서 설명됩니다.
 
-* **The Xank Reserve will be funded by a percentage of the block rewards.** 15% of all coins from Xank’s coin emission will fund the Xank Reserve, the decentralized and autonomous mechanism that calibrates Stable Pay and Local Pay transactions, both of which are outlined next.
+*   **Xank 프로토콜은 기본 자산에 소프트 페그를 지정하고 할당할 것입니다.** Stable Pay 및 Local Pay라는 특수 거래 유형이 네트워크 사용자에게 제공될 것입니다.
 
-*   **The Xank protocol will specify and assign a soft peg to an underlying asset.** Special transaction types called Stable Pay and Local Pay will be made available to the users of the network. 
+Stable Pay 거래 유형은 사용자가 IMF의 SDR, 다른 법정 화폐, 소비자 물가지수(CPI)와 같은 지수 또는 사전 정의된 상품 바구니로 표시된 가치 전송을 할 수 있게 합니다. 시뮬레이션에서 페그될 기본 자산은 Xank 프로토콜의 거버넌스 메커니즘에 따라 네트워크에 의해 결정되고 설정될 것입니다. 출시 시, 소프트 페그는 SDR로 설정되며, Stable Pay 거래의 SDR 가치는 거래가 시작되어 거래 당사자 간의 최종 결제 및 수령에 이르기까지 거래 기간 동안 일정하게 유지됩니다. 초기 페그된 자산이 IMF의 SDR로 설정되어 있으므로, 이 논문의 나머지 부분에서는 예로써 소프트 SDR 페그가 언급될 것입니다.
 
-    The Stable Pay transaction type will allow a user to make a transfer of value that is denominated in the IMF’s SDR, another fiat currency, an index like the Consumer Price Index (CPI), or a predefined basket of goods. The underlying asset to be pegged in the simulation will be decided on and set by the network as specified by the Xank protocol’s governance mechanism. At launch, the soft peg will be set to the SDR, and the SDR value of a Stable Pay transaction will remain constant throughout the timeline of the transaction, that is, from initiation to final settlement and receipt between the transacting parties. Because the initial pegged asset is set as the IMF’s SDR, the soft SDR peg will be referred to by example throughout the rest of this paper. 
+Local Pay는 사용자가 미국 달러 또는 일본 엔과 같은 국가 통화로 표시된 가치를 전송할 수 있도록 합니다. Local Pay 거래의 법정 화폐 가치는 거래가 시작되어 거래 당사자 간의 최종 결제 및 수령에 이르기까지 거래 기간 동안 일정하게 유지됩니다.
+
+*   **Xank 블록체인은 Oracle 서비스를 사용하여 환율 피드를 모니터링하고 가격을 측정할 것입니다.** Xank-XDR 환율은 실시간 환율 오라클에 의해 Xank 블록체인에 전달됩니다. 이는 네트워크가 중앙 집중화된 장애 지점에 노출되지 않도록 탈중앙화 방식으로 달성할 수 있습니다. 이 과정은 이 논문에서 더 자세히 설명됩니다.
+*   **Xank 블록체인은 Stable Pay(또는 Local Pay) 거래당 정확한 XANK 코인 수를 조정하여,** 전송된 가치가 거래 시점의 기본 페그 자산 환율에서 벗어나지 않도록 합니다.
     
-    Local Pay allows a user to transfer value that is denominated in a national currency, such as the U.S. dollar or Japanese Yen. The fiat value of a Local Pay transaction will remain constant throughout the transaction timeline, that is, from initiation to final settlement and receipt between the transacting parties.
-
-*   **The Xank blockchain will use an Oracle service to monitor an exchange rate feed to measure price.** The Xank-XDR exchange rate will be fed to the Xank blockchain by a real-time exchange rate oracle. This can be achieved in a decentralized way so as not to expose the network to centralized points of failure. This process is described in more detail in this paper.
-*   **The Xank blockchain calibrates the precise count of XANK coins on a per Stable Pay (or Local Pay) transaction basis,** so that the value that is transferred does not deviate from the underlying pegged asset’s exchange rate at the time of the transaction. 
+    *   Stable Pay(또는 Local Pay) 거래 시점에 XANK 코인이 원하는 SDR 균형 환율보다 **낮은** 가치로 거래되고 있다면, 거래에 참여하는 XANK 코인의 수는 알고리즘적으로 필요한 양만큼 **증가**하여 거래된 가치가 의도한 구매 가격과 동일하게 됩니다. 이 과정은 후반부에서 더 자세히 설명됩니다.
+    *   Stable Pay(또는 Local Pay) 거래 시점에 XANK 코인이 원하는 SDR 균형 환율보다 **높은** 가치로 거래되고 있다면, 거래에 참여하는 XANK 코인의 수는 알고리즘적으로 필요한 양만큼 **감소**하여 거래된 가치가 의도한 구매 가격과 동일하게 됩니다. 이 과정은 후반부에서 더 자세히 설명됩니다.
+*   **모든 이익과 손실은 준비금에 반환됩니다.** 이 과정은 Xank 준비금에 의해 규제되며, 안정 지불 또는 지역 지불 거래 주기 동안 발생한 XANK 코인의 모든 이익과 손실을 Xank 준비금 기금과 조정하여, 인간의 개입이나 수동 조작 없이 블록체인과 그 준비금 시스템 내에서 가치를 유지합니다. 이 모든 것은 프로토콜 수준에서 처음부터 설정됩니다.
     
-    *   If at the time of the Stable Pay (or Local Pay) transaction, the XANK coins are trading at a **lesser** value than the desired SDR equilibrium rate, the number of XANK coins involved in that transaction will be algorithmically **increased** to the required amount so as the transacted value is equal to the intended purchase price. This process is described in more detail in this paper.
-    *   If at the time of the Stable Pay (or Local Pay) transaction, the XANK coins are trading at a **higher** value than the desired SDR equilibrium rate, the number of XANK coins involved in that transaction will be algorithmically **decreased** to the required amount so as the transacted value is equal to the intended purchase price. This process is described in more detail in this paper.
-*   **All profits and losses will be put back into the Reserve.** This process will be regulated by the Xank Reserve, which will calibrate any XANK coin profits and losses made during Stable or Local Pay transaction life cycles with the Xank Reserve fund, thereby keeping the value within the confines of the blockchain and its reserve system without the need for any human intervention or manual manipulation. All this will be set from the onset at the protocol level.
-    
-    *   If the price of XANK decreases during the transaction process, then all the loss made from the algorithmic adjustment will be refunded from the Reserve. If the price of XANK increases during the transaction process, then the receiver receives fewer coins. However, the fiat equivalent is still equal to that sent by the sender, and the difference is paid into the Reserve.
-*   **An Extreme Volatility Safeguard (EVS) price floor mechanism will be set** to safeguard the economy from a complete collapse. This mechanism will ensure that the Xank cryptocurrency will serve as a stable cryptocurrency even after it recovers from a catastrophic failure, an occurrence that is extremely unlikely, while also remaining a free-floating cryptocurrency during normal times. The Extreme Volatility Safeguard is described in more detail later in this paper. 
-*   **An Extreme Volatility Safeguard (EVS) price ceiling mechanism will _not_ be set** to assure that any upside will remain in the Reserve, assuring the stability and continuity of the reserve function and confidence in the wider network sustainability at large.
+    *   거래 과정에서 XANK의 가격이 하락하면 알고리즘 조정에서 발생한 모든 손실은 준비금에서 환불됩니다. 거래 과정에서 XANK의 가격이 상승하면 수신자는 더 적은 코인을 받게 됩니다. 그러나 법정 화폐로 환산한 가치는 송신자가 보낸 것과 여전히 동일하며, 차액은 준비금에 지급됩니다.
+*   **극단적 변동성 방어(EVS) 가격 하한 메커니즘은** 경제가 완전히 붕괴되는 것을 방지하기 위해 설정됩니다. 이 메커니즘은 Xank 암호화폐가 재앙적인 실패에서 회복한 후에도 안정적인 암호화폐로 기능할 수 있도록 하며, 이는 극히 드문 일이지만, 정상적인 시기에는 자유 변동 암호화폐로 남아 있게 합니다. 극단적 변동성 방어에 대해서는 이 논문의 후반부에서 더 자세히 설명됩니다.
+*   **극단적 변동성 방어(EVS) 가격 상한 메커니즘은** _설정되지 않으며_, 이는 어떠한 상승분도 준비금에 남아있어 준비금 기능의 **안정성과 지속 가능성에 대한 신뢰를 보장합니다.**
 
-At this point, it is useful to think of the soft-pegging mechanism in practice as an autonomously adjusting price tracking mechanism, and not as a peg as such, as a peg usually refers to a figure arbitrarily set by a centralized governing body. We provide this example:
+이 시점에서 소프트 페깅 메커니즘을 실제로는 자율적으로 조정되는 가격 추적 메커니즘으로 생각하는 것이 유용합니다. 페그는 일반적으로 중앙 집권적 기관이 임의로 설정한 수치를 의미하기 때문입니다. 다음 예를 제공합니다 :
 
-If Alice decides to use the Xank Stable Pay (or Local Pay) feature to send $100.00 USD worth of XANK coins to Bob, the following two scenarios can occur when Bob receives the XANK coins and tries to exchange his coins back to fiat:
+앨리스가 Xank Stable Pay(또는 Local Pay) 기능을 사용하여 밥에게 100.00달러 상당의 XANK 코인을 보내기로 결정하면, 밥이 XANK 코인을 받고 그 코인을 다시 법정 화폐로 교환하려고 할 때 다음 두 가지 시나리오가 발생할 수 있습니다 :
 
 
-![Figure 1](images/Xank-Price-Increase-Scenario_wt-en.jpg "Xank Price Increase Scenario")
+![그림 1](images/Xank-Price-Increase-Scenario_wt-en.jpg "Xank 가격 상승 시나리오")
 
-<div align="center"><strong>Figure 1</strong>: Xank Price Increase Scenario</div>
+<div align="center"><strong>그림 1</strong> : Xank 가격 상승 시나리오</div>
 
-**Scenario A**
+**시나리오 A**
 
-> The price of XANK was $10.00 USD at the time that Alice sent the transaction. This means that Alice needed to send Bob 10 XANK coins to achieve the required USD value (10 XANK = $100.00 USD). In the time that it took Bob to receive the transaction, the value of XANK doubled, meaning that only 5 XANK coins are required to achieve the value of $100.00 USD. In this scenario, the protocol deducts 5 XANK coins from the receiving wallet and places them in the Xank Reserve system. When Bob transfers his Xank to fiat, he will receive $100.00 USD worth in fiat terms. Alice and Bob’s need to transact using a stable cryptocurrency has been met.
+> 앨리스가 거래를 보낸 시점에 XANK의 가격은 10.00달러 USD였습니다. 이는 앨리스가 100.00달러 USD의 가치를 달성하기 위해 밥에게 10개의 XANK 코인을 보내야 한다는 것을 의미합니다 (10 XANK = 100.00달러 USD). 밥이 거래를 받는 동안 XANK의 가치가 두 배로 상승하여, 이제는 100.00달러 USD의 가치를 달성하기 위해 5개의 XANK 코인만 필요하게 됩니다. 이 시나리오에서 프로토콜은 수신 지갑에서 5개의 XANK 코인을 차감하여 Xank 준비금 시스템에 넣습니다. 밥이 Xank를 법정 화폐로 전환할 때, 그는 100.00달러 USD 상당의 법정 화폐를 받게 됩니다. 앨리스와 밥의 안정적인 암호화폐 거래 필요가 충족되었습니다.
 
 
 
-![Figure 2](images/Xank-Price-Decrease-Scenario_wt-en.jpg "Xank Price Decrease Scenario")
+![그림 2](images/Xank-Price-Decrease-Scenario_wt-en.jpg "Xank 가격 하락 시나리오")
 
-<div align="center"><strong>Figure 2</strong>: Xank Price Decrease Scenario</div>
-
-
-**Scenario B**
-
-> The price of XANK was $10.00 USD at the time that Alice sent the transaction. This means that Alice needed to send Bob 10 XANK coins to achieve the required USD value (10 XANK = $100.00 USD). In the time that it took Bob to receive the transaction, the value of XANK halved, meaning that 20 XANK coins are required to achieve the value of $100.00 USD. In this scenario, the protocol adds an extra 10 XANK coins to the receiving wallet by extracting them from the Xank Reserve system. When Bob transfers his Xank to fiat, he will receive USD $100.00 worth in fiat terms. Alice and Bob’s need to transact using a stable cryptocurrency has been met.
+<div align="center"><strong>그림 2</strong> : Xank 가격 하락 시나리오</div>
 
 
+**시나리오 B**
 
-![Figure 3](images/Xank-Universal-Wallet-wt_en.jpg "Xank Universal Wallet with In-wallet Stable/Local Pay Conversion")
-
-<div align="center"><strong>Figure 3</strong>: Xank Universal Wallet with In-wallet Stable/Local Pay Conversion</div>
-
-**Scenario C**
-
-> The price of XANK is $9.99 USD at the time that Alice wants to send the transaction to Bob. This means that Alice needs to send Bob 10.00728 XANK coins to achieve the required USD value (10.00728 XANK = $100.00 USD). Alice is choosing to use regular XANK coins for this transfer. She is also wanting to send using Stable Pay instead of normal send as the transfer method. The Xank Universal Wallet supports in-wallet Stable Pay conversions, since it is a phone number based wallet that can be connected with multiple Xank wallets holding regular XANK and Stable/Local Pay coins. Alice can easily send fiat money using the Xank Universal Wallet as well since it supports fiat currency bank accounts and credit/debit cards.
+> 앨리스가 거래를 보낸 시점에 XANK의 가격은 10.00달러 USD였습니다. 이는 앨리스가 100.00달러 USD의 가치를 달성하기 위해 밥에게 10개의 XANK 코인을 보내야 한다는 것을 의미합니다 (10 XANK = 100.00달러 USD). 밥이 거래를 받는 동안 XANK의 가치가 절반으로 떨어져, 이제 100.00달러 USD의 가치를 달성하기 위해 20개의 XANK 코인이 필요하게 됩니다. 이 시나리오에서 프로토콜은 Xank 준비금 시스템에서 10개의 추가 XANK 코인을 추출하여 수신 지갑에 추가합니다. 밥이 Xank를 법정 화폐로 전환할 때, 그는 100.00달러 USD 상당의 법정 화폐를 받게 됩니다. 앨리스와 밥의 안정적인 암호화폐 거래 필요가 충족되었습니다.
 
 
-### Stable Pay Functionality
 
-This protocol function described in the above scenarios is called Stable Pay and is an optional function. This means that the sender and receiver can mutually decide if they want to use the protocol for a stable transaction that is tracked to an underlying soft peg or alternatively decide to do a raw XANK coin transaction that is not pegged to an underlying asset. The Stable Pay works very similarly to how the FX forward contract works in the real world without an end date to mitigate any currency fluctuations when trading internationally. We want to bring this valuable service to the cryptocurrency level and remove the high costs associated with it.
+![그림 3](images/Xank-Universal-Wallet-wt_en.jpg "지갑 내 Stable/Local Pay 전환이 가능한 Xank 유니버설 지갑")
 
+<div align="center"><strong>그림 3</strong> : 지갑 내 Stable/Local Pay 전환이 가능한 Xank 유니버설 지갑</div>
 
-### Local Pay Functionality
+**시나리오 C**
 
-Local Pay works exactly the same as Stable Pay, but it uses supported local fiat currencies instead of the IMF SDR as a stable value. This functionality is useful for people who wish to transact in their relatively stable local currencies (for example, national currencies of G20 countries). With Local Pay, the sender and receiver mutually decide which currency they want to use for a stable transaction. If the two select the U.S. dollar as their Local Pay currency, the transaction will maintain a soft peg value denominated in the U.S. dollar. Local Pay, like Stable Pay, is an optional feature, so users are free to perform raw Xank coin transactions without the stability factor.
-
-
-### Xank Proof-of-Stake (PoS) Governance
-
-Unlike Bitcoin and Dash that use the Proof-of-Work (PoW) mining consensus mechanism to achieve network-wide consensus and security, Xank will implement Avalanche protocol, a new metastable consensus protocol. By choosing to implement Avalanche, the Xank network participants will avoid having to deal with problems that arise out of PoW implementations, such as 51% mining attacks and investment in hardware that quickly obsoletes and is characterized by excessive electricity consumption. While consensus is achieved through the Avalanche family of protocols, governance takes the form of a Proof-of-Stake masternode system.
-
-There will be one form of staking in the Xank ecosystem:
-
-*   **Masternode Staking** - Masternode operators will stake 1,000 XDR worth of XANK coins at the point of masternode creation to operate a Xank masternode that gives them voting privileges on the Xank network. Xank masternode operators are also known as **Governors** and receive incentives from the network.
-
-The reason we are using XDR as a unit of account instead of a XANK coin count for masternode staking is to remove the potential entry barrier for latecomers who wish to operate a masternode on the Xank network. If we set 1,000 XANK as the masternode staking requirement, it will be easy to stake a masternode in the beginning, but as the price rises, it will become increasingly difficult to stake a masternode. If we set 1,000 XDR as the masternode staking requirement, the number of XANK required for each masternode will fluctuate, but the value in fiat terms will always be constant. We believe this system will make it easier for later investors to participate in the network as Governors. Since building a non-inflationary currency is a significant objective of cryptocurrencies, we believe this makes more sense. 
-
-With regards to the fairness to early investors, early investors will be handsomely rewarded if the Xank price goes up, whether they own masternodes or not. However, if the price rises to such a level that later investors cannot join the only decision-making body of Xank, early investors will be the only entities governing the Xank blockchain. The lack of new Governors could lead to a dead body of control with no fresh blood supply, a phenomenon we observe in most of today’s masternode networks.
+> 앨리스가 밥에게 거래를 보내고자 할 때 XANK의 가격은 9.99달러 USD입니다. 이는 앨리스가 100.00달러 USD의 가치를 달성하기 위해 밥에게 10.00728개의 XANK 코인을 보내야 한다는 것을 의미합니다 (10.00728 XANK = 100.00달러 USD). 앨리스는 이번 전송에 일반 XANK 코인을 사용하기로 선택했습니다. 또한, 전송 방법으로 일반 전송 대신 Stable Pay를 사용하려고 합니다. Xank 유니버설 지갑은 지갑 내 Stable Pay 전환을 지원하며, 이는 여러 Xank 지갑을 연결할 수 있는 전화번호 기반 지갑이기 때문에 가능합니다. 이 지갑은 일반 XANK와 Stable/Local Pay 코인을 모두 보유할 수 있습니다. 앨리스는 Xank 유니버설 지갑을 사용하여 법정 화폐 은행 계좌 및 신용/직불 카드를 지원하기 때문에 쉽게 법정 화폐를 전송할 수 있습니다.
 
 
-### The Xank Reserve 
+### Stable Pay 기능
 
-One of the main deterrents to the broader adoption of cryptocurrencies is their degree of volatility in comparison to fiat currencies and other traditional assets. This volatility means that they cannot be readily used as a medium of exchange, as the value is exposed to price fluctuations. Variations in price are not over the medium to long-term; they can also happen during the time it takes for a transaction to be cleared or converted from cryptocurrency to fiat. When cryptocurrencies are used for payments of goods and services, price volatility during the time of transaction transit can leave the receivers exposed. 
-
-Xank’s proposed solution is to establish an autonomous reserve fund that acts as a stabilizing mechanism. With this mechanism, network users can choose to activate the Stable Pay (or Local Pay) feature at the time of the transaction. Such a transaction will be calibrated by the autonomous reserve system and equilibrium will be established in terms of an underlying asset or fiat currency value. As such, the sender and receiver can use the Stable Pay (or Local Pay) feature and agree on an underlying value in fiat terms - the protocol will then ensure that the fiat-stable amount is sent by the sender and that the receiver receives an amount of XANK coins that is equivalent to the agreed value in fiat terms. Any differences in XANK coins that arise from this type of transaction will be calibrated against the reserve mechanism. 
-
-*   Should the transaction require more XANK coins to be fulfilled because of a drop in the Xank-XDR rate, the reserve system will provide the required amount of Xank to calibrate the transaction in fiat terms.
-*   Should fewer XANK coins be needed to fulfill a transaction due to an increase in the Xank-XDR rate, the excess amount of XANK coins will be retrieved by the Reserve system for transaction calibration in fiat terms.
-
-The Xank Reserve will need to be aligned with the economic incentives present in the Xank protocol to ensure that it maintains adequate funding to meet its stable transactions functionality objectives when the Stable Pay (or Local Pay) feature is chosen. At all times, the amount of XANK coins in the Reserve must be greater than the cost of the subsidy that the Reserve provides. The cost of the subsidy will proportionally depend on the volume of Stable Pay (or Local Pay) enabled transactions multiplied by the value of the XANK coin. The subsidy cost needs to be aligned with the incentives provided throughout the Xank ecosystem. All the protocol components - Citizens, Governors, Reserve, and Treasury (some components will be further discussed later in this paper) - need to tend toward an equilibrium point in order for the system to function as specified.
+위 시나리오에서 설명한 이 프로토콜 기능은 Stable Pay라고 하며 선택적 기능입니다. 이는 송신자와 수신자가 기본 소프트 페그에 연결된 안정적인 거래를 위해 프로토콜을 사용할지 아니면 기본 자산에 연결되지 않은 원래의 XANK 코인 거래를 할지 상호 합의할 수 있음을 의미합니다. Stable Pay는 국제 거래 시 통화 변동성을 완화하기 위해 종료 날짜 없이 작동하는 FX 선도 계약과 매우 유사하게 작동합니다. 우리는 이 귀중한 서비스를 암호화폐 수준으로 가져와 그와 관련된 높은 비용을 제거하고자 합니다.
 
 
-![Figure 4](images/Xank-Coin-Supply-en.jpg "How Xank Reserve is Created from Block Rewards")
+### Local Pay 기능
 
-<div align="center"><strong>Figure 4</strong>: How Xank Reserve is Created from Block Rewards</div>
-
-
-The masternode count has a direct effect on the number of XANK coins that are circulating in the economy. Masternode interests need to be aligned with the Xank protocol's Reserve and Treasury system. As already mentioned, Xank will implement a Dash-style masternode network after its success as an autonomous self-funding network. The above-described tendency toward equilibrium is necessary so as no players or faction of the Xank ecosystem is able to establish and yield central power over the network. 
-
-To achieve this, we will be allocating funds from block rewards in the following manner:
-
-**1.	Governors** - 35% of total block rewards
-
-* Xank Governors are Xank node operators that have staked 1,000 XDR as collateral and are thus qualified to be Xank masternode operators. Masternode operators can establish voting rights on how Treasury funds are spent. Masternode operators can also establish voting rights so as to vote on proposals for protocol modifications, upgrades, and underlying asset pegging mechanisms in order to be able to respond to market conditions, network robustness, and network competitiveness. Governors must maintain the original XANK coins for 1,000 XDR as collateral at all times and will lose all voting rights should they maintain a balance less than that. 35% of each block reward will be allocated for distribution toward the network’s Governors. There is no upper limit to the number of masternodes an operator may acquire, but a Self-sovereign Identity (SSI) system will ensure that a masternode operator can only establish the power of one reputation weighted vote regardless of how many masternodes they have in operation. The reward mechanism will maintain a minimum of 5% of the coin supply at all times for the Governors portion of the Xank Reserve Pool as escrow, which we’ll cover later in this paper.
-
-**2.	Citizens** - 35% of total block rewards
-
-* Xank has a lot of special features, but a cryptocurrency is only as good as its adoption rate. That is why we've allocated 35% of our coin emission for market adoption via a loyalty points redemption program, which we call the Citizens pool. The Citizens pool allows three parties - merchants, consumers, and Xank - to benefit from Xank's distinct loyalty redemption structure, as well as from any other market adoption strategy the network chooses to implement in the future. For example, at a subsequent stage, the network may decide to use the Citizens pool to fund a Universal Basic Income (UBI) initiative, similar to the ones adopted by certain governments, to ensure that every citizen receives a minimum income. As more businesses and consumers see the merit in Xank's adoption strategies and come on board, we believe usage will come naturally. Then, the Xank network will grow to be not only a uniquely designed protocol but also a widely used cryptocurrency. The reward mechanism will maintain a minimum of 5% of the coin supply at all times for the Citizens portion of the Xank Reserve Pool as escrow, which we'll cover later in this paper. 
-
-**3.	Xank Reserve** - 15% of total block rewards
-
-* Calibrating the value of XANK coins against the value of the XDR, fiat currency, or any underlying asset chosen by the network for the purposes of stable transactions functionality, will require transactions to be subsidized from a reserve fund. The Xank Reserve fund will operate autonomously and will be funded by a percentage of each block reward. The Xank protocol’s use of the Xank Reserve is designed in such a way so as the protocol remains resistant to death spirals and positive feedback loops that have the opposite effect of maintaining stable transactions functionality. By default, 15% of each block reward will be allocated for distribution toward the Xank Reserve. Most government-run central banks in the world maintain a less than 10% reserve to stabilize their respective currency. Since no one can predict whether the XANK price will rise or fall during a transaction lifecycle, which starts and ends at a different price level, the Reserve is forecasted to maintain 15% of the total coin supply, a percentage that is higher than most government-run central banks' reserves. 
-
-**4.	Xank Treasury** - 15% of total block rewards
-
-* The Xank Treasury is the network’s self-funding mechanism for network development and growth. The Xank Treasury will contribute funds for code development, code auditing, marketers, translators, and all other funding needs that are set out in the Xank Constitution. The allocation of funds and percentages of funds to be used will vary according to each masternode voting round. The Xank Constitution is described in more detail later in this paper. 15% of each block reward will be allocated for distribution toward the Xank Treasury. The reward mechanism will maintain a minimum of 5% of the coin supply at all times for the treasury portion of the Xank Reserve Pool as escrow, which we’ll also cover later in this paper.
+Local Pay는 Stable Pay와 동일하게 작동하지만, 안정적인 가치를 위해 IMF SDR 대신 지원되는 지역 법정 화폐를 사용합니다. 이 기능은 비교적 안정적인 지역 통화(예: G20 국가의 국가 통화)로 거래하려는 사람들에게 유용합니다. Local Pay를 사용하면 송신자와 수신자가 안정적인 거래에 사용할 통화를 상호 결정합니다. 두 사람이 미국 달러를 Local Pay 통화로 선택하면 거래는 미국 달러로 표시된 소프트 페그 가치를 유지합니다. Stable Pay와 마찬가지로 Local Pay는 선택적 기능이므로 사용자는 안정성 요소 없이 원래의 Xank 코인 거래를 수행할 수 있습니다.
 
 
-### Go-to-market Strategy
+### Xank 지분 증명(PoS) 거버넌스
 
-The Citizens pool of Xank coins will be used for mass adoption programs that encourage companies and consumers to take part in the Xank network. One such example is a Xank loyalty program. How this works is Xank will partner with a merchant, let's say merchant X, to allow consumers holding its loyalty points to use the Xank wallet to redeem merchant X's points for Xank coins. Consumers who have exchanged their points for Xank coins are free to hold Xank, cash out at a local exchange, or spend Xank at stores where Xank coins are accepted. Xank, which has now received merchant X's loyalty points in exchange for Xank coins, will simply burn the points, subsequently allowing merchant X to write off its loyalty program liability. In exchange for having its points erased, merchant X will accept Xank at all of its payment terminals. 
+네트워크 전체의 합의와 보안을 달성하기 위해 작업 증명(PoW) 채굴 합의 메커니즘을 사용하는 비트코인과 Dash와 달리, Xank는 새로운 메타스테이블 합의 프로토콜인 Avalanche 프로토콜을 구현할 것입니다. Avalanche를 구현함으로써 Xank 네트워크 참여자들은 PoW 구현에서 발생하는 문제, 예를 들어 51% 채굴 공격과 빠르게 구식이 되어 과도한 전기 소비를 특징으로 하는 하드웨어 투자 문제를 피할 수 있습니다. 합의는 Avalanche 프로토콜 군을 통해 달성되지만, 거버넌스는 지분 증명 마스터노드 시스템의 형태를 취합니다.
+
+Xank 생태계에는 한 가지 형태의 스테이킹이 있을 것입니다 :
+
+*   **마스터노드 스테이킹** - 마스터노드 운영자는 Xank 네트워크에서 투표 권한을 부여받기 위해 마스터노드를 생성할 때 1,000 XDR 상당의 XANK 코인을 스테이킹하여 Xank 마스터노드를 운영합니다. Xank 마스터노드 운영자는 **관료(Governor)** 라고도 하며 네트워크로부터 인센티브를 받습니다.
+
+마스터노드 스테이킹에 XANK 코인 수 대신 XDR을 회계 단위로 사용하는 이유는 Xank 네트워크에서 마스터노드를 운영하려는 후발 주자에게 잠재적인 진입 장벽을 제거하기 위함입니다. 마스터노드 스테이킹 요건으로 1,000 XANK를 설정하면 초기에 마스터노드를 스테이킹하기는 쉽지만, 가격이 상승함에 따라 마스터노드를 스테이킹하는 것이 점점 더 어려워질 것입니다. 마스터노드 스테이킹 요건으로 1,000 XDR을 설정하면 각 마스터노드에 필요한 XANK의 수는 변동하지만, 법정 화폐로서의 가치는 항상 일정하게 유지될 것입니다. 우리는 이 시스템이 후발 투자자들이 관료로 네트워크에 참여하기 더 쉽게 만들 것이라고 믿습니다. 비인플레이션 화폐를 구축하는 것이 암호화폐의 중요한 목표이기 때문에 이것이 더 합리적이라고 생각합니다.
+
+초기 투자자의 공정성에 관해서는, 초기 투자자는 Xank 가격이 상승하면 마스터노드를 소유하고 있든 아니든 크게 보상받을 것입니다. 그러나 가격이 너무 올라 후발 투자자들이 Xank의 유일한 의사결정 기구에 참여할 수 없게 되면, 초기 투자자들만이 Xank 블록체인을 관리하는 주체가 될 것입니다. 새로운 관료의 부족은 오늘날 대부분의 마스터노드 네트워크에서 관찰되는 신선한 혈액 공급이 없는 죽은 통제 기구로 이어질 수 있습니다.
+
+
+### Xank 준비금
+
+암호화폐의 폭넓은 채택을 방해하는 주요 요인 중 하나는 법정 화폐 및 기타 전통적 자산과 비교할 때의 높은 변동성입니다. 이러한 변동성은 암호화폐가 교환의 매개로 쉽게 사용될 수 없다는 것을 의미하며, 이는 가치가 가격 변동에 노출되기 때문입니다. 가격 변동은 중장기적으로만 발생하는 것이 아니라, 거래가 완료되거나 암호화폐가 법정 화폐로 전환되는 동안에도 발생할 수 있습니다. 암호화폐가 상품 및 서비스 결제에 사용될 때, 거래 중 변동성은 수신자를 위험에 노출시킬 수 있습니다.
+
+Xank의 제안된 해결책은 안정화 메커니즘으로 작동하는 자율 준비금 기금을 설립하는 것입니다. 이 메커니즘을 통해 네트워크 사용자는 거래 시 Stable Pay(또는 Local Pay) 기능을 활성화할 수 있습니다. 이러한 거래는 자율 준비금 시스템에 의해 조정되며, 기본 자산이나 법정 화폐 가치 측면에서 균형이 이루어집니다. 따라서 송신자와 수신자는 Stable Pay(또는 Local Pay) 기능을 사용하여 법정 화폐 가치로 합의할 수 있으며, 프로토콜은 송신자가 법정 화폐로 안정적인 금액을 보내고 수신자가 합의된 법정 화폐 가치에 상응하는 XANK 코인을 받도록 보장합니다. 이러한 유형의 거래에서 발생하는 XANK 코인의 차이는 준비금 메커니즘을 통해 조정됩니다.
+
+*   거래가 Xank-XDR 환율 하락으로 인해 더 많은 XANK 코인을 필요로 할 경우, 준비금 시스템은 법정 화폐 가치로 거래를 조정하기 위해 필요한 양의 XANK를 제공합니다.
+*   Xank-XDR 환율 상승으로 인해 거래에 더 적은 XANK 코인이 필요할 경우, 잉여 XANK 코인은 법정 화폐 가치로 거래를 조정하기 위해 준비금 시스템에 의해 회수됩니다.
+
+Xank 준비금은 Stable Pay(또는 Local Pay) 기능이 선택될 때 안정적인 거래 기능 목표를 달성하기 위해 충분한 자금을 유지할 수 있도록 Xank 프로토콜 내의 경제적 인센티브와 정렬되어야 합니다. 항상 준비금에 있는 XANK 코인의 양은 준비금이 제공하는 보조금의 비용보다 많아야 합니다. 보조금의 비용은 Stable Pay(또는 Local Pay) 활성화된 거래량에 XANK 코인의 가치를 곱한 값에 비례합니다. 보조금 비용은 Xank 생태계 전반에 걸쳐 제공되는 인센티브와 정렬되어야 합니다. 모든 프로토콜 구성 요소 - 시민, 관료, 준비금 및 재정부 (일부 구성 요소는 후반부에서 더 논의될 예정) -는 시스템이 지정된 대로 작동하기 위해 균형점으로 수렴해야 합니다.
+
+
+![그림 4](images/Xank-Coin-Supply-en.jpg "블록 보상으로 생성된 Xank 준비금")
+
+<div align="center"><strong>그림 4</strong> : 블록 보상으로 생성된 Xank 준비금</div>
+
+마스터노드 수는 경제에서 유통되는 XANK 코인의 수에 직접적인 영향을 미칩니다. 마스터노드의 이해관계는 Xank 프로토콜의 준비금 및 재정부 시스템과 일치해야 합니다. 이미 언급했듯이, Xank는 자율적 자체 자금 조달 네트워크로 성공한 후 Dash 스타일의 마스터노드 네트워크를 구현할 것입니다. 위에서 설명한 균형 경향은 Xank 생태계의 어떤 플레이어나 파벌도 네트워크에 대한 중앙 권력을 확립하고 행사할 수 없도록 하기 위해 필요합니다.
+
+이를 달성하기 위해, 우리는 블록 보상에서 자금을 다음과 같이 할당할 것입니다 :
+
+**1.	관료** - 전체 블록 보상의 35%
+
+* Xank 관료는 1,000 XDR을 담보로 스테이킹한 Xank 노드 운영자로, Xank 마스터노드 운영자로 자격을 갖추게 됩니다. 마스터노드 운영자는 재정부 자금 사용 방법에 대한 투표권을 가질 수 있습니다. 마스터노드 운영자는 또한 프로토콜 수정, 업그레이드 및 기본 자산 페깅 메커니즘에 대한 제안에 투표할 수 있는 권리를 설정하여 시장 상황, 네트워크 견고성 및 네트워크 경쟁력에 대응할 수 있습니다. 관료는 항상 1,000 XDR에 해당하는 원래의 XANK 코인을 담보로 유지해야 하며, 이 잔액이 부족할 경우 모든 투표권을 상실하게 됩니다. 각 블록 보상의 35%는 네트워크의 관료들에게 배분될 것입니다. 운영자가 획득할 수 있는 마스터노드의 수에는 상한이 없지만, 자기주권 신원(SSI) 시스템을 통해 운영자가 몇 개의 마스터노드를 운영하든 상관없이 단일 평판 가중 투표의 권한만을 행사할 수 있도록 보장할 것입니다. 보상 메커니즘은 Xank 준비금 풀의 관료 부분에 대한 최소 5%의 코인 공급량을 항상 에스크로로 유지할 것입니다. 이에 대해서는 이 논문 후반부에서 다룰 것입니다.
+
+**2.	시민** - 전체 블록 보상의 35%
+
+* Xank는 많은 특별한 기능을 가지고 있지만, 암호화폐는 그 채택률만큼만 가치가 있습니다. 그래서 우리는 로열티 포인트 환급 프로그램을 통해 시장 채택을 위해 코인 발행량의 35%를 시민 풀에 할당했습니다. 시민 풀은 상인, 소비자, Xank라는 세 가지 당사자가 Xank의 독특한 로열티 환급 구조뿐만 아니라 네트워크가 미래에 구현하기로 선택한 기타 시장 채택 전략으로부터 혜택을 받을 수 있게 합니다. 예를 들어, 추후 단계에서 네트워크는 모든 시민이 최소한의 소득을 받을 수 있도록 보장하기 위해 일부 정부가 채택한 것과 유사한 보편적 기본 소득(UBI) 이니셔티브를 시민 풀을 사용하여 자금을 지원하는 결정을 내릴 수 있습니다. 더 많은 기업과 소비자가 Xank의 채택 전략의 장점을 보고 참여하게 되면, 사용은 자연스럽게 증가할 것이라고 믿습니다. 그런 다음 Xank 네트워크는 독특하게 설계된 프로토콜일 뿐만 아니라 널리 사용되는 암호화폐로 성장할 것입니다. 보상 메커니즘은 Xank 준비금 풀의 시민 부분에 대한 최소 5%의 코인 공급량을 항상 에스크로로 유지할 것입니다. 이에 대해서는 이 논문 후반부에서 다룰 것입니다.
+
+**3.	Xank 준비금** - 전체 블록 보상의 15%
+
+* XANK 코인의 가치를 XDR, 법정 화폐, 또는 네트워크가 안정적인 거래 기능을 위해 선택한 기본 자산의 가치에 맞춰 조정하려면 준비금에서 거래를 보조해야 합니다. Xank 준비금 기금은 자율적으로 운영되며 각 블록 보상의 일정 비율로 자금을 지원받게 됩니다. Xank 프로토콜의 Xank 준비금 사용은 프로토콜이 죽음의 나선이나 안정적인 거래 기능을 유지하는 데 반대 효과를 미치는 긍정적 피드백 루프에 저항할 수 있도록 설계되었습니다. 기본적으로 각 블록 보상의 15%가 Xank 준비금을 위해 배분될 것입니다. 세계 대부분의 정부 운영 중앙 은행은 해당 통화를 안정화하기 위해 10% 미만의 준비금을 유지합니다. 거래 수명 주기 동안 XANK 가격이 상승할지 하락할지 예측할 수 없으므로, 거래가 시작되고 끝나는 가격 수준이 다르기 때문에, 준비금은 전체 코인 공급량의 15%를 유지할 것으로 예상되며, 이는 대부분의 정부 운영 중앙 은행의 준비금보다 높은 비율입니다.
+
+**4.	Xank 재정부** - 전체 블록 보상의 15%
+
+* Xank 재정부는 네트워크 개발 및 성장을 위한 자체 자금 조달 메커니즘입니다. Xank 재정부는 코드 개발, 코드 감사, 마케팅, 번역가 및 Xank 헌법에 명시된 기타 모든 자금 필요에 기여할 것입니다. 자금 할당 및 사용될 자금의 비율은 각 마스터노드 투표 라운드에 따라 달라질 것입니다. Xank 헌법에 대해서는 이 논문 후반부에서 더 자세히 설명합니다. 각 블록 보상의 15%가 Xank 재정부에 배분될 것입니다. 보상 메커니즘은 Xank 준비금 풀의 재정부 부분에 대한 최소 5%의 코인 공급량을 항상 에스크로로 유지할 것입니다. 이에 대해서도 이 논문 후반부에서 다룰 것입니다.
+
+
+### 시장 진출 전략
+
+Xank 코인의 시민 풀은 기업과 소비자가 Xank 네트워크에 참여하도록 장려하는 대규모 채택 프로그램에 사용될 것입니다. 그 예로 Xank 로열티 프로그램이 있습니다. 이 프로그램은 Xank가 상인 X와 제휴하여, 소비자가 Xank 지갑을 사용해 상인 X의 포인트를 Xank 코인으로 교환할 수 있도록 하는 방식입니다. 포인트를 Xank 코인으로 교환한 소비자는 Xank를 보유하거나, 현지 거래소에서 현금화하거나, Xank 코인을 받아들이는 상점에서 사용할 수 있습니다. Xank는 상인 X의 포인트를 Xank 코인으로 교환받은 후, 해당 포인트를 소각하여 상인 X가 로열티 프로그램의 부채를 삭감할 수 있도록 합니다. 포인트가 소멸되는 대가로 상인 X는 모든 결제 단말기에서 Xank를 결제 수단으로 받아들일 것입니다.
 
 
 ### Measuring the Exchange Rate
