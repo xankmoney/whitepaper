@@ -468,7 +468,7 @@ Similar to the SDR rate, the oracle will draw data from multiple exchanges, and 
 
 Let’s look at XDR/USD rate in the chart below. This should give you an idea of how the SDR rate (“XDR/USD Rate”) and the price of the XANK coin (“Xank Price in USD”) are used to calculate the Xank-XDR rate (“Xank Price in SDR”). Note that this local currency conversion takes place in the wallet and not in the protocol.
 
-|                       |  Transaction  | Price Increase |  Scenario   | Price Decrease |   Scenario   |
+|                       |  Transaction  | Price Increase |  Scenario A   | Price Decrease |   Scenario B   |
 | --------------------- | :----------: | :------------: | :---------: | :------------: | :----------: |
 |                       | Start |  1 Year High   | 1 Year Low  |  1 Year High   |  1 Year Low  |
 | XDR/USD Rate          |   1.38195    |    1.45998     |   1.37778   |    1.45998     |   1.37778    |
