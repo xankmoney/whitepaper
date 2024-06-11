@@ -339,7 +339,7 @@ Local Pay는 사용자가 미국 달러 또는 일본 엔과 같은 국가 통�
 
 
 
-![그림 3](images/Xank-Universal-Wallet-wt_en.jpg "지갑 내 Stable/Local Pay 전환이 가능한 Xank 유니버설 지갑")
+![그림 3](images/Xank-Universal-Wallet-wt_kr.jpg "지갑 내 Stable/Local Pay 전환이 가능한 Xank 유니버설 지갑")
 
 <div align="center"><strong>그림 3</strong> : 지갑 내 Stable/Local Pay 전환이 가능한 Xank 유니버설 지갑</div>
 
@@ -383,7 +383,7 @@ Xank의 제안된 해결책은 안정화 메커니즘으로 작동하는 자율 
 Xank 준비금은 Stable Pay(또는 Local Pay) 기능이 선택될 때 안정적인 거래 기능 목표를 달성하기 위해 충분한 자금을 유지할 수 있도록 Xank 프로토콜 내의 경제적 인센티브와 정렬되어야 합니다. 항상 준비금에 있는 XANK 코인의 양은 준비금이 제공하는 보조금의 비용보다 많아야 합니다. 보조금의 비용은 Stable Pay(또는 Local Pay) 활성화된 거래량에 XANK 코인의 가치를 곱한 값에 비례합니다. 보조금 비용은 Xank 생태계 전반에 걸쳐 제공되는 인센티브와 정렬되어야 합니다. 모든 프로토콜 구성 요소 - 시민, 관료, 준비금 및 재정부 (일부 구성 요소는 후반부에서 더 논의될 예정) -는 시스템이 지정된 대로 작동하기 위해 균형점으로 수렴해야 합니다.
 
 
-![그림 4](images/Xank-Coin-Supply-en.jpg "블록 보상으로 생성된 Xank 준비금")
+![그림 4](images/Xank-Coin-Supply-kr.jpg "블록 보상으로 생성된 Xank 준비금")
 
 <div align="center"><strong>그림 4</strong> : 블록 보상으로 생성된 Xank 준비금</div>
 
@@ -524,7 +524,7 @@ SDR : 특별 인출권(ISO 4217 통화 코드 XDR)은 국제통화기금(IMF)이
 
 ### 극심한 변동성 방지 장치 (EVS) 가격 하한 메커니즘
 
-![그림 5](images/Xank-Extreme-Volatility-Safeguard_Simplified_wh-en.jpg "극심한 변동성 방지 장치 (EVS) 가격 하한 메커니즘")
+![그림 5](images/Xank-Extreme-Volatility-Safeguard_Simplified_wh-kr.jpg "극심한 변동성 방지 장치 (EVS) 가격 하한 메커니즘")
 
 <div align="center"><strong>그림 5</strong> : 극심한 변동성 방지 장치 (EVS) 가격 하한 메커니즘</div>
 
@@ -1007,7 +1007,7 @@ Xank는 네트워크 사용량 또는 채택률을 계산하기 위해 누적된
 
 초기 화폐 공급은 유동성을 보장할 만큼 충분해야 하며, 네트워크의 경제가 안정화됨에 따라 코인 발행은 점진적으로 감소해야 합니다. 그러나 경제가 급격히 성장하면, 충분한 유동성을 보장하고 가격 변동을 최소화하기 위해 더 많은 코인을 발행해야 합니다. 따라서 최대 코인 수는 제한되지 않아야 합니다.
 
-초기에는 10억 개의 Xank 코인이 사전 채굴되어 설립자, 고문진, 초기 공개 토큰 판매(ICO) 참가자, 초기 후원자에게 제공될 것입니다.
+초기에는 10억 개의 Xank 코인이 사전 채굴되어 설립자, 자문단, 초기 공개 토큰 판매(ICO) 참가자, 초기 후원자에게 제공될 것입니다.
 
 
 ### Xank 발행 알고리즘
