@@ -100,21 +100,21 @@ Xank는 여기서 설명한 기능을 제공하기 위해 구축되고 있습니
     - [Tether](#tether)
     - [Maker (Dai)](#maker-dai)
     - [Carbon](#carbon)
-  - [**Xank Network Specifications and Comparisons**](#xank-network-specifications-and-comparisons)
-  - [**Xank Units of Measure**](#xank-units-of-measure)
-  - [XANK Coin Supply Algorithm](#xank-coin-supply-algorithm)
-    - [Introduction](#introduction)
-    - [Limited Supply](#limited-supply)
-    - [Unlimited Supply and Inflation](#unlimited-supply-and-inflation)
+  - [**Xank 네트워크 사양 및 비교**](#xank-네트워크-사양-및-비교)
+  - [**Xank 측정 단위**](#xank-측정-단위)
+  - [XANK 코인 발행 알고리즘](#xank-코인-발행-알고리즘)
+    - [소개](#소개)
+    - [한정된 공급](#한정된-공급)
+    - [무제한 공급과 인플레이션](#무제한-공급과-인플레이션)
     - [GDP](#gdp)
-    - [Xank Network Transactions](#xank-network-transactions)
-    - [Xank Coin Supply](#xank-coin-supply)
-    - [Xank Emission Algorithm](#xank-emission-algorithm)
-      - [Initial Design](#initial-design)
-      - [Current Design](#current-design)
-  - [**Xank Protocol Characteristics Comparison**](#xank-protocol-characteristics-comparison)
-- [References and Resources](#references-and-resources)
-  - [Notes](#notes)
+    - [Xank 네트워크 거래](#xank-네트워크-거래)
+    - [Xank 코인 공급](#xank-코인-공급)
+    - [Xank 발행 알고리즘](#xank-발행-알고리즘)
+      - [초기 설계](#초기-설계)
+      - [현재 설계](#현재-설계)
+  - [**Xank 프로토콜 특성 비교**](#xank-프로토콜-특성-비교)
+- [참고 자료 및 리소스](#참고-자료-및-리소스)
+  - [주석](#주석)
 
 
 # 서론
@@ -892,174 +892,173 @@ Tether는 최근까지 감사를 피했으며, 이는 그들이 주장하는 자
 
 ### Carbon
 
-The idea that a coin does not need to be issued by an underlying asset gained traction in thought circles since it was first propounded by F.A. Hayek in the 1970s. After all, the United States was able to decouple the dollar from the gold standard and maintain a relatively stable valuation using monetary inflationary and deflationary policies to regulate the supply of the currency in circulation. Seigniorage shares, a scheme invented by Robert Sams in 2014, was based on the simple idea that a central bank can be replaced by a smart contract that regulates the amount of the currency that is in circulation. The smart contract could be mandated to peg the currency to a fiat value, say \$1.00 USD. 
+코인이 기초 자산에 의해 발행될 필요가 없다는 아이디어는 1970년대 F.A. 하이에크에 의해 처음 제기된 이후 많은 이들의 주목을 받았습니다. 결국 미국은 달러를 금본위제로부터 분리하고 통화 유통량을 조절하기 위한 인플레이션 및 디플레이션 정책을 사용하여 비교적 안정적인 평가를 유지할 수 있었습니다. 2014년 로버트 샘스가 고안한 시뇨리지 셰어즈(Seigniorage shares) 계획은 중앙은행을 대체하여 통화 유통량을 조절하는 스마트 계약을 기반으로 하는 간단한 아이디어에 기반하고 있습니다. 이 스마트 계약은 예를 들어 $1.00 USD에 통화를 고정하는 임무를 부여받을 수 있습니다.
 
-Expanding the money supply is a simple matter of course for a central issuer. You simply issue more coins as demand for the coin increases to keep the price stable. Contracting the money supply, however, is not as straightforward, as it would involve you having to buy back the coins at market value, which would be lower than the peg and thereby restricting the price until the value returns to the peg. Offering newly issued coins to the market to lower the price returns a profit; this is known as seigniorage.
+중앙 발행자가 통화 공급을 확장하는 것은 간단합니다. 수요가 증가할 때 더 많은 코인을 발행하여 가격을 안정시키면 됩니다. 그러나 통화 공급을 축소하는 것은 그리 간단하지 않습니다. 이는 시장 가격으로 코인을 다시 사들여야 하기 때문이며, 이는 페그보다 낮은 가격으로 사들여 가격을 제한해야 합니다. 새로 발행된 코인을 시장에 제공하여 가격을 낮추는 것은 이익을 반환합니다. 이를 시뇨리지라고 합니다.
 
-Contracting the supply would mean that the smart contract would need to have a large reserve of funds that can buy up excess coins in price downturns, which is not very feasible or practical. The seigniorage shares proposed solution is to issue shares that would cover the difference in times of price downturn. Shareholders would then gain access to seigniorage profits when the market turns the other way, and the coin becomes profitable to the smart contract. 
+공급을 축소하는 것은 스마트 계약이 가격 하락 시 초과 코인을 매입할 수 있는 대규모 예비 자금을 보유해야 하므로 실현 가능하지 않거나 실용적이지 않습니다. 시뇨리지 셰어즈가 제안한 해결책은 가격 하락 시 차이를 메우기 위해 주식을 발행하는 것입니다. 주주들은 시장이 반전될 때 시뇨리지 이익에 접근하게 되며, 코인이 스마트 계약에 대해 수익성이 있게 됩니다.
 
-Other non-collateralized stablecoins use variations of this method. There are many detractors to this methodology, and critics are quick to highlight its potential flaws, the most prominent one being that the system assumes that network growth will be continual in order for it to fulfill its obligations toward the shareholders. Others feel it is akin to a pyramid scheme where new entrants are continuously needed to prop the system up, and others yet point to the system virtually collateralizing from its future growth, thereby inherently cannibalizing its future growth potential and limiting the growth of the network. The coin is also open facing to a death spiral if it comes under continual pressure to sell, where traders sell their shares even below the peg value whereby the currency can experience a catastrophic collapse. 
+다른 비담보 스테이블코인은 이 방법의 변형을 사용합니다. 이 방법에는 많은 반대가 있으며, 비판자들은 그 잠재적 결함을 빠르게 지적합니다. 가장 두드러진 결함은 네트워크 성장이 지속되어야 주주에 대한 의무를 다할 수 있다는 시스템 가정입니다. 일부는 이 시스템이 피라미드 사기와 유사하다고 느끼며, 새로운 참가자가 계속해서 시스템을 유지해야 한다고 지적합니다. 또한 이 시스템은 사실상 미래 성장에서 담보화되고 있어, 본질적으로 미래 성장 잠재력을 갉아먹고 네트워크 성장을 제한한다고 비판합니다. 코인은 지속적인 매도 압력을 받으면, 거래자들이 페그 가치 이하로 주식을 매도하여 통화가 치명적인 붕괴를 겪을 수 있는 죽음의 소용돌이에 직면하게 됩니다.
 
-Non-collateralized stablecoins are inherently susceptible to failure should they come under sustained selling pressure. However, as seen with many fiat currencies, they are issued with the intention of achieving a Schelling point, that is, if enough people believe that the system will survive, the belief itself will ensure the system’s survival as more entrants enter the network. This makes it one of the most exciting stablecoin propositions because if such a network can achieve a Schelling point, then it can potentially become resistant to shocks that other currencies experience, as it will act independently from them. Even if the U.S. dollar and Ethereum collapse, the non-collateralized stablecoin could act as a more stable store of value. And unlike central banks that can be overtaken by perverse incentives under the influence of nation-state governments, the stablecoin’s smart contract would carry on fulfilling its mathematically coded mandate to maintain price stability. For this reason, non-collateralized stablecoins have the potential to revolutionize money but exist on a knife’s edge where they can also experience catastrophic failure. 
+비담보 스테이블코인은 지속적인 매도 압력을 받으면 실패할 수 있습니다. 그러나 많은 법정화폐처럼, 이는 셸링 포인트를 달성하기 위해 발행됩니다. 즉, 충분히 많은 사람들이 시스템이 생존할 것이라고 믿으면, 그 믿음 자체가 시스템의 생존을 보장하며 더 많은 참가자가 네트워크에 참여하게 됩니다. 이는 가장 흥미로운 스테이블코인 제안 중 하나입니다. 왜냐하면 이러한 네트워크가 셸링 포인트를 달성할 수 있다면, 다른 통화가 겪는 충격에 저항할 수 있기 때문입니다. 이는 독립적으로 작동하기 때문입니다. 미국 달러와 이더리움이 붕괴하더라도, 비담보 스테이블코인은 더 안정적인 가치 저장 수단으로 작용할 수 있습니다. 국가 정부의 영향을 받는 중앙은행과 달리, 스테이블코인의 스마트 계약은 수학적으로 코딩된 임무를 수행하여 가격 안정을 유지합니다. 이러한 이유로 비담보 스테이블코인은 돈의 혁명을 가져올 잠재력을 가지고 있지만, 치명적인 실패를 겪을 가능성도 있습니다.
 
-**Pros:**
+**장점 :**
 
-*   No collateral required
-*   Most decentralized and independent (not tied to any other cryptocurrency or to fiat)
+*   담보가 필요 없음
+*   가장 분산화되고 독립적임 (다른 암호화폐나 법정화폐와 연관되지 않음)
 
-**Cons:**
+**단점 :**
 
-*   Requires continual growth
-*   Vulnerable to general crypto market decline or crash and cannot be liquidated in a crash
-*   Difficult to analyze safety bounds or health
-*   High levels of complexity
+*   지속적인 성장이 필요함
+*   일반 암호화폐 시장의 하락 또는 붕괴에 취약하며, 붕괴 시 청산 불가능
+*   안전 경계 또는 건강 상태를 분석하기 어려움
+*   높은 복잡성
 
-Carbon is a seigniorage shares style stablecoin that emerged in early 2018 with plans for protocol-governed expansion and contraction of the money supply via the issuance of additional tokens as the price moves above the peg and the withdrawal of tokens as the price moves below the peg. 
+Carbon은 2018년 초에 등장한 시뇨리지 셰어즈 스타일의 스테이블코인으로, 가격이 페그를 초과하면 추가 토큰을 발행하고 가격이 페그 아래로 떨어지면 토큰을 회수하여 통화 공급을 프로토콜이 관리하는 확장 및 축소 계획을 가지고 있습니다.
 
 
-## **Xank Network Specifications and Comparisons**
+## **Xank 네트워크 사양 및 비교**
 
-| Masternode Cryptocurrency      |                             Dash                             |                             Pivx                             |                             Xank                             |
+| 마스터노드 암호화폐            |                             Dash                             |                             Pivx                             |                             Xank                             |
 | ------------------------------ | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
-| Consensus algorithm            |        Proof-of-Work (PoW)<br>Proof-of-Service (PoSv)        |       Proof-of-Stake (PoS)<br>Proof-of-Service (PoSv)        |  Avalanche<br>Proof-of-Stake (PoS)<br>Proof-of-Merit (PoM)   |
-| Hashing algorithm              |                             X11                              |                            Quark                             |                            Quark                             |
-| Hardware mineable              |                             Yes                              |                No* (but multipool supported)                 |                No* (but multipool supported)                 |
-| Block time                     |                         150 seconds                          |            60 Seconds (Re-targeting every block)             |             60 Seconds (Time based Super-block)              |
-| Block size                     |                             2MB                              |                             2MB                              |             A batch size (Block size) of 40 TXs              |
-| Datastore                      |                          Blockchain                          |                          Blockchain                          |                 DAG (Directed acyclic graph)                 |
-| Premine                        | No premine. But 2M Dash was mined within first 36 hours of launch. (aka. instamine) | 60K on genesis block for setup of 6 initial masternodes. Premine was burnt from coin supply at block 279917. | 1B on genesis block for setup of 6 initial masternodes, early backers, ICO investors, founders, and founding company. |
-| Max. coin supply               |                Approx. 17.6M after 100 years.                | No max. Increases by approx. 2.6M PIV per year. Approx 312M after 100 years. | No max. Increases by XANK coin Supply Algorithm. Approx 6.26B after 100 years. |
-| Denominations                  |                           1e8 Duff                           |                             1e8                              |                         1e16 Ryu(𝔯)                          |
-| Masternodes                    |                             Yes                              |                             Yes                              |                             Yes                              |
-| Instant Pay                    |                             Yes                              |                        Yes (SwiftTX)                         |                        Yes (SwiftTX)                         |
-| Private Pay                    |                        Yes (Coinjoin)                        |                        Yes (Zerocoin)                        |                Yes (Zerocoin at Wallet level)                |
-| Stable Pay                     |                              No                              |                              No                              |                             Yes                              |
-| IPv6 support                   |                              No                              |                Yes (both wallet & masternode)                |                Yes (both wallet & masternode)                |
-| Decentralized governance       |                   Yes (masternode voting)                    |                   Yes (masternode voting)                    |                   Yes (masternode voting)                    |
-| Budget funding                 |                  Yes. 10% of block reward.                   |                  Yes. 10% of block reward.                   |                  Yes. 15% of block reward.                   |
-| In-wallet BIP38 encryption     |                              No                              |                      Yes (private key)                       |                      Yes (private key)                       |
-| Permanent self funded treasury |                              No                              |                             Yes                              |                             Yes                              |
+| 합의 알고리즘                  |        작업 증명 (PoW)<br>서비스 증명 (PoSv)                  |       지분 증명 (PoS)<br>서비스 증명 (PoSv)                  |  Avalanche<br>지분 증명 (PoS)<br>메리트 증명 (PoM)           |
+| 해싱 알고리즘                  |                             X11                              |                            Quark                             |                            Quark                             |
+| 하드웨어 채굴 가능 여부        |                             예                              |                아니오* (하지만 멀티풀 지원)                 |                아니오* (하지만 멀티풀 지원)                 |
+| 블록 시간                      |                         150초                               |             60초 (매 블록마다 재조정)                       |             60초 (시간 기반 슈퍼블록)                        |
+| 블록 크기                      |                             2MB                              |                             2MB                              |             40 TXs의 배치 크기 (블록 크기)                  |
+| 데이터 저장소                  |                          블록체인                           |                          블록체인                           |                 DAG (방향성 비순환 그래프)                   |
+| 사전 채굴                      | 사전 채굴 없음. 그러나 출시 후 첫 36시간 내에 2M Dash가 채굴됨. (일명 인스타마인) | 제네시스 블록에서 6개의 초기 마스터노드 설정을 위해 60K 사전 채굴. 사전 채굴은 블록 279917에서 코인 공급에서 소각됨. | 제네시스 블록에서 초기 마스터노드 설정, 초기 후원자, ICO 투자자, 창립자 및 창립 회사를 위해 1B 사전 채굴. |
+| 최대 코인 공급량               |                약 100년 후 17.6M.                           | 최대 없음. 연간 약 2.6M PIV 증가. 약 100년 후 312M.         | 최대 없음. XANK 코인 공급 알고리즘에 따라 증가. 약 100년 후 6.26B. |
+| 단위                           |                           1e8 Duff                           |                             1e8                              |                         1e16 Ryu(𝔯)                          |
+| 마스터노드                     |                             예                              |                             예                              |                             예                              |
+| Instant Pay                  |                             예                              |                        예 (SwiftTX)                         |                        예 (SwiftTX)                         |
+| Private Pay                  |                        예 (코인조인)                        |                        예 (제로코인)                        |                예 (지갑 수준의 제로코인)                     |
+| Stable Pay                  |                              아니오                          |                              아니오                          |                             예                              |
+| IPv6 지원                      |                              아니오                          |                예 (지갑 및 마스터노드 모두)                 |                예 (지갑 및 마스터노드 모두)                 |
+| 분산 거버넌스                  |                   예 (마스터노드 투표)                      |                   예 (마스터노드 투표)                      |                   예 (마스터노드 투표)                      |
+| 예산 자금                      |                  예. 블록 보상의 10%.                      |                  예. 블록 보상의 10%.                      |                  예. 블록 보상의 15%.                      |
+| 인월렛 BIP38 암호화            |                              아니오                          |                      예 (개인 키)                           |                      예 (개인 키)                           |
+| 영구적으로 자금 조달되는 재정부  |                              아니오                          |                             예                              |                             예                              |
 
 
-## **Xank Units of Measure**
+## **Xank 측정 단위**
 
-Xank has a metric system of denominations used as units of Xank. Each denomination has its own unique name. The smallest denomination aka base unit of Xank is called a Ryu. Below is a list of the named denominations and their value in Ryu. Following a common pattern, Xank also designates a unit (of 1e16 or ten quadrillions Ryu) of the currency. 
-| Unit | Ryu                    | Symbol | Xank               | Symbol | Ryu Value |
-| ---- | ---------------------- | ------ | ------------------ | ------ | --------- |
-| Ryu  | 1                      | 𝔯      | 0.0000000000000001 | 𝔛      | 1 𝔯       |
-|      | 10                     | 𝔯      | 0.000000000000001  | 𝔛      | 1e1 𝔯     |
-|      | 100                    | 𝔯      | 0.00000000000001   | 𝔛      | 1e2 𝔯     |
-| Kryu | 1,000                  | 𝔯      | 0.0000000000001    | 𝔛      | 1e3 𝔯     |
-|      | 10,000                 | 𝔯      | 0.000000000001     | 𝔛      | 1e4 𝔯     |
-|      | 100,000                | 𝔯      | 0.00000000001      | 𝔛      | 1e5 𝔯     |
-| Mryu | 1,000,000              | 𝔯      | 0.0000000001       | 𝔛      | 1e6 𝔯     |
-|      | 10,000,000             | 𝔯      | 0.000000001        | 𝔛      | 1e7 𝔯     |
-|      | 100,000,000            | 𝔯      | 0.00000001         | 𝔛      | 1e8 𝔯     |
-| Bryu | 1,000,000,000          | 𝔯      | 0.0000001          | 𝔛      | 1e9 𝔯     |
-|      | 10,000,000,000         | 𝔯      | 0.000001           | 𝔛      | 1e10 𝔯    |
-|      | 100,000,000,000        | 𝔯      | 0.00001            | 𝔛      | 1e11 𝔯    |
-| Tryu | 1,000,000,000,000      | 𝔯      | 0.0001             | 𝔛      | 1e12 𝔯    |
-|      | 10,000,000,000,000     | 𝔯      | 0.001              | 𝔛      | 1e13 𝔯    |
-|      | 100,000,000,000,000    | 𝔯      | 0.01               | 𝔛      | 1e14 𝔯    |
-| Qryu | 1,000,000,000,000,000  | 𝔯      | 0.1                | 𝔛      | 1e15 𝔯    |
-| Xank | 10,000,000,000,000,000 | 𝔯      | 1                  | 𝔛      | 1e16 𝔯    |
+Xank는 측정 단위로 사용되는 미터법 명칭을 가지고 있습니다. 각 명칭은 고유한 이름을 가지고 있으며, Xank의 가장 작은 단위는 Ryu라고 합니다. 아래는 명칭과 Ryu의 가치에 대한 도표입니다. 일반적인 패턴을 따르며, Xank는 통화의 단위(1e16 또는 10,000,000,000,000,000 Ryu)를 지정합니다.
 
-
-## XANK Coin Supply Algorithm
-
-### Introduction
-
-Cryptocurrencies are produced through a sophisticated cryptographic process known as mining. Mining involves the use of high-powered computers running hash algorithms to find solutions to cryptographic problems that vary in complexity, known as the mining difficulty.  A solution is discovered once a problem is solved and the miner is permitted to create new units of the currency. This is known as the block reward. To ensure that the currency is not subject to endless inflation, the block reward is reduced at regular intervals. The coin emission rate is the term used to describe the quantum at which new cryptocurrency is introduced into the system.
+| 단위 | Ryu                     | 기호  | Xank               | 기호  | Ryu 값     |
+| ---- | ----------------------- | ------ | ------------------ | ------ | --------- |
+| Ryu  | 1                       | 𝔯      | 0.0000000000000001 | 𝔛      | 1 𝔯       |
+|      | 10                      | 𝔯      | 0.000000000000001  | 𝔛      | 1e1 𝔯     |
+|      | 100                     | 𝔯      | 0.00000000000001   | 𝔛      | 1e2 𝔯     |
+| Kryu | 1,000                   | 𝔯      | 0.0000000000001    | 𝔛      | 1e3 𝔯     |
+|      | 10,000                  | 𝔯      | 0.000000000001     | 𝔛      | 1e4 𝔯     |
+|      | 100,000                 | 𝔯      | 0.00000000001      | 𝔛      | 1e5 𝔯     |
+| Mryu | 1,000,000               | 𝔯      | 0.0000000001       | 𝔛      | 1e6 𝔯     |
+|      | 10,000,000              | 𝔯      | 0.000000001        | 𝔛      | 1e7 𝔯     |
+|      | 100,000,000             | 𝔯      | 0.00000001         | 𝔛      | 1e8 𝔯     |
+| Bryu | 1,000,000,000           | 𝔯      | 0.0000001          | 𝔛      | 1e9 𝔯     |
+|      | 10,000,000,000          | 𝔯      | 0.000001           | 𝔛      | 1e10 𝔯    |
+|      | 100,000,000,000         | 𝔯      | 0.00001            | 𝔛      | 1e11 𝔯    |
+| Tryu | 1,000,000,000,000       | 𝔯      | 0.0001             | 𝔛      | 1e12 𝔯    |
+|      | 10,000,000,000,000      | 𝔯      | 0.001              | 𝔛      | 1e13 𝔯    |
+|      | 100,000,000,000,000     | 𝔯      | 0.01               | 𝔛      | 1e14 𝔯    |
+| Qryu | 1,000,000,000,000,000   | 𝔯      | 0.1                | 𝔛      | 1e15 𝔯    |
+| Xank | 10,000,000,000,000,000  | 𝔯      | 1                  | 𝔛      | 1e16 𝔯    |
 
 
-### Limited Supply
+## XANK 코인 발행 알고리즘
 
-Bitcoin and Dash are two important cryptocurrencies that have upper boundaries on the amount of cryptocurrency that can be theoretically minted. Bitcoin’s total coin emission can be calculated as the sum of a geometric series, with the total emission approaching (but never reaching) 21,000,000 BTC. While Dash is based on Bitcoin, it significantly modifies the coin emission rate to offer a smoother reduction in coin emission over time. Bitcoin reduces the coin emission rate by 50% every 4 years, whereas Dash reduces the emission by one-fourteenth (approx. 7.14%) every 210,240 blocks (approx. 383.25 days). It can be seen that reducing the block reward by a smaller amount each year offers a smoother transition to a fee-based economy than Bitcoin.
+### 소개
 
-Dash’s total coin emission is also the sum of a geometric series, but the ultimate total coin emission is uncertain because it cannot be known a priori how much of the 10% block reward reserved for budget proposals will actually be allocated since this depends on future voting behavior.
+암호화폐는 채굴로 알려진 복잡한 암호화 과정을 통해 생산됩니다. 채굴은 고성능 컴퓨터가 해시 알고리즘을 실행하여 복잡성이 다양한 암호화 문제의 해답을 찾는 과정을 포함합니다. 문제를 해결하면 해답이 발견되고, 채굴자는 새로운 암호화폐 단위를 생성할 수 있습니다. 이를 블록 보상이라고 합니다. 암호화폐가 무한 인플레이션에 노출되지 않도록 블록 보상은 정기적으로 감소합니다. 코인 발행율은 새로운 암호화폐가 시스템에 도입되는 양을 설명하는 용어입니다.
+
+### 한정된 공급
+
+비트코인과 대시는 이론적으로 발행될 수 있는 암호화폐의 양에 상한이 있는 두 가지 중요한 암호화폐입니다. 비트코인의 총 코인 발행은 기하급수적 시리즈의 합으로 계산될 수 있으며, 총 발행량은 21,000,000 BTC에 접근하지만 절대 도달하지 않습니다. 대시는 비트코인을 기반으로 하지만 시간이 지남에 따라 코인 발행율을 부드럽게 줄이기 위해 발행율을 크게 수정합니다. 비트코인은 코인 발행율을 4년마다 50%씩 줄이는 반면, 대시는 발행율을 210,240 블록(약 383.25일)마다 14분의 1(약 7.14%)씩 줄입니다. 매년 블록 보상을 더 적게 줄이는 것이 비트코인보다 수수료 기반 경제로의 부드러운 전환을 제공하는 것을 알 수 있습니다.
+
+대시의 총 코인 발행도 기하급수적 시리즈의 합이지만, 예산 제안에 할당된 10% 블록 보상이 실제로 얼마나 할당될지는 미래의 투표 행동에 따라 다르기 때문에 궁극적인 총 코인 발행량은 불확실합니다.
 
 
-### Unlimited Supply and Inflation
+### 무제한 공급과 인플레이션
 
-Unlike Bitcoin, which has a maximum supply capped at 21,000,000 BTC, Ethereum does not have an overall cap. While the total annual issuance of ETH is fixed, the relative inflation decreases every year. Since the total supply increases, the inflation caused by issuance reduces.
+최대 공급량이 21,000,000 BTC로 제한된 비트코인과 달리, 이더리움은 전체 상한이 없습니다. 연간 ETH 발행 총량은 고정되어 있지만, 상대적인 인플레이션은 매년 감소합니다. 총 공급량이 증가함에 따라 발행으로 인한 인플레이션은 감소합니다.
 
-By approximately the year 2140, the issuance of BTC ceases, and since some BTC will likely be lost each year, the monetary base of Bitcoin is expected to start shrinking at that point.
+약 2140년경에 BTC 발행이 중단되고, 매년 일부 BTC가 유실될 가능성이 있으므로, 비트코인의 화폐 기반은 그 시점부터 축소되기 시작할 것으로 예상됩니다.
 
-At approximately the same time, the expected rate of annual loss and destruction of ETH will balance the rate of issuance.  If the demand for ETH is still growing at that point due to an expanding economy, prices will be in a deflationary regime. 
+동시에 ETH의 연간 손실 및 파괴율이 발행율과 균형을 이루게 될 것입니다. 그 시점에서 경제 확장으로 인해 ETH에 대한 수요가 계속 증가한다면, 가격은 디플레이션 상태에 있게 될 것입니다.
 
 
 ### GDP
 
-Almost no coins use any economic indicators to assess the current growth of the economy. They hope to adjust the emission rate, to account for price deflation, through external community-based consensus, if needed. Xank uses the current global GDP value as an economic indicator inside the emission logic to reduce deflationary pressure in the future.
+거의 모든 암호화폐는 현재 경제 성장률을 평가하기 위해 경제 지표를 사용하지 않습니다. 필요할 경우, 외부 커뮤니티 기반 합의를 통해 가격 디플레이션을 감안하여 발행율을 조정하려고 합니다. Xank는 향후 디플레이션 압력을 줄이기 위해 발행 논리 내에서 경제 지표로 현재 글로벌 GDP 가치를 사용합니다.
 
-GDP at purchaser's prices is the sum of gross value added by all resident producers in the economy plus any product taxes and minus any subsidies not included in the value of the products. It is calculated without making deductions for the depreciation of fabricated assets or for the depletion and degradation of natural resources. Data are in current U.S. dollars. Dollar figures for GDP are converted from domestic currencies using single-year official exchange rates. World Bank national accounts data provide us with the current value at \$85 trillion USD.  The global GDP shows economic growth/decline, which will, in turn, increase or decrease the Xank economy. Hence it is used as a primary factor in Xank emission. 
-
-
-### Xank Network Transactions
-
-Xank also measures the network usage or adoption by calculating the cumulative Xank collected as gas (tx fee). We release equal amounts of newly created Xank during emission. As the number of transactions in the network increases, the gas fee also collected increases. Hence the coins emitted will also increase. As the newly created Xank is evenly split between different stakeholders, the network effect is bound to increase Xank transactions.
+구매자 가격 기준 GDP는 경제 내 모든 거주 생산자가 추가한 총 가치에 제품세를 더하고 제품 가치에 포함되지 않은 보조금을 뺀 금액의 합계입니다. 이는 제작 자산의 감가상각이나 천연 자원의 고갈 및 악화를 위한 공제를 하지 않고 계산됩니다. 데이터는 현재 미국 달러로 표시됩니다. GDP에 대한 달러 수치는 단일 연도 공식 환율을 사용하여 국내 통화에서 변환됩니다. 세계은행 국가 계정 데이터는 현재 85조 달러의 미국 달러 가치로 제공됩니다. 글로벌 GDP는 경제 성장/감소를 나타내며, 이는 Xank 경제의 증가 또는 감소로 이어집니다. 따라서 Xank 발행의 주요 요인으로 사용됩니다.
 
 
-### Xank Coin Supply
+### Xank 네트워크 거래
 
-If the increase in the value obtained by holding a coin becomes larger than the value of using the coin, economically minded users will refrain from using the coin. To encourage widespread usage of the coin, the issuance of coins should be coordinated in a direct relationship to the size of the economy.
+Xank는 네트워크 사용량 또는 채택률을 계산하기 위해 누적된 가스(Xank 수수료)를 측정합니다. 발행 시 새로 생성된 Xank의 동일한 양을 방출합니다. 네트워크 내 거래 수가 증가함에 따라 수집된 가스 수수료도 증가합니다. 따라서 발행되는 코인도 증가합니다. 새로 생성된 Xank는 다양한 이해관계자에게 균등하게 분배되므로, 네트워크 효과는 Xank 거래를 증가시키게 됩니다.
 
-Conversely, if an infinite number of coins are issued, the value of a coin will dramatically fall as the coin will depreciate due to oversupply. If the coin discourages investors from holding it, no investors will assist in the growth of the coin economy. Therefore, the issuance policy should take this into consideration to avoid reducing and discouraging the coin’s investment value.
+### Xank 코인 공급
 
-The initial money supply should be sufficient to ensure liquidity, and coin issuance should gradually decrease as the network’s economy stabilizes. However, if the economy grows rapidly, more coins must be issued to ensure sufficient liquidity and minimal price variance. Therefore, the maximum number of coins must remain unrestricted.
+코인을 보유함으로써 얻는 가치가 코인을 사용하는 가치보다 커지면, 경제적으로 사고하는 사용자는 코인을 사용하는 것을 자제하게 됩니다. 코인의 광범위한 사용을 장려하기 위해, 코인 발행은 경제 규모와 직접적으로 관련되어 조정되어야 합니다.
 
-Initially, there will be 1 billion Xank coins pre-mined that will be made available to the founders, advisors, initial public token sale (ICO) participants, and early backers.
+반대로, 무한히 많은 코인이 발행되면, 과잉 공급으로 인해 코인이 가치가 급격히 떨어지게 됩니다. 코인의 보유를 저해하면, 투자자들은 코인 경제의 성장에 기여하지 않게 됩니다. 따라서 발행 정책은 코인의 투자 가치를 감소시키고 저해하는 것을 피하도록 고려되어야 합니다.
 
+초기 화폐 공급은 유동성을 보장할 만큼 충분해야 하며, 네트워크의 경제가 안정화됨에 따라 코인 발행은 점진적으로 감소해야 합니다. 그러나 경제가 급격히 성장하면, 충분한 유동성을 보장하고 가격 변동을 최소화하기 위해 더 많은 코인을 발행해야 합니다. 따라서 최대 코인 수는 제한되지 않아야 합니다.
 
-### Xank Emission Algorithm
-
-#### Initial Design 
-
-In our initial design, a binary logarithmic emission based on the initial year issuance(800m) was used, where the supply will double in 1.5 years, triple by the fifth year, quadruple by the thirteenth year, and quintuple by the thirty-first year; and so on. 
-
-Emission volume is reduced by half every $2_n$ years.  For example, the 1st year 800M, the next two years 400M each year, and the next 4 years 200M each, and so on. In this distribution formula, it is self-evident that the summation of coins in the $2_n$ period always becomes 800M. So the coin issue rate converges to zero, but the sum of them diverges infinitely.
-
-#### Current Design 
-
-We use the binary logarithm to calculate the emission of the Xank coins in the $N^{th}$ year. The binary logarithm is the logarithm to the base 2. It is the inverse function of the power of two functions and is used to reduce the coin emission gradually. Instead of using a fixed issuance amount, Xank takes into account the current global GDP as an economic growth Indicator and Xank TPS as the network growth indicator. As the global GDP, as well as Xank TPS, is bound to increase over time, we can reduce them gradually by applying binary logarithms.
-
-The general term of the emission sequence of Xank coins is:
-
-$$E_n=(GDP_n + TPS_n) *(\frac{1}2)^{INT(log_2n)}$$
-
-From the below graph, you can see that the amount of Xank released per year is very high during the initial years and gradually reduces over time. This gives rise to very high inflation during the initial period.  From the above link, you can see that any changes in GDP or TPS in the initial years cause significant variance in issuance amounts. As seen in the table, these initial volatile years correspond to the first three logarithmic cycles.
-
-![Figure 6](images/Xank-Emission-for-100-years-en.png "Xank Emission for 100 years")
-
-<div align="center"><strong>Figure 6</strong>: Xank Emission for 100 years</div>
+초기에는 10억 개의 Xank 코인이 사전 채굴되어 설립자, 고문진, 초기 공개 토큰 판매(ICO) 참가자, 초기 후원자에게 제공될 것입니다.
 
 
-To mitigate the high volatility as well as high inflation of logarithmic emission, we use a fixed emission for the first 7 years. The fixed emission amount should be selected such that, after 7 years, the total Xank emitted will be equal to that of normal binary logarithmic emission. Hence we have used 340M Xank as the fixed emission for the first 7 years, after which the binary logarithmic emission resumes.
+### Xank 발행 알고리즘
 
-Hence we define the general term for Xank emission per year as,
+#### 초기 설계
 
-$$E_n = 340,000,000, for\ n < = 7$$
+초기 설계에서는 초기 연도 발행량(8억)을 기준으로 이진 로그 발행 방식을 사용했습니다. 공급량은 1.5년 후에 두 배, 5년 후에 세 배, 13년 후에 네 배, 31년 후에 다섯 배가 되도록 했습니다.
 
-$$E_n=(GDP_n + TPS_n) *(\frac{1}2)^{INT(log_2n)}, for\ n > 7$$
+발행량은 $2_n$년마다 절반으로 줄어듭니다. 예를 들어, 첫해에 8억 개, 다음 2년 동안 매년 4억 개, 그다음 4년 동안 매년 2억 개 등입니다. 이 분포 공식에서는 $2_n$ 기간 동안의 코인 합계가 항상 8억 개가 된다는 것이 자명합니다. 따라서 코인 발행률은 0으로 수렴하지만, 총 합계는 무한히 발산합니다.
 
-where, 
+#### 현재 설계
 
-*   $E_n=N^{th}$ year emission
-*   $GDP_n= N^{th}$ year Global GDP divided by 100K (Rounded off to Millions)
-*   $TPS_n=N^{th}$ year Xank network transactions per second
-*   $INT()=$ integer-valued function which takes the integer part of the given number 
-    *   for instance 
-        *   $INT(1.1)=1$
-        *   $INT(2)=2$
-        *   $INT(\sqrt2)$ $=INT(1.414$ \.\.\. $)=1$
-        *   $log_23\approxeq1.58496$ so that $INT(log_2 3)=1$
+우리는 $N$번째 연도의 Xank 코인 발행을 계산하기 위해 이진 로그를 사용합니다. 이진 로그는 밑이 2인 로그로, 2의 거듭제곱 함수의 역함수이며, 코인 발행을 점진적으로 줄이는 데 사용됩니다. 고정된 발행량을 사용하는 대신, Xank는 현재의 글로벌 GDP를 경제 성장 지표로, Xank TPS를 네트워크 성장 지표로 고려합니다. 글로벌 GDP와 Xank TPS가 시간이 지남에 따라 증가할 것이므로, 이진 로그를 적용하여 점진적으로 발행량을 줄일 수 있습니다.
+
+Xank 코인의 발행 시퀀스의 일반 항은 다음과 같습니다:
+
+$$E_n=(GDP_n + TPS_n) *(\frac{1}{2})^{INT(\log_2 n)}$$
+
+아래 그래프에서 볼 수 있듯이, 초기 몇 년 동안 매년 발행되는 Xank의 양이 매우 많고 시간이 지남에 따라 점차 줄어듭니다. 이는 초기 기간 동안 매우 높은 인플레이션을 초래합니다. 위 링크에서 볼 수 있듯이, 초기 몇 년 동안의 GDP 또는 TPS 변화는 발행량에 큰 변동을 초래합니다. 표에서 볼 수 있듯이, 이러한 초기 변동이 심한 해는 첫 세 로그 주기에 해당합니다.
+
+![그림 6](images/Xank-Emission-for-100-years-en.png "Xank 100년 발행 계획")
+
+<div align="center"><strong>그림 6</strong> : Xank 100년 발행 계획</div>
 
 
-![Figure 7](images/Xank-Final-Emission-for-100-years-en.png "Xank Final Emission for 100 years")
+변동성과 초기 인플레이션의 문제를 완화하기 위해, 처음 7년 동안은 고정 발행량을 사용합니다. 7년 이후에 정상적인 이진 로그 발행량과 동일한 총 Xank 발행량을 맞추기 위해 고정 발행량은 3억 4천만 Xank로 설정했습니다. 따라서 첫 7년 동안은 고정 발행량을 사용하고, 이후에는 이진 로그 발행량을 재개합니다.
 
-<div align="center"><strong>Figure 7</strong>: Xank Final Emission for 100 years</div>
+이에 따라, 매년 Xank 발행량의 일반 항을 다음과 같이 정의합니다.
 
-The partial sum of the sequence is:
+$$E_n = 340,000,000, \text{for } n \leq 7$$
+
+$$E_n = (GDP_n + TPS_n) * (\frac{1}{2})^{INT(log_2 n)}, \text{for } n > 7$$
+
+여기서, 
+
+* $E_n$ = $N$번째 연도의 발행량
+* $GDP_n$ = $N$번째 연도의 전 세계 GDP를 10만으로 나눈 값 (백만 단위로 반올림)
+* $TPS_n$ = $N$번째 연도의 Xank 네트워크 초당 거래 수
+* $INT()$ = 주어진 숫자의 정수 부분을 취하는 정수 값 함수
+  * 예를 들어
+    * $INT(1.1)=1$
+    * $INT(2)=2$
+    * $INT(\sqrt2)$ = $INT(1.414\ldots) = 1$
+    * $log_2 3 \approx 1.58496$이므로 $INT(log_2 3) = 1$
+
+
+![그림 7](images/Xank-Final-Emission-for-100-years-en.png "100년 동안의 Xank 최종 발행량")
+
+<div align="center"><strong>그림 7</strong> : 100년 동안의 Xank 최종 발행량</div>
+
+수열의 부분합 :
 
 $$M_n=P+\sum^n_{k=1n} E_k$$
 
@@ -1067,172 +1066,165 @@ $$M_n=P +\sum^n_{k=1} E_{340,000,000} , for\ n < = 7$$
 
 $$M_n=P+7*340,000,000 +\sum_{k=8}^n E_k , for\ n > 7$$
 
+여기서,
 
-where,
+*   $M_n=$ N번째 해까지의 총 화폐 공급량의 합
+*   $P=10억$ (사전 채굴된 코인) 
 
-*   $M_n=$ Total summation of money supply up to the $N^{th}$ year
-*   $P=1$ billion (Pre-mined coins.)
-
-
-
-Mathematically it is easy to prove $E_n$ converges to zero, but $M_n$ diverges infinitely.
+수학적으로 $E_n$이 0으로 수렴하지만, $M_n$은 무한대로 발산한다는 것을 증명하기 쉽습니다.
 
 $$M_n=\infty\ where\ E_n=0$$
 
+증명:
 
+1. 만약 $n$ &#8594; $\infty$이면, $log_2n$ &#8594; $\infty$ 또한 $INT(log_2n)$ &#8594; $\infty$이므로 $(\frac1 2)$ &#8594; $0, E_n=0$
+2. $INT()$ 함수는 주어진 숫자의 정수 부분을 취하므로 $INT(log_2n)\leq{log_2n}$ 항상 참이며, 따라서 다음도 참입니다. $(\frac1 2)^{log_2n} \leq (\frac1 2)^{INT(log_2n)}$ 로그의 정의에 따르면 $(\frac1 2)^{log_2n}=\frac1 n$이며, 위 관계로부터 $\frac1n \leq (\frac1 2)^{INT(log_2n)}$입니다. 적분 테스트를 사용하여 $\int_{1}^{\infty}\frac1x dx \leq \int_{1}^{\infty}(\frac1 2)^{INT(log_2x)}dx, \int_{1}^{\infty}\frac1x dx =(1n(x))^\infty_1 =\infty \leq \int_{1}^{\infty}(\frac1 2)^{INT(log_2x)}dx$
 
-Proof: 
+적분 테스트 정리에 의해, 왼쪽의 적분이 발산하므로, 오른쪽의 급수도 발산합니다. 따라서 $M_n=\infty$입니다.
 
-1. If $n$ &#8594; $\infty$, then  $log_2n$ &#8594; $\infty$ also $INT(log_2n)$ &#8594; $\infty$ so that $(\frac1 2)$ &#8594; $0, E_n=0$
-2. Since $INT()$ function takes the integer part of the given numbers so that $INT(log_2n)\leq{log_2n}$ is always true, therefore the following is also true. $(\frac1 2)^{log_2n} \leq (\frac1 2)^{INT(log_2n)}$ from the definition of the logarithm $(\frac1 2)^{log_2n}=\frac1 n$ and the above relation we can see that $\frac1n \leq (\frac1 2)^{INT(log_2n)}$ using integral test $\int_{1}^{\infty}\frac1x dx \leq \int_{1}^{\infty}(\frac1 2)^{INT(log_2x)}dx, \int_{1}^{\infty}\frac1x dx =(1n(x))^\infty_1 =\infty \leq \int_{1}^{\infty}(\frac1 2)^{INT(log_2x)}dx$
+증명 끝.
 
-By the theorem of the integral test, since the integral on the left side diverges, the series on the right side also diverges. Hence $M_n=\infty$ 
-
-Proof end.
-
-
-
-Using the above equation, the money supply for 100 years can be calculated by substituting _n_ to 100. 
+위 방정식을 사용하여 100년 동안의 화폐 공급량을 _n_ 을 100으로 대입하여 계산할 수 있습니다.
 
 $$M_{100}=P+7*340,000,000 +\sum_{n=8}^{100}(GDP_n + TPS_n) * (\frac1 2)^{INT(log_2n)}$$
 
 
-![Figure 8](images/Xank-Money-Supply-for-100-years-en.png "Xank Money Supply for 100 years")
+![그림 8](images/Xank-Money-Supply-for-100-years-en.png "Xank 100년 화폐 공급량")
 
-<div align="center"><strong>Figure 8</strong>: Xank Money Supply for 100 years</div>
-
-
-We have not set a maximum coin supply and the amount of Xank emitted in a year depends on the GDP and TPS of that respective year.  The emission volume, per year, is reduced by $(GDP_n + TPS_n)$ times every $2_n$ years. 
-
-E.g.: Considering current GDP and average TPS of 10, In the 4th logarithmic cycle(Year 8 -Year 15) 111.2M Xank is released,  in the 5th cycle(Year 16 - Year 31) 55.6M Xank and next cycle $(GDP_n + TPS_n)$ each, and so on. In this distribution formula, it is self-evident that the summation of coins in the $2_n$ period is always equal to the average value of $(GDP_n + TPS_n)$ over the period. So the coin issue rate converges to zero, but the sum of them diverges infinitely.
+<div align="center"><strong>그림 8</strong> : Xank 100년 화폐 공급량</div>
 
 
-## **Xank Protocol Characteristics Comparison**
+우리는 최대 코인 공급량을 설정하지 않았으며, 각 연도의 GDP와 TPS에 따라 연간 발행되는 Xank의 양이 결정됩니다. 발행량은 $2_n$ 년마다 $(GDP_n + TPS_n)$ 배씩 감소합니다.
 
-Xank aims to solve the Cryptocurrency Quadrilemma: price stability, fee consistency, auditable privacy, and distributed governance to become a true medium of exchange cryptocurrency. To gain a better understanding of how the Xank network will work, it can be useful to compare the network’s characteristics against those of other cryptocurrency networks. The following metrics have been used in the comparison:
+예를 들어, 현재 GDP와 평균 TPS가 10인 상황을 고려하면, 4번째 로그 주기(8년 차 - 15년 차)에는 1억 1120만 Xank가 발행되며, 5번째 주기(16년 차 - 31년 차)에는 5560만 Xank가 발행됩니다. 이후 주기에서는 $(GDP_n + TPS_n)$의 각 값이 사용됩니다. 이 분배 공식에서는 $2_n$ 기간 동안의 코인 합계가 항상 해당 기간의 $(GDP_n + TPS_n)$ 평균 값과 같다는 것이 자명합니다. 따라서 코인 발행 비율은 0으로 수렴하지만, 그 합계는 무한히 발산하게 됩니다.
 
-*   **Stability** - can the network achieve price stability, either through network design or price stabilizing features?
-*   **Consistency** - can the network achieve transaction fee consistency, either through network design or fee-stabilizing features?
-*   **Privacy** - are network users given the right tools to achieve adequate levels of anonymity and fungibility while preserving public auditability?
-*   **Governance** - can the network’s governance remain independent from coercion and collusion by central authorities or major stakeholders?
 
-| Cryptocurrency     | Stability | Consistency | Privacy | Governance |
-| ------------------ | :-------: | :---------: | :-----: | :--------: |
-| Avalanche          |     ✕     |      ✓      |    ✕    |     ✓      |
-| Bitcoin            |     ✕     |      ✕      |    ✕    |     ✕      |
-| BitShares (BitUSD) |     ✓     |      ✕      |    ✕    |     ✕      |
-| Carbon             |     ✓     |      ✕      |    ✕    |     ✕      |
-| Cosmos             |     ✕     |      ✕      |    ✕    |     ✓      |
-| Dash               |     ✕     |      ✕      |    △    |     ✓      |
-| Digix (DGX)        |     ✓     |      ✕      |    ✕    |     ✕      |
-| EOS                |     ✕     |      ✕      |    ✕    |     ✓      |
-| Ethereum           |     ✕     |      ✕      |    ✕    |     ✕      |
-| Libra (Diem)       |     ✓     |      ✕      |    ✕    |     ✓      |
-| Maker (DAI)        |     ✓     |      ✕      |    ✕    |     ✕      |
-| Monero             |     ✕     |      ✕      |    △    |     ✕      |
-| Pivx               |     ✕     |      ✕      |    △    |     ✓      |
-| Polkadot           |     ✕     |      ✕      |    ✕    |     ✓      |
-| XRP                |     ✕     |      ✕      |    ✕    |     ✕      |
-| Saga               |     ✓     |      ✕      |    ✕    |     ✕      |
-| Synthetix          |     ✓     |      ✕      |    ✕    |     ✓      |
-| Terra              |     ✓     |      ✕      |    ✕    |     ✓      |
-| Tether             |     ✓     |      ✕      |    ✕    |     ✕      |
-| Xank               |     ✓     |      ✓      |    ✓    |     ✓      |
-| Zcash              |     ✕     |      ✕      |    △    |     ✕      |
-△ No auditability 
+## **Xank 프로토콜 특성 비교**
 
-# References and Resources
+Xank는 암호화폐 사중난제(가격 안정성, 수수료 일관성, 감사 가능한 프라이버시, 분산 거버넌스)를 해결하여 진정한 거래 수단 암호화폐가 되는 것을 목표로 합니다. Xank 네트워크가 어떻게 작동할 것인지에 대한 더 나은 이해를 얻기 위해 다른 암호화폐 네트워크의 특성과 비교해 보는 것이 유용할 수 있습니다. 비교에 사용된 메트릭은 다음과 같습니다:
 
-Understanding the Governance and Budget System
+* **안정성 (Stability)** - 네트워크가 설계나 가격 안정화 기능을 통해 가격 안정성을 달성할 수 있는가?
+* **일관성 (Consistency)** - 네트워크가 설계나 수수료 안정화 기능을 통해 거래 수수료의 일관성을 달성할 수 있는가?
+* **프라이버시 (Privacy)** - 네트워크 사용자가 공공 감사 가능성을 유지하면서 적절한 수준의 익명성과 대체 가능성을 달성할 수 있는 도구를 제공받는가?
+* **거버넌스 (Governance)** - 네트워크의 거버넌스가 중앙 권한이나 주요 이해관계자의 강압 및 담합에서 독립성을 유지할 수 있는가?
+
+| 암호화폐           | 안정성 | 일관성 | 프라이버시 | 거버넌스 |
+| ------------------ | :----: | :----: | :-------: | :------: |
+| Avalanche          |   ✕    |   ✓    |    ✕      |    ✓     |
+| Bitcoin            |   ✕    |   ✕    |    ✕      |    ✕     |
+| BitShares (BitUSD) |   ✓    |   ✕    |    ✕      |    ✕     |
+| Carbon             |   ✓    |   ✕    |    ✕      |    ✕     |
+| Cosmos             |   ✕    |   ✕    |    ✕      |    ✓     |
+| Dash               |   ✕    |   ✕    |    △      |    ✓     |
+| Digix (DGX)        |   ✓    |   ✕    |    ✕      |    ✕     |
+| EOS                |   ✕    |   ✕    |    ✕      |    ✓     |
+| Ethereum           |   ✕    |   ✕    |    ✕      |    ✕     |
+| Libra (Diem)       |   ✓    |   ✕    |    ✕      |    ✓     |
+| Maker (DAI)        |   ✓    |   ✕    |    ✕      |    ✕     |
+| Monero             |   ✕    |   ✕    |    △      |    ✕     |
+| Pivx               |   ✕    |   ✕    |    △      |    ✓     |
+| Polkadot           |   ✕    |   ✕    |    ✕      |    ✓     |
+| XRP                |   ✕    |   ✕    |    ✕      |    ✕     |
+| Saga               |   ✓    |   ✕    |    ✕      |    ✕     |
+| Synthetix          |   ✓    |   ✕    |    ✕      |    ✓     |
+| Terra              |   ✓    |   ✕    |    ✕      |    ✓     |
+| Tether             |   ✓    |   ✕    |    ✕      |    ✕     |
+| Xank               |   ✓    |   ✓    |    ✓      |    ✓     |
+| Zcash              |   ✕    |   ✕    |    △      |    ✕     |
+△ 감사 불가능
+
+# 참고 자료 및 리소스
+
+거버넌스 및 예산 시스템 이해하기
 
 [https://dashpay.atlassian.net/wiki/spaces/DOC/pages/8585240/Understanding+the+Governance+and+Budget+System](https://dashpay.atlassian.net/wiki/spaces/DOC/pages/8585240/Understanding+the+Governance+and+Budget+System)
 
-The Key to Bridgewater's Success: A Real Idea Meritocracy
+브리지워터의 성공 열쇠: 진정한 아이디어 메리토크라시
 
 [https://www.linkedin.com/pulse/key-bridgewaters-success-real-idea-meritocracy-ray-dalio](https://www.linkedin.com/pulse/key-bridgewaters-success-real-idea-meritocracy-ray-dalio)
 
-Employees at the world's largest hedge fund use iPads to rate each other's performance in real-time — see how it works
+세계 최대 헤지 펀드의 직원들이 실시간으로 서로의 성과를 평가하는 방법
 
 [http://www.businessinsider.com/bridgewater-ray-dalio-radical-transparency-app-dots-2017-9](http://www.businessinsider.com/bridgewater-ray-dalio-radical-transparency-app-dots-2017-9)
 
-Special Drawing Right (SDR)
+특별인출권 (SDR)
 
 [https://www.imf.org/external/np/exr/facts/sdrcb.htm](https://www.imf.org/external/np/exr/facts/sdrcb.htm) 
 
-Stablecoins: designing a price-stable cryptocurrency
+스테이블코인: 가격 안정적인 암호화폐 설계
 
 [https://hackernoon.com/stablecoins-designing-a-price-stable-cryptocurrency-6bf24e2689e5](https://hackernoon.com/stablecoins-designing-a-price-stable-cryptocurrency-6bf24e2689e5)
 
-Binary logarithm
+이진 로그
 
 [https://en.wikipedia.org/wiki/Binary_logarithm](https://en.wikipedia.org/wiki/Binary_logarithm)
 
-Protocol Spotlight: Avalanche Part 1
+프로토콜 스포트라이트: Avalanche Part 1
 
 [https://flatoutcrypto.com/home/avalancheprotocol](https://flatoutcrypto.com/home/avalancheprotocol)
 
-Protocol Spotlight: Avalanche Part 2
+프로토콜 스포트라이트: Avalanche Part 2
 
 [https://flatoutcrypto.com/home/avalancheprotocolpart2](https://flatoutcrypto.com/home/avalancheprotocolpart2)
 
-The Mathematics of Agile Communication
+애자일 커뮤니케이션의 수학
 
 [https://theagiledirector.com/article/2013/12/09/the-mathematics-of-agile-communication/](https://theagiledirector.com/article/2013/12/09/the-mathematics-of-agile-communication/)
 
-Avalanche (AVA) — Blockchain 3.0: A Novel Metastable Consensus Protocol
+Avalanche (AVA) — 블록체인 3.0: 새로운 메타안정적 합의 프로토콜
 
 [https://hackernoon.com/avalanche-ava-blockchain-3-0-a-novel-metastable-consensus-protocol-28cdc4ee8984](https://hackernoon.com/avalanche-ava-blockchain-3-0-a-novel-metastable-consensus-protocol-28cdc4ee8984)
 
-Demystifying “Snowflake to Avalanche”
+"Snowflake to Avalanche" 디미스티파잉
 
 [https://medium.com/@elseidy/demystifying-snowflake-to-avalanche-966f56c33fd7](https://medium.com/@elseidy/demystifying-snowflake-to-avalanche-966f56c33fd7)
 
-“Snowflake to Avalanche” Consensus Protocol Family: Overview and Technicality
+“Snowflake to Avalanche” 합의 프로토콜 가족: 개요 및 기술적 세부사항
 
 [https://medium.com/@marcomanoppo/snowflake-to-avalanche-consensus-protocol-family-overview-and-technicality-68db9febfa1](https://medium.com/@marcomanoppo/snowflake-to-avalanche-consensus-protocol-family-overview-and-technicality-68db9febfa1)
 
-Snowflake to Avalanche: A Novel Metastable Consensus Protocol Family for Cryptocurrencies
+Snowflake to Avalanche: 암호화폐를 위한 새로운 메타안정적 합의 프로토콜 가족
 
 [http://muratbuffalo.blogspot.com/2018/06/snowflake-to-avalanche-novel-metastable.html](http://muratbuffalo.blogspot.com/2018/06/snowflake-to-avalanche-novel-metastable.html)
 
-Bitcoin Cash and Avalanche Video:
+비트코인 캐시와 Avalanche 비디오:
 
 [https://www.youtube.com/watch?v=F1HZSKdR7eA](https://www.youtube.com/watch?v=F1HZSKdR7eA)
 
 
 
 
-## Notes
+## 주석
 
-<b id="f1">1</b>:Convert XDR/USD. International Monetary Fund (IMF) Special Drawing Rights to United States Dollar [↩](#a1)
+<b id="f1">1</b>: 국제통화기금(IMF) 특별인출권(SDR)을 미국 달러로 환산 [↩](#a1)
     https://www.xe.com/currencyconverter/convert/?Amount=1&From=XDR&To=USD
 
-<b id="f2">2</b>:Ray Dalio’s meritocratic governance system, as outlined in his essay, which led to the success of the company he founded, Bridgewater [↩](#a2)
+<b id="f2">2</b>: 레이 달리오의 실적주의 거버넌스 시스템은 그가 창립한 회사 브리지워터의 성공을 이끌었다는 내용의 에세이 [↩](#a2)
     https://www.linkedin.com/pulse/key-bridgewaters-success-real-idea-meritocracy-ray-dalio
 
-<b id="f3">3</b>:Avalanche, which reached 6,500 transactions per second on a test network of 1,000 nodes and stabilized at 4,500 transactions per second [↩](#a3)
+<b id="f3">3</b>: Avalanche는 1,000개의 노드로 구성된 테스트 네트워크에서 초당 6,500건의 거래를 기록하고 안정적으로 초당 4,500건의 거래를 유지하였다 [↩](#a3)
     https://medium.com/avalabs/avalanche-ava-monthly-update-may-2019-7a78657217f4
 
-<b id="f4">4</b>:As of September 2017, 204.2 billion SDRs ($291 billion USD equivalent) had been created and allocated to the member states. [↩](#a4)
+<b id="f4">4</b>: 2017년 9월 기준, 2,042억 SDR(미국 달러로 2,910억 달러 상당)이 창출되어 회원국에 할당되었다 [↩](#a4)
     https://www.imf.org/en/About/Factsheets/Sheets/2016/08/01/14/51/Special-Drawing-Right-SDR
 
-<b id="f5">5</b>:IMF’s 2016 factsheet [↩](#a5)
+<b id="f5">5</b>: IMF의 2016년 팩트시트 [↩](#a5)
     https://www.imf.org/external/np/exr/facts/sdrcb.htm 
 
-<b id="f6">6</b>:How a meritocratic governance system and the implementation of its key principles and components were intricate to the success of the Bridgewater venture. [↩](#a6)
+<b id="f6">6</b>: 실적주의 거버넌스 시스템과 그 주요 원칙 및 구성 요소의 구현이 브리지워터 벤처의 성공에 중요한 역할을 했다는 내용 [↩](#a6)
     https://qz.com/1071749/bridgewater-associates-ceo-ray-dalio-explains-the-dot-collector-feedback-tool-his-company-uses-to-rate-employees/
 
-<b id="f7">7</b>:Seeing as the SDR rate is measured against a basket of weighted currencies and is announced and published by the IMF on its website. [↩](#a7)
+<b id="f7">7</b>: SDR 환율은 가중치가 부여된 통화 바스켓을 기준으로 측정되며 IMF 웹사이트에 발표 및 공표된다 [↩](#a7)
     https://www.imf.org/external/np/fin/data/rms_sdrv.aspx
 
-<b id="f8">8</b>:Multisignature security, cold and hot wallet usage, Hierarchical Deterministic (HD) wallets (BIP32) [↩](#a8)
+<b id="f8">8</b>: 멀티서명 보안, 콜드 및 핫 월렛 사용, 계층적 결정론적(HD) 월렛(BIP32) [↩](#a8)
     https://bitcoin.org/en/glossary/hd-protocol
 
-<b id="f9">9</b>:Sustainable Development Goals (SDGs) [↩](#a9)
+<b id="f9">9</b>: 지속 가능한 개발 목표(SDGs) [↩](#a9)
     https://www.un.org/sustainabledevelopment/
 
-<b id="f10">10</b>:The Constitution of the Xank Decentralized Autonomous Organization [↩](#a10)
+<b id="f10">10</b>: Xank 탈중앙화 자율 조직 헌법 [↩](#a10)
     https://github.com/xankmoney/governance/blob/master/xank-constitution.md/
 
-<b id="f11">11</b>:A commentary, analysis, observations and extracts based on a post by Haseeb Qureshi on Hackernoon, where he explains the key concepts behind the current batch of stablecoins. [↩](#a11)
+<b id="f11">11</b>: 해시브 쿠레시가 Hackernoon에 게시한 포스트를 기반으로 한 해설, 분석, 관찰 및 발췌문으로, 현재 배치된 스테이블코인의 주요 개념을 설명 [↩](#a11)
     https://hackernoon.com/stablecoins-designing-a-price-stable-cryptocurrency-6bf24e2689e5
