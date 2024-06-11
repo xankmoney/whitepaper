@@ -318,7 +318,7 @@ Local Pay는 사용자가 미국 달러 또는 일본 엔과 같은 국가 통�
 앨리스가 Xank Stable Pay(또는 Local Pay) 기능을 사용하여 밥에게 100.00달러 상당의 XANK 코인을 보내기로 결정하면, 밥이 XANK 코인을 받고 그 코인을 다시 법정 화폐로 교환하려고 할 때 다음 두 가지 시나리오가 발생할 수 있습니다 :
 
 
-![그림 1](images/Xank-Price-Increase-Scenario_wt-en.jpg "Xank 가격 상승 시나리오")
+![그림 1](images/Xank-Price-Increase-Scenario_wt-kr.jpg "Xank 가격 상승 시나리오")
 
 <div align="center"><strong>그림 1</strong> : Xank 가격 상승 시나리오</div>
 
@@ -328,7 +328,7 @@ Local Pay는 사용자가 미국 달러 또는 일본 엔과 같은 국가 통�
 
 
 
-![그림 2](images/Xank-Price-Decrease-Scenario_wt-en.jpg "Xank 가격 하락 시나리오")
+![그림 2](images/Xank-Price-Decrease-Scenario_wt-kr.jpg "Xank 가격 하락 시나리오")
 
 <div align="center"><strong>그림 2</strong> : Xank 가격 하락 시나리오</div>
 
